@@ -38,7 +38,7 @@ const Reveal = ({ children, width = "fit-content" }) => {
         }}
         initial="hidden"
         animate={slideControls}
-        transition={{ duration: 0.75, ease: "easeIn" }}
+        transition={{ duration: 0.5, ease: "easeIn" }}
         style={{
           position: "absolute",
           top: 4,

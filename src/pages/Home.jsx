@@ -35,7 +35,7 @@ const Home = () => {
 
       <section className="max-w-7xl mx-auto items-center relative top-0 md:top-[-150px] z-10 overflow-hidden px-0 sm:px-4 2xl:px-0">
         {/* labtop */}
-        <div className='hidden md:block'>
+        <div className='hidden md:block overflow-hidden'>
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#29292980] rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
             <div className="flex justify-center w-[120px]">
               <img src={icon1} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
@@ -51,7 +51,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
+          <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
               <p>Who are we?</p>
             </div>
@@ -96,17 +96,27 @@ const Home = () => {
         </div>
 
 
-        <div data-aos='fade-up' data-aos-duration='1000'>
+        <div >
           <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
           <div className='grid grid-cols-1 md:grid-cols-3 items-center gap-4 py-10 md:pt-16 md:pb-5 px-4 md:px-20 overflow-hidden' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
-            <div className='text-[30px] text-gradient font-[700] flex items-center justify-start md:justify-center' data-aos='fade-right' data-aos-duration='1500'>
-              WHO ARE WE?
-            </div>
-            <div className='col-span-2 whitespace-pre-line space-y-2 text-[#ffffff] text-[12px] lg:text-[15px]' data-aos='fade-left' data-aos-duration='1500'>
-              <p>Xin Yuan Li was started in 2018 and later officially registered in 2019 as medium tax enterprise. As of now, the company has increased the number of clients from 15 to 50 clients, while 80% are international clients and 20% are locals. </p>
-              <p>The company provides support to business registration, tax and accounting services, advisory services.</p>
-              <p> Founded by the managing director held degrees of Finance and English language proficiency. With a conviction in business service, the ideas of turning the problems from the founder have been implemented into opportunity, assisting in audit and finance. </p>
-              <p>The business further commits to building strong networking with local authorities for business registration at MOC.</p>
+            <Reveal>
+              <div className='text-[30px] text-gradient font-[700] flex items-center justify-start md:justify-center'>
+                WHO ARE WE?
+              </div>
+            </Reveal>
+            <div className='col-span-2 whitespace-pre-line space-y-2 text-[#ffffff] text-[12px] lg:text-[15px]'>
+              <Reveal>
+                <p>Xin Yuan Li was started in 2018 and later officially registered in 2019 as medium tax enterprise. As of now, the company has increased the number of clients from 15 to 50 clients, while 80% are international clients and 20% are locals. </p>
+              </Reveal>
+              <Reveal>
+                <p>The company provides support to business registration, tax and accounting services, advisory services.</p>
+              </Reveal>
+              <Reveal>
+                <p>Founded by the managing director held degrees of Finance and English language proficiency. With a conviction in business service, the ideas of turning the problems from the founder have been implemented into opportunity, assisting in audit and finance. </p>
+              </Reveal>
+              <Reveal>
+                <p>The business further commits to building strong networking with local authorities for business registration at MOC.</p>
+              </Reveal>
             </div>
           </div>
         </div>
@@ -177,7 +187,9 @@ const Home = () => {
           <img src={banner} alt="Image description" className="w-full h-[250px] sm:h-[400px] lg:h-[600px] object-cover object-center" />
           <div className="absolute inset-0" style={{ background: 'rgba(165, 148, 101, 0.8)' }}></div>
           <div className="absolute inset-0 flex justify-center items-center text-white px-4" data-aos="fade-up" data-aos-duration="1500">
-            <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
+            <Reveal>
+              <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
+            </Reveal>
           </div>
         </div>
       </section>
