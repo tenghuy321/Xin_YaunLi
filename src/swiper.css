@@ -1,0 +1,48 @@
+.serviceSlide{
+  margin-inline: initial;
+  padding-bottom: 4rem;
+}
+.ProfileSlide{
+    margin-inline: initial;
+    padding-bottom:6rem;
+}
+
+.serviceSlide .swiper-slide {
+  width: 220px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.serviceSlide .swiper-button-prev::after,
+.serviceSlide .swiper-button-next::after,
+.ProfileSlide .swiper-button-prev::after,
+.ProfileSlide .swiper-button-next::after  {
+  content: "";
+}
+
+.serviceSlide .swiper-button-prev,
+.serviceSlide .swiper-button-next,
+.ProfileSlide .swiper-button-prev,
+.ProfileSlide .swiper-button-next {
+  top: initial;
+  bottom: 0;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(90deg, #ebb81b 0%, #dfad16 45.5%, #faf088 100%);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: white;
+}
+
+.serviceSlide .swiper-button-prev,
+.ProfileSlide .swiper-button-prev  {
+  left: calc(50% - 3rem);
+}
+
+.serviceSlide .swiper-button-next, 
+.ProfileSlide .swiper-button-next{
+  right: calc(50% - 3rem);
+}
