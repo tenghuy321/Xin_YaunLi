@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/vite-deploy/",
   build: {
     // Increase chunk size warning limit
     chunkSizeWarningLimit: 1000, // Increase the size limit to 1MB or more as needed
