@@ -47,7 +47,7 @@ const Home = () => {
         <ButtonScroll />
       </div>
       <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-        <div className="w-full container flex justify-center md:justify-end md:px-4 xl:px-0">
+        <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5 xl:px-8">
           <div className="flex flex-col items-center text-center justify-center text-[#ffffff] ">
             <Reveal>
               <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>
@@ -126,7 +126,7 @@ const Home = () => {
 
 
         <div id='who'>
-          <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
+          <hr style={{ height: '8px', border: 'none',background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)' }} />
           <div className='grid grid-cols-1 md:grid-cols-3 items-center gap-4 py-10 md:pt-16 md:pb-5 px-4 md:px-20 overflow-hidden' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
             <Reveal>
               <div className='text-[30px] text-gradient font-[700] flex items-center justify-start md:justify-center'>

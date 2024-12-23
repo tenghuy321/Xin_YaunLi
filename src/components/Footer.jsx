@@ -22,7 +22,7 @@ const Footer = () => {
 
     return (
         <section className="w-full bg-[#1E1E1EF2]">
-            <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
+            <hr style={{ height: '8px',border: 'none', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
             <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 py-10 md:py-20 px-4">
                 <div className="flex flex-col space-y-3 text-[#ffffff] text-[13px] md:text-[15px]">
                     <h1 className="text-[15px] md:text-[18px] text-[#EBB81B] font-[700]">Keep In Touch</h1>

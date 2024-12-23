@@ -115,7 +115,7 @@ const OurService = () => {
                         </a>
                     </div>
 
-                    <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
+                    <hr style={{ height: '8px', border: 'none', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
                     <div id='pro_services' className='w-full py-20' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
                         <div className='text-center text-[13px] md:text-[15px] text-[#ffffff]'>
                             <h1 className='text-[30px] text-gradient font-[700]' data-aos='fade-right' data-aos-duration='1500'>Professional Services</h1>
@@ -185,7 +185,7 @@ const OurService = () => {
                                 </svg>
                                 <p>Advice</p>
                             </div>
-                            <div className="w-[20rem] relative -top-[7px]" data-aos='fade-right' data-aos-duration='1200' style={{ background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', height: '4px' }}></div>
+                            <div className="w-[20rem] relative -top-[7px]" data-aos='fade-right' data-aos-duration='1200' style={{ border: 'none',background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', height: '4px' }}></div>
                             <div className='flex flex-col items-center text-[14px] md:text-[16px] font-[700]' data-aos='fade-right' data-aos-duration='1500'>
                                 <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M26.9791 37.0006C21.4538 37.0006 16.9583 32.5051 16.9583 26.9798C16.9583 21.4545 21.4538 16.959 26.9791 16.959C32.5045 16.959 37 21.4545 37 26.9798C37 32.5051 32.5045 37.0006 26.9791 37.0006ZM26.9791 18.5007C22.3033 18.5007 18.5 22.3055 18.5 26.9798C18.5 31.6541 22.3033 35.459 26.9791 35.459C31.655 35.459 35.4583 31.6541 35.4583 26.9798C35.4583 22.3055 31.655 18.5007 26.9791 18.5007Z" fill="#A59365" />
@@ -199,7 +199,7 @@ const OurService = () => {
                                 </svg>
                                 <p>Register</p>
                             </div>
-                            <div className="w-[20rem] relative -top-[7px]" data-aos='fade-right' data-aos-duration='1700' style={{ background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', height: '4px' }}></div>
+                            <div className="w-[20rem] relative -top-[7px]" data-aos='fade-right' data-aos-duration='1700' style={{ border: 'none',background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', height: '4px' }}></div>
                             <div className='flex flex-col items-center text-[14px] md:text-[16px] font-[700]' data-aos='fade-right' data-aos-duration='2000'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
                                     <path
@@ -319,7 +319,7 @@ const OurService = () => {
                                 </svg>
                                 <p>Tax / Accounting</p>
                             </div>
-                            <div className="w-[20rem] relative -top-[7px]" data-aos='fade-left' data-aos-duration='1200' style={{ background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', height: '4px' }}></div>
+                            <div className="w-[20rem] relative -top-[7px]" data-aos='fade-left' data-aos-duration='1200' style={{ border: 'none',background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', height: '4px' }}></div>
                             <div className='flex flex-col items-center text-[14px] md:text-[16px] font-[700]' data-aos='fade-left' data-aos-duration='1500'>
                                 <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_23_810" style={{ maskType: 'luminance' }} maskUnits="userSpaceOnUse" x="0" y="0" width="38" height="38">
@@ -369,7 +369,7 @@ const OurService = () => {
                             <p>Advice</p>
                         </div>
                         <div className='flex justify-center' data-aos='fade-up' data-aos-duration='1200'>
-                            <div className="h-14 text-center" style={{ background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', width: '4px', }}></div>
+                            <div className="h-14 text-center" style={{ background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', width: '4px',border: 'none' }}></div>
                         </div>
                         <div className='flex flex-col items-center justify-center text-center text-[14px] md:text-[16px] font-[700]' data-aos='fade-up' data-aos-duration='1200'>
                             <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -385,7 +385,7 @@ const OurService = () => {
                             <p>Register</p>
                         </div>
                         <div className='flex justify-center' data-aos='fade-up' data-aos-duration='1500'>
-                            <div className="h-14 text-center" style={{ background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', width: '4px', }}></div>
+                            <div className="h-14 text-center" style={{ background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', width: '4px',border: 'none' }}></div>
                         </div>
                         <div className='flex flex-col items-center text-[14px] md:text-[16px] font-[700]' data-aos='fade-up' data-aos-duration='2000'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
@@ -486,7 +486,7 @@ const OurService = () => {
                             <p>License</p>
                         </div>
                         <div className='flex justify-center' data-aos='fade-up' data-aos-duration='1800'>
-                            <div className="h-14 text-center" style={{ background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', width: '4px', }}></div>
+                            <div className="h-14 text-center" style={{ background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)', width: '4px',border: 'none' }}></div>
                         </div>
                         <div className='flex flex-col items-center text-[14px] md:text-[16px] font-[700]' data-aos='fade-up' data-aos-duration='2000'>
                             <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">

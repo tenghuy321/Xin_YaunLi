@@ -59,7 +59,7 @@ const OurProfile = () => {
         <ButtonScroll />
       </div>
       <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home/banner_footer.png')]">
-        <div className="w-full max-w-7xl mx-auto flex justify-center md:px-5">
+        <div className="w-full max-w-7xl mx-auto flex justify-center md:px-5 xl:px-8">
           <div className="flex flex-col items-center text-center text-[#000000]">
             <Reveal>
               <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>
@@ -139,7 +139,7 @@ const OurProfile = () => {
 
 
         <div id='message'>
-          <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
+          <hr style={{ height: '8px', border: 'none', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
           <div className='grid grid-cols-1 md:grid-cols-3 items-center gap-4 py-10 md:py-20 px-4 md:px-20 overflow-hidden' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
             <div className='text-[30px] text-gradient font-[700] flex items-center justify-start md:justify-center' data-aos='fade-right' data-aos-duration='1500'>
               {/* pic */}

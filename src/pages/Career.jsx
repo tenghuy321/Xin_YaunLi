@@ -31,7 +31,7 @@ const Career = () => {
             </section>
 
             <div className='relative top-[-20px] md:-top-[50px]'>
-                <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
+                <hr style={{ height: '8px',border: 'none', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
                 <section className="w-full pt-20 md:pt-40" style={{ background: 'rgba(30, 30, 30, 0.95)' }}>  
                     <h1 className="text-[50px] px-4 md:px-0 md:text-[100px] font-[800] max-w-[500px] mx-auto text-center leading-none text-gradient" data-aos='fade-up' data-aos-duration='1000'>WORK WITH US!</h1>
                     <div className="max-w-4xl mx-auto flex items-center justify-center pt-20" data-aos='fade-up' data-aos-duration='1500'>
