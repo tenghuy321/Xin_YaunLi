@@ -8,8 +8,8 @@ const Contact = () => {
     })
     return (
         <>
-            <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-                <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5">
+            <section className="py-[4rem] md:pt-[10rem] h-full md:h-[70vh] bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
+                <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5 xl:px-8">
                     <div className="flex flex-col items-center text-center text-[#ffffff]">
                         <Reveal>
                             <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>

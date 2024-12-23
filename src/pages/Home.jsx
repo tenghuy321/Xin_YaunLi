@@ -11,15 +11,22 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Reveal from '../components/Reveal';
+// import ScrollToTop from '../components/ScrollToTop';
+import ButtonScroll from '../components/ButtonScroll';
 const Home = () => {
   useEffect(() => {
-    Aos.init();
+    Aos.init({
+      offset: 10,
+    });
   });
   return (
     <>
+      <div>
+        <ButtonScroll />
+      </div>
       <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-          <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5">
-            <div className="flex flex-col items-center text-center justify-center text-[#ffffff]">
+          <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5 xl:px-8">
+            <div className="flex flex-col items-center text-center justify-center text-[#ffffff] ">
               <Reveal>
                 <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>              
               </Reveal>
@@ -37,66 +44,66 @@ const Home = () => {
         {/* labtop */}
         <div className='hidden md:block overflow-hidden'>
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#29292980] rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
-            <div className="flex justify-center w-[120px]">
+            <a href='#who' className="flex justify-center w-[120px]">
               <img src={icon1} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            </div>
-            <div className="flex justify-center w-[120px]">
+            </a>
+            <a href='#vision' className="flex justify-center w-[120px]">
               <img src={icon2} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            </div>
-            <div className="flex justify-center w-[120px]">
+            </a>
+            <a href='#mission' className="flex justify-center w-[120px]">
               <img src={icon3} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            </div>
-            <div className="flex justify-center w-[120px]">
+            </a>
+            <a href='#core_values' className="flex justify-center w-[120px]">
               <img src={icon4} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            </div>
+            </a>
           </div>
 
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>Who are we?</p>
+              <a href='#who' >Who are we?</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>Vision</p>
+              <a href='#vision'>Vision</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>Mission</p>
+              <a href='#mission'>Mission</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>Core Values</p>
+              <a href='#core_values'>Core Values</a>
             </div>
           </div>
         </div>
 
         {/* mobile */}
         <div className='grid md:hidden grid-cols-2 items-center justify-center py-4 gap-y-4'>
-          <div className='flex flex-col items-center justify-center'>
+          <a href='#who' className='flex flex-col items-center justify-center'>
             <img src={icon1} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
               <p>Who are we?</p>
             </div>
-          </div>
-          <div className='flex flex-col items-center justify-center'>
+          </a>
+          <a href='#vision' className='flex flex-col items-center justify-center'>
             <img src={icon2} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
               <p>Vision</p>
             </div>
-          </div>
-          <div className='flex flex-col items-center justify-center'>
+          </a>
+          <a href='#mission' className='flex flex-col items-center justify-center'>
             <img src={icon3} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
               <p>Mission</p>
             </div>
-          </div>
-          <div className='flex flex-col items-center justify-center'>
+          </a>
+          <a href='#core_values' className='flex flex-col items-center justify-center'>
             <img src={icon4} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
               <p>Core Values</p>
             </div>
-          </div>
+          </a>
         </div>
 
 
-        <div >
+        <div id='who'>
           <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
           <div className='grid grid-cols-1 md:grid-cols-3 items-center gap-4 py-10 md:pt-16 md:pb-5 px-4 md:px-20 overflow-hidden' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
             <Reveal>
@@ -125,7 +132,7 @@ const Home = () => {
 
       <section className='relative top-0 md:top-[-170px] z-1'>
         {/* vision */}
-        <div className='bg-[#F1EBDB] w-full'>
+        <div id='vision' className='bg-[#F1EBDB] w-full'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto items-center py-14 md:py-16 px-4 md:px-20' data-aos='fade-right' data-aos-duration='1000'>
             <div className='flex justify-center'>
               <img src={icon5} alt="" className='w-32 md:w-40' />
@@ -137,7 +144,7 @@ const Home = () => {
           </div>
         </div>
         {/* mission */}
-        <div className='bg-[#ffffff] w-full overflow-hidden'>
+        <div id='mission' className='bg-[#ffffff] w-full overflow-hidden'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto items-center py-10 md:py-20 px-4 md:px-20' data-aos='fade-left' data-aos-duration='1000'>
             <div className='flex justify-center'>
               <img src={icon6} alt="" className='w-32 md:w-40' />
@@ -149,7 +156,7 @@ const Home = () => {
           </div>
         </div>
         {/* Core Values */}
-        <div className='bg-[#F1EBDB] w-full'>
+        <div id='core_values' className='bg-[#F1EBDB] w-full'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto items-center py-10 px-4 md:px-20'>
             <div className='flex justify-center' data-aos='fade-right' data-aos-duration='1000'>
               <img src={icon7} alt="" className='w-32 md:w-40' />

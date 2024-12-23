@@ -21,13 +21,20 @@ import { Navigation } from 'swiper/modules';
 import Aos from 'aos';
 import { useEffect } from 'react';
 import Reveal from '../components/Reveal';
+import ButtonScroll from '../components/ButtonScroll';
+
 
 const OurProfile = () => {
   useEffect(() => {
-    Aos.init();
+    Aos.init({
+      offset: 10,
+    });
   });
   return (
     <>
+      <div>
+        <ButtonScroll/>
+      </div>
       <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home/banner_footer.png')]">
         <div className="w-full max-w-7xl mx-auto flex justify-center md:px-5">
           <div className="flex flex-col items-center text-center text-[#000000]">
@@ -49,18 +56,18 @@ const OurProfile = () => {
         {/* labtop */}
         <div className='hidden md:block overflow-hidden'>
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#29292980] rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
-            <div className="flex justify-center w-[120px]">
+            <a href='#message' className="flex justify-center w-[120px]">
               <img src={icon8} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            </div>
-            <div className="flex justify-center w-[120px]">
-              <img src={icon9} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            </div>
-            <div className="flex justify-center w-[120px]">
+            </a>
+            <a href='#uniqueness' className="flex justify-center w-[120px]">
               <img src={icon10} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            </div>
-            <div className="flex justify-center w-[120px]">
+            </a>
+            <a href='#license' className="flex justify-center w-[120px]">
+              <img src={icon9} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+            </a>
+            <a href='#clients' className="flex justify-center w-[120px]">
               <img src={icon11} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            </div>
+            </a>
           </div>
 
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
@@ -68,10 +75,10 @@ const OurProfile = () => {
               <p>Message</p>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>License</p>
+              <p>Uniqueness</p>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>Uniqueness</p>
+              <p>License</p>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
               <p>Notable Clients</p>
@@ -81,34 +88,34 @@ const OurProfile = () => {
 
         {/* mobile */}
         <div className='grid md:hidden grid-cols-2 items-center justify-center py-4 gap-y-4'>
-          <div className='flex flex-col items-center justify-center'>
+          <a href='message' className='flex flex-col items-center justify-center'>
             <img src={icon8} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
               <p>Message</p>
             </div>
-          </div>
-          <div className='flex flex-col items-center justify-center'>
-            <img src={icon9} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            <div className="p-2 font-[500] text-gradient">
-              <p>License</p>
-            </div>
-          </div>
-          <div className='flex flex-col items-center justify-center'>
+          </a>
+          <a href='#uniqueness' className='flex flex-col items-center justify-center'>
             <img src={icon10} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
               <p>Uniqueness</p>
             </div>
-          </div>
-          <div className='flex flex-col items-center justify-center'>
+          </a>
+          <a href='#license' className='flex flex-col items-center justify-center'>
+            <img src={icon9} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+            <div className="p-2 font-[500] text-gradient">
+              <p>License</p>
+            </div>
+          </a>
+          <a href='#clients' className='flex flex-col items-center justify-center'>
             <img src={icon11} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
               <p>Notable Clients</p>
             </div>
-          </div>
+          </a>
         </div>
 
 
-        <div>
+        <div id='message'>
           <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
           <div className='grid grid-cols-1 md:grid-cols-3 items-center gap-4 py-10 md:py-20 px-4 md:px-20 overflow-hidden' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
             <div className='text-[30px] text-gradient font-[700] flex items-center justify-start md:justify-center' data-aos='fade-right' data-aos-duration='1500'>
@@ -135,13 +142,13 @@ const OurProfile = () => {
         </div>
       </section>
 
-      <section className='relative top-0 md:top-[-170px] '>
+      <section className='relative top-0 md:top-[-170px]'>
         {/* banner */}
         <div data-aos='fade-up' data-aos-duration='1000'>
           <img src={profile} alt="" className='w-full h-auto object-cover object-center' />
         </div>
         {/* Uniqueness */}
-        <div className='w-full py-10'>
+        <div className='w-full py-10' id='uniqueness'>
           <h1 className='text-[20px] md:text-[30px] text-gradient font-[700] text-center'>Uniqueness</h1>
           <div className='grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-5 mt-4 px-4 overflow-hidden'>
             <div className='flex flex-col md:flex-row md:space-x-4 items-center border border-[#A59465] p-4' data-aos='fade-right' data-aos-duration='1200'>
@@ -183,7 +190,7 @@ const OurProfile = () => {
         </div>
 
         {/* registered */}
-        <div className='bg-[#F1EBDB] py-10'>  
+        <div className='bg-[#F1EBDB] py-10' id='license'>  
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center px-10' data-aos='fade-up' data-aos-duration='1000'>Our entity is officially registered under</h1>
           {/* laptop */}
           <div className='hidden lg:grid grid-cols-4 w-full px-4 max-w-7xl items-center mx-auto py-10 overflow-hidden'>
@@ -240,7 +247,7 @@ const OurProfile = () => {
         </div>
 
         {/* Notable Clients */}
-        <div className='w-full py-10'>
+        <div className='w-full py-10' id='clients'>
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center' data-aos='fade-right' data-aos-duration='1000'>Notable Clients</h1>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto items-center justify-center py-6 px-4">
             <div className='flex items-center justify-center' data-aos='fade-up' data-aos-duration='1200'>

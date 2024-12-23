@@ -12,18 +12,22 @@ import banner from '../assets/images/service/service_footer.jpg';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import Reveal from '../components/Reveal';
-
-
+import ButtonScroll from '../components/ButtonScroll';
 
 const OurService = () => {
     useEffect(() => {
-        Aos.init();
+        Aos.init({
+        offset: 10,
+        });
     })
 
     return (
         <>
+            <div>
+                <ButtonScroll/>
+            </div>
             <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-                <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5">
+                <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5 xl:px-8">
                     <div className="flex flex-col items-center text-center text-[#ffffff]">
                         <Reveal>
                             <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>
@@ -46,12 +50,12 @@ const OurService = () => {
                             <a href='#pro_services' className="flex justify-center w-[120px]">
                                 <img src={icon12} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </a>
-                            <div className="flex justify-center w-[120px]">
+                            <a href='#financial' className="flex justify-center w-[120px]">
                                 <img src={icon13} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-                            </div>
-                            <div className="flex justify-center w-[120px]">
+                            </a>
+                            <a href='#experiences' className="flex justify-center w-[120px]">
                                 <img src={icon14} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-                            </div>
+                            </a>
                         </div>
 
                         <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
@@ -59,34 +63,34 @@ const OurService = () => {
                                 <a href='#pro_services'>Pro Services</a>
                             </div>
                             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-                                <p>Financial</p>
+                                <a href='#financial'>Financial</a>
                             </div>
                             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-                                <p>Experiences</p>
+                                <a href='#experiences'>Experiences</a>
                             </div>
                         </div>
                     </div>
 
                     {/* mobile */}
                     <div className='grid md:hidden grid-cols-2 items-center justify-center py-4 gap-y-4'>
-                        <div className='flex flex-col items-center justify-center'>
+                        <a href='#pro_services' className='flex flex-col items-center justify-center'>
                             <img src={icon12} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="p-2 font-[500] text-gradient">
                                 <p>Pro Services</p>
                             </div>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
+                        </a>
+                        <a href='#financial' className='flex flex-col items-center justify-center'>
                             <img src={icon13} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="p-2 font-[500] text-gradient">
                                 <p>Financial</p>
                             </div>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
+                        </a>
+                        <a href='#experiences' className='flex flex-col items-center justify-center'>
                             <img src={icon14} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="p-2 font-[500] text-gradient">
                                 <p>Experiences</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
@@ -144,7 +148,7 @@ const OurService = () => {
 
             <section className='relative top-0 md:-top-[170px] z-1 py-4'>
                 {/* financial */}
-                <div className='bg-[#F1EBDB] py-20 md:py-32 px-4'>
+                <div className='bg-[#F1EBDB] py-20 md:py-32 px-4' id='financial'>
                     <h1 className='text-center max-w-[35rem] mx-auto text-[20px] md:text-[30px] font-[800] text-gradient leading-none' data-aos='fade-right' data-aos-duration='1000'>Financial  Performance Business Licenses Roadmap</h1>
                     {/* laptop up */}
                     <div className="md:flex flex-col space-y-10 pt-10 px-4 hidden overflow-hidden">
@@ -521,7 +525,7 @@ const OurService = () => {
 
 
                 {/* Experiences */}
-                <div className='py-10 min-h-[500px] md:min-h-screen bg-cover bg-center bg-[url("assets/images/home/banner_footer.png")]'>
+                <div id='experiences' className='py-10 min-h-[500px] md:min-h-screen bg-cover bg-center bg-[url("assets/images/home/banner_footer.png")]'>
                     <div className='text-center text-[14px] md:text-[16px]'>
                         <h1 className='text-[20px] md:text-[30px] font-[800] text-gradient' data-aos='fade-right' data-aos-duration='1000'>Experiences Across Industry</h1>
                         <p className='py-2' data-aos='fade-right' data-aos-duration='1500'>We handle projects from a variety of sectors in Cambodia with licenses such as</p>

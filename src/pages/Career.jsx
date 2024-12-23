@@ -3,6 +3,7 @@ import serviceBg from '../assets/images/service/service-bg.png';
 import banner from '../assets/images/service/service_footer.jpg';
 import Aos from 'aos';
 import Reveal from '../components/Reveal';
+import ButtonScroll from '../components/ButtonScroll';
 
 const Career = () => {
     useEffect(() => {
@@ -10,8 +11,11 @@ const Career = () => {
     })
     return (
         <>
+              <div>
+                <ButtonScroll />
+            </div>
             <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-                <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5">
+                <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5 xl:px-8">
                 <div className="flex flex-col items-center text-center text-[#ffffff]">
                     <Reveal>
                         <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>
@@ -41,7 +45,9 @@ const Career = () => {
                 <img src={banner} alt="Image description" className="w-full h-[250px] sm:h-[400px] lg:h-[600px] object-cover object-center" />
                 <div className="absolute inset-0 bg-blend-multiply bg-[#A59465CC]"></div>
                 <div className="absolute inset-0 flex justify-center items-center text-white px-4" data-aos="fade-up" data-aos-duration="1500">
-                    <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
+                    <Reveal>
+                        <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
+                    </Reveal>
                 </div>
             </div>
         </>
