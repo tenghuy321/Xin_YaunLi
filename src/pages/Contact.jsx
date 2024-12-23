@@ -25,7 +25,7 @@ const Contact = () => {
     return (
         <>
             <section className="pt-[4rem] md:pt-[10rem] lg:pt-[14rem] h-full md:min-h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-                <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5 xl:px-8">
+                <div className="w-full max-w-7xl mx-auto flex justify-center md:justify-end md:px-5 xl:px-8">
                     <div className="flex flex-col items-center text-center text-[#ffffff]">
                         <Reveal>
                             <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>
