@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 const Header = () => {
     const location = useLocation();
     const [isLoading, setIsLoading] = useState(false);
+    
 
     const handleLinkClick = () => {
         setIsLoading(true);

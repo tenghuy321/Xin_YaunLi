@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import loadingImg from '../assets/images/loadingImg.png'
+import loadingImg from '../assets/images/loadingImg.png';
+import '../style';
 const Navbar = () => {
     const location = useLocation();
     const [isLoading, setIsLoading] = useState(false);
