@@ -13,6 +13,8 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
+import Footer from "../components/Footer";
+
 
 const OurService = () => {
     useEffect(() => {
@@ -1186,6 +1188,9 @@ const OurService = () => {
                     </div>
                 </div>
             </section>
+
+
+            <Footer/>
         </>
     )
 }

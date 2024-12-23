@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import OurProfile from "./pages/OurProfile";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import OurService from "./pages/OurService";
 import Career from "./pages/Career";
 // import ContactUs from "./pages/Contact";
@@ -22,7 +22,6 @@ function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/contact-us" element={<Contact />} />
       </Routes>
-      <Footer />
 
     </BrowserRouter>
   )
