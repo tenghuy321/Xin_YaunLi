@@ -19,7 +19,7 @@
   position: absolute;
   width: 160%;
   height: 4px;
-  top: -22px;
+  top: -21px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(90deg, #ebb81b 0%, #dfad16 45.5%, #faf088 100%);

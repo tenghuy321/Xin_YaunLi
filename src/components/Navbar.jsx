@@ -15,7 +15,7 @@ const Navbar = () => {
 
     return (
         <nav className="absolute top-20 left-0 w-full z-50 hidden lg:block">
-            <div className="flex justify-between items-center px-4 py-3 md:px-8 max-w-7xl mx-auto bg-[#1E1E1E] bg-blend-multiply">
+            <div className="flex justify-between items-center py-3 px-3 max-w-7xl mx-auto bg-[#1E1E1E] bg-blend-multiply">
                 <div className="flex items-center">
                     <a href="/" className="text-xl font-bold text-gray-800">
                         <img src="../logo.png" alt="Logo" className="w-10" />
