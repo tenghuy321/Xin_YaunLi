@@ -27,7 +27,7 @@ const Home = () => {
                 <p className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[100px] leading-none font-[800]">XIN YUAN LI</p>
               </Reveal>
               <Reveal>
-                <p className="text-[20px] lg:text-[27px] tracking-[4px] md:tracking-[0.32rem]">BUSINESS SERVICE</p>
+                <p className="text-[16px] lg:text-[27px] tracking-[4px] md:tracking-[0.32rem]">BUSINESS SERVICE</p>
               </Reveal>
             </div>
           </div>

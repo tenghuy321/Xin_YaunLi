@@ -20,7 +20,7 @@ const Career = () => {
                         <h1 className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[100px] leading-none font-[800]">XIN YUAN LI</h1>
                     </Reveal>
                     <Reveal>
-                        <p className="text-[20px] lg:text-[27px] tracking-[5px] md:tracking-[8px]">Business Service</p>
+                        <p className="text-[16px] lg:text-[27px] tracking-[5px] md:tracking-[8px]">Business Service</p>
                     </Reveal>
                 </div>
                 </div>
