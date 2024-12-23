@@ -183,7 +183,7 @@ const OurProfile = () => {
         </div>
 
         {/* registered */}
-        <div className='bg-[#F1EBDB] py-10'>
+        <div className='bg-[#F1EBDB] py-10'>  
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center px-10' data-aos='fade-up' data-aos-duration='1000'>Our entity is officially registered under</h1>
           {/* laptop */}
           <div className='hidden lg:grid grid-cols-4 w-full px-4 max-w-7xl items-center mx-auto py-10 overflow-hidden'>
@@ -261,7 +261,7 @@ const OurProfile = () => {
         {/* banner footer */}
         <div className="relative mt-4">
           <img src={banner} alt="Image description" className="w-full h-[250px] sm:h-[400px] lg:h-[600px] object-cover object-center" />
-          <div className="absolute inset-0" style={{ background: 'rgba(165, 148, 101, 0.8)' }}></div>
+          <div className="absolute inset-0 bg-blend-multiply bg-[#A59465CC]"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white px-4" data-aos="fade-up" data-aos-duration="1500">
             <Reveal>
             <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
