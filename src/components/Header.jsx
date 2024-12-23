@@ -18,14 +18,6 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     <div>
                         <button className="lg:hidden mr-4focus:outline-none" type="button" data-drawer-target="drawer-example" data-drawer-show="drawer-example" aria-controls="drawer-example">
-                            {/* <svg className="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h16m-7 6h7"
-                                />
-                            </svg> */}
                             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><g fill="rgb(0,0,0)"><path d="m5 2c-1.65685 0-3 1.34315-3 3v3c0 1.65685 1.34315 3 3 3h3c1.65685 0 3-1.34315 3-3v-3c0-1.65685-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m5 13c-1.65685 0-3 1.3431-3 3v3c0 1.6569 1.34315 3 3 3h3c1.65685 0 3-1.3431 3-3v-3c0-1.6569-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path clipRule="evenodd" d="m16 2c-1.6569 0-3 1.34315-3 3v3c0 1.65685 1.3431 3 3 3h3c1.6569 0 3-1.34315 3-3v-3c0-1.65685-1.3431-3-3-3zm-1 3c0-.55228.4477-1 1-1h3c.5523 0 1 .44772 1 1v3c0 .55228-.4477 1-1 1h-3c-.5523 0-1-.44772-1-1z" fillRule="evenodd" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m16 13c-1.6569 0-3 1.3431-3 3v3c0 1.6569 1.3431 3 3 3h3c1.6569 0 3-1.3431 3-3v-3c0-1.6569-1.3431-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /></g></g><defs><linearGradient id="SvgjsLinearGradient1015"><stop stopOpacity="1" stopColor="#ebb81b" offset="0" /><stop stopOpacity="1" stopColor="#dfad16" offset="1" /></linearGradient></defs></svg>
                         </button>
                     </div>
@@ -112,7 +104,7 @@ const Header = () => {
                                 </a>
                             </li>
                             <li className="px-4 py-3">
-                                <a href="/contact-us" className={`vlcok text-[16px] ${location.pathname === '/contact-us' ? 'text-white bg-[#1E1E1EF2] px-3 py-2 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                <a href="/contact-us" className={`block text-[16px] ${location.pathname === '/contact-us' ? 'text-white bg-[#1E1E1EF2] px-3 py-2 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
                                     Contact Us
                                 </a>
                             </li>

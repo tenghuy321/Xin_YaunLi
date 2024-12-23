@@ -41,8 +41,8 @@ const OurService = () => {
             <section className="relative top-0 md:top-[-150px] z-10">
                 <div className='max-w-7xl mx-auto items-center px-0 sm:px-4 2xl:px-0'>
                     {/* labtop */}
-                    <div className='hidden md:block' data-aos='fade-up' data-aos-duration='1000'>
-                        <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#29292980] rounded-t-md'>
+                    <div className='hidden md:block overflow-hidden'>
+                        <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#29292980] rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
                             <a href='#pro_services' className="flex justify-center w-[120px]">
                                 <img src={icon12} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </a>
@@ -54,7 +54,7 @@ const OurService = () => {
                             </div>
                         </div>
 
-                        <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md'>
+                        <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
                             <div className="flex justify-center w-[120px] font-[500] text-gradient">
                                 <a href='#pro_services'>Pro Services</a>
                             </div>
@@ -89,54 +89,52 @@ const OurService = () => {
                         </div>
                     </div>
 
-                    <div data-aos='fade-up' data-aos-duration='1000'>
-                        <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
-                        <div id='pro_services' className='w-full py-20' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
-                            <div className='text-center text-[13px] md:text-[15px] text-[#ffffff]'>
-                                <h1 className='text-[30px] text-gradient font-[700]' data-aos='fade-right' data-aos-duration='1500'>Professional Services</h1>
-                                <p data-aos='fade-right' data-aos-duration='1500'>We comprehensively offer the following services </p>
+                    <hr style={{ height: '8px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
+                    <div id='pro_services' className='w-full py-20' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
+                        <div className='text-center text-[13px] md:text-[15px] text-[#ffffff]'>
+                            <h1 className='text-[30px] text-gradient font-[700]' data-aos='fade-right' data-aos-duration='1500'>Professional Services</h1>
+                            <p data-aos='fade-right' data-aos-duration='1500'>We comprehensively offer the following services </p>
 
-                                <div className='grid grid-cols-1 md:grid-cols-2 gap-10 px-4 2xl:px-40 mt-10 overflow-hidden'>
-                                    <div className='bg-[#1E1E1E] rounded-[30px]' data-aos='fade-right' data-aos-duration='1000'>
-                                        <h1 className='text-[50px] md:text-[70px] lg:text-[100px] font-[700] text-gradient lg:leading-none'>01</h1>
-                                        <p className='py-1 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Business Registration</p>
-                                        <ul className="centered-list py-4 text-[#ffffff] space-y-2 text-[13px] md:text-[14px] lg:text-[15px]">
-                                            <li>All Types of Company Registration</li>
-                                            <li>Business Plans and Financial Management</li>
-                                            <li>Company Updates</li>
-                                            <li>Company Dissolution</li>
-                                        </ul>
-                                    </div>
-                                    <div className='bg-[#1E1E1E] rounded-[30px]' data-aos='fade-left' data-aos-duration='1000'>
-                                        <h1 className='text-[50px] md:text-[70px] lg:text-[100px] font-[700] text-gradient lg:leading-none'>02</h1>
-                                        <p className='py-1 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Tax Accounting & Audit Services</p>
-                                        <ul className="centered-list py-4 text-[#ffffff] space-y-2 text-[13px] md:text-[14px] lg:text-[15px]">
-                                            <li>Monthly and Annual Tax Declaration</li>
-                                            <li>Monthly Bookkeeping and Accounting Records</li>
-                                            <li>Tax Benefits/Exemption Request</li>
-                                            <li>Audit Support</li>
-                                        </ul>
-                                    </div>
-                                    <div className='bg-[#1E1E1E] rounded-[30px]' data-aos='fade-right' data-aos-duration='1000'>
-                                        <h1 className='text-[50px] md:text-[70px] lg:text-[100px] font-[700] text-gradient lg:leading-none'>03</h1>
-                                        <p className='py-1 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Advisory Services</p>
-                                        <ul className="centered-list py-4 text-[#ffffff] space-y-2 text-[13px] md:text-[14px] lg:text-[15px]">
-                                            <li>Legal and Audit Consultation</li>
-                                            <li>Tax and Accounting Consultation</li>
-                                            <li>Tax Benefits/Exemption Request</li>
-                                            <li></li>
-                                        </ul>
-                                    </div>
-                                    <div className='bg-[#1E1E1E] rounded-[30px]' data-aos='fade-left' data-aos-duration='1000'>
-                                        <h1 className='text-[50px] md:text-[70px] lg:text-[100px] font-[700] text-gradient lg:leading-none'>04</h1>
-                                        <p className='py-1 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Business Licenses</p>
-                                        <ul className="centered-list py-4 text-[#ffffff] space-y-2 text-[13px] md:text-[14px] lg:text-[15px]">
-                                            <li>Request Business Licenses at All Relevant</li>
-                                            <li>Ministries, Especially for Banks, Restaurants,</li>
-                                            <li>Hotels, Pawnshops, and Casinos</li>
-                                            <li></li>
-                                        </ul>
-                                    </div>
+                            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 px-4 2xl:px-40 mt-10 overflow-hidden'>
+                                <div className='bg-[#1E1E1E] rounded-[30px]' data-aos='fade-right' data-aos-duration='1000'>
+                                    <h1 className='text-[50px] md:text-[70px] lg:text-[100px] font-[700] text-gradient lg:leading-none'>01</h1>
+                                    <p className='py-1 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Business Registration</p>
+                                    <ul className="centered-list py-4 text-[#ffffff] space-y-2 text-[13px] md:text-[14px] lg:text-[15px]">
+                                        <li>All Types of Company Registration</li>
+                                        <li>Business Plans and Financial Management</li>
+                                        <li>Company Updates</li>
+                                        <li>Company Dissolution</li>
+                                    </ul>
+                                </div>
+                                <div className='bg-[#1E1E1E] rounded-[30px]' data-aos='fade-left' data-aos-duration='1000'>
+                                    <h1 className='text-[50px] md:text-[70px] lg:text-[100px] font-[700] text-gradient lg:leading-none'>02</h1>
+                                    <p className='py-1 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Tax Accounting & Audit Services</p>
+                                    <ul className="centered-list py-4 text-[#ffffff] space-y-2 text-[13px] md:text-[14px] lg:text-[15px]">
+                                        <li>Monthly and Annual Tax Declaration</li>
+                                        <li>Monthly Bookkeeping and Accounting Records</li>
+                                        <li>Tax Benefits/Exemption Request</li>
+                                        <li>Audit Support</li>
+                                    </ul>
+                                </div>
+                                <div className='bg-[#1E1E1E] rounded-[30px]' data-aos='fade-right' data-aos-duration='1000'>
+                                    <h1 className='text-[50px] md:text-[70px] lg:text-[100px] font-[700] text-gradient lg:leading-none'>03</h1>
+                                    <p className='py-1 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Advisory Services</p>
+                                    <ul className="centered-list py-4 text-[#ffffff] space-y-2 text-[13px] md:text-[14px] lg:text-[15px]">
+                                        <li>Legal and Audit Consultation</li>
+                                        <li>Tax and Accounting Consultation</li>
+                                        <li>Tax Benefits/Exemption Request</li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div className='bg-[#1E1E1E] rounded-[30px]' data-aos='fade-left' data-aos-duration='1000'>
+                                    <h1 className='text-[50px] md:text-[70px] lg:text-[100px] font-[700] text-gradient lg:leading-none'>04</h1>
+                                    <p className='py-1 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Business Licenses</p>
+                                    <ul className="centered-list py-4 text-[#ffffff] space-y-2 text-[13px] md:text-[14px] lg:text-[15px]">
+                                        <li>Request Business Licenses at All Relevant</li>
+                                        <li>Ministries, Especially for Banks, Restaurants,</li>
+                                        <li>Hotels, Pawnshops, and Casinos</li>
+                                        <li></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

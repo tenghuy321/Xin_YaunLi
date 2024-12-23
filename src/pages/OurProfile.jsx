@@ -63,7 +63,7 @@ const OurProfile = () => {
             </div>
           </div>
 
-          <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
+          <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
               <p>Message</p>
             </div>
@@ -186,23 +186,23 @@ const OurProfile = () => {
         <div className='bg-[#F1EBDB] py-10'>
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center px-10' data-aos='fade-up' data-aos-duration='1000'>Our entity is officially registered under</h1>
           {/* laptop */}
-          <div className='hidden md:grid grid-cols-4 w-full px-4 max-w-7xl items-center mx-auto py-10 overflow-hidden'>
+          <div className='hidden lg:grid grid-cols-4 w-full px-4 max-w-7xl items-center mx-auto py-10 overflow-hidden'>
             <div className='col-span-2 text-center' data-aos='fade-right' data-aos-duration='1000'>
-              <img src={image1} alt="" className='w-full h-auto object-contain object-center' />
+              <img src={image1} alt="" className='w-full h-auto object-cover object-center' />
               <div className='pt-1 text-[10px] lg:text-[12px] xl:text-[16px]'>
                 <p>Ministry of Commerce with registration</p>
                 <p>number 00044850</p>
               </div>
             </div>
             <div className='text-center' data-aos='fade-left' data-aos-duration='1000'>
-              <img src={image2} alt="" className='w-full h-auto object-contain object-center' />
+              <img src={image2} alt="" className='w-full h-auto object-cover object-center' />
               <div className='pt-1 text-[10px] lg:text-[12px] xl:text-[16px]'>
                 <p>Department of taxation with registration</p>
                 <p>number K004-901906337</p>
               </div>
             </div>
             <div className='text-center' data-aos='fade-left' data-aos-duration='1500'>
-              <img src={image3} alt="" className='w-full h-auto object-contain object-center' />
+              <img src={image3} alt="" className='w-full h-auto object-cover object-center' />
               <div className='pt-1 text-[10px] lg:text-[12px] xl:text-[16px]'>
                 <p>Tax Agent License  with registration</p>
                 <p>number TA202001003</p>
