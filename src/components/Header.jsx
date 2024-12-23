@@ -5,7 +5,18 @@ import { useLocation } from "react-router-dom";
 const Header = () => {
     const location = useLocation();
     const [isLoading, setIsLoading] = useState(false);
-    
+
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    // Toggle the drawer visibility
+    const toggleDrawer = () => {
+        setIsDrawerOpen(!isDrawerOpen);
+    };
+
+    // Close the drawer
+    const closeDrawer = () => {
+        setIsDrawerOpen(false);
+    };
 
     const handleLinkClick = () => {
         setIsLoading(true);
@@ -18,7 +29,12 @@ const Header = () => {
             <div className="container mx-auto py-3 px-3 lg:px-10 relative">
                 <div className="flex justify-between items-center">
                     <div>
-                        <button className="lg:hidden mr-4 focus:outline-none" type="button" data-drawer-target="drawer-example" data-drawer-show="drawer-example" aria-controls="drawer-example">
+                        {/* <button className="lg:hidden mr-4 focus:outline-none" type="button" data-drawer-target="drawer-example" data-drawer-show="drawer-example" aria-controls="drawer-example">
+                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><g fill="rgb(0,0,0)"><path d="m5 2c-1.65685 0-3 1.34315-3 3v3c0 1.65685 1.34315 3 3 3h3c1.65685 0 3-1.34315 3-3v-3c0-1.65685-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m5 13c-1.65685 0-3 1.3431-3 3v3c0 1.6569 1.34315 3 3 3h3c1.65685 0 3-1.3431 3-3v-3c0-1.6569-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path clipRule="evenodd" d="m16 2c-1.6569 0-3 1.34315-3 3v3c0 1.65685 1.3431 3 3 3h3c1.6569 0 3-1.34315 3-3v-3c0-1.65685-1.3431-3-3-3zm-1 3c0-.55228.4477-1 1-1h3c.5523 0 1 .44772 1 1v3c0 .55228-.4477 1-1 1h-3c-.5523 0-1-.44772-1-1z" fillRule="evenodd" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m16 13c-1.6569 0-3 1.3431-3 3v3c0 1.6569 1.3431 3 3 3h3c1.6569 0 3-1.3431 3-3v-3c0-1.6569-1.3431-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /></g></g><defs><linearGradient id="SvgjsLinearGradient1015"><stop stopOpacity="1" stopColor="#ebb81b" offset="0" /><stop stopOpacity="1" stopColor="#dfad16" offset="1" /></linearGradient></defs></svg>
+                        </button> */}
+                        <button className="md:hidden text-white"
+                            onClick={toggleDrawer}
+                        >
                             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><g fill="rgb(0,0,0)"><path d="m5 2c-1.65685 0-3 1.34315-3 3v3c0 1.65685 1.34315 3 3 3h3c1.65685 0 3-1.34315 3-3v-3c0-1.65685-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m5 13c-1.65685 0-3 1.3431-3 3v3c0 1.6569 1.34315 3 3 3h3c1.65685 0 3-1.3431 3-3v-3c0-1.6569-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path clipRule="evenodd" d="m16 2c-1.6569 0-3 1.34315-3 3v3c0 1.65685 1.3431 3 3 3h3c1.6569 0 3-1.34315 3-3v-3c0-1.65685-1.3431-3-3-3zm-1 3c0-.55228.4477-1 1-1h3c.5523 0 1 .44772 1 1v3c0 .55228-.4477 1-1 1h-3c-.5523 0-1-.44772-1-1z" fillRule="evenodd" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m16 13c-1.6569 0-3 1.3431-3 3v3c0 1.6569 1.3431 3 3 3h3c1.6569 0 3-1.3431 3-3v-3c0-1.6569-1.3431-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /></g></g><defs><linearGradient id="SvgjsLinearGradient1015"><stop stopOpacity="1" stopColor="#ebb81b" offset="0" /><stop stopOpacity="1" stopColor="#dfad16" offset="1" /></linearGradient></defs></svg>
                         </button>
                     </div>
@@ -72,7 +88,7 @@ const Header = () => {
 
 
                     {/* Mobile Menu */}
-                    <div id="drawer-example" className="fixed top-0 left-0 z-40 h-screen overflow-y-auto transition-transform -translate-x-full bg-white w-80 duration-300" tabIndex="-1" aria-labelledby="drawer-label">
+                    {/* <div id="drawer-example" className="fixed top-0 left-0 z-40 h-screen overflow-y-auto transition-transform -translate-x-full bg-white w-80 duration-300" tabIndex="-1" aria-labelledby="drawer-label">
                         <div className="flex items-center justify-between border-gradient px-4 py-3">
                             <span>
                                 <img src="../logo.png" alt="" className="w-10" />
@@ -110,6 +126,93 @@ const Header = () => {
                                 </a>
                             </li>
                         </ul>
+                    </div> */}
+
+                    {/* {isDrawerOpen && (
+                        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 z-50">
+                            <div className="w-80 h-full bg-white shadow-lg absolute left-0 top-0 transition-transform duration-300">
+                                <div className="">
+                                    <div className="flex items-center justify-between border-gradient px-4 py-3">
+                                        <span>
+                                            <img src="../logo.png" alt="" className="w-10" />
+                                        </span>
+                                        <button onClick={closeDrawer} className="text-gray-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul className="mt-4" onClick={handleLinkClick}>
+                                        <li className="px-4 py-3">
+                                            <a href="/" className={`block text-[16px] ${location.pathname === '/' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                                Home
+                                            </a>
+                                        </li>
+                                        <li className="px-4 py-3">
+                                            <a href="/our-profile" className={`block text-[16px] ${location.pathname === '/our-profile' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                                Our Profile
+                                            </a>
+                                        </li>
+                                        <li className="px-4 py-3">
+                                            <a href="/our-services" className={`block text-[16px] ${location.pathname === '/our-services' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                                Our Service
+                                            </a>
+                                        </li>
+                                        <li className="px-4 py-3">
+                                            <a href="/career" className={`block text-[16px] ${location.pathname === '/career' ? 'text-white bg-[#1E1E1EF2] px-3 py-2 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                                Career
+                                            </a>
+                                        </li>
+                                        <li className="px-4 py-3">
+                                            <a href="/contact-us" className={`block text-[16px] ${location.pathname === '/contact-us' ? 'text-white bg-[#1E1E1EF2] px-3 py-2 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                                Contact Us
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    )} */}
+                    <div className={`fixed inset-0 bg-gray-800 bg-opacity-50 z-50 transition-opacity duration-300 ${isDrawerOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} style={{ transition: 'opacity 0.3s ease-in-out' }}>
+                        <div className={`w-80 h-full bg-white shadow-lg absolute left-0 top-0 transform transition-transform duration-300 ${isDrawerOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+                            <div className="">
+                                <div className="flex justify-between items-center border-gradient px-4 py-3">
+                                    <span>
+                                        <img src="../logo.png" alt="" className="w-10" />
+                                    </span>
+                                    <button onClick={closeDrawer} className="text-gray-500">
+                                        <svg className="w-5 h-5" id="Glyph" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" version="1.1"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><path d="m22.9541 16.00049s7.59664-7.59713 7.60254-7.60302c1.97479-1.97492 1.87283-5.29082-.20507-7.14893-1.94238-1.7373-4.96875-1.5874-6.89063.33643l-7.46094 7.46142-7.46094-7.46143c-1.92381-1.92381-4.94916-2.07373-6.89057-.33648-2.07575 1.85746-2.17371 5.18094-.20513 7.14849l7.60254 7.60254s-7.59125 7.59173-7.60253 7.60301c-1.92525 1.92538-1.84193 5.2761.15819 7.10646 1.91113 1.75 5.04199 1.60156 6.97656-.33301l7.42188-7.42187s7.42188 7.42188 7.42189 7.42189c1.90722 1.90902 5.14842 2.12061 7.12391.19242 1.92453-1.87845 1.89914-5.07757.01084-6.96587z" fill="url(#SvgjsLinearGradient1012)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /></g><defs><linearGradient id="SvgjsLinearGradient1012"><stop stopOpacity="1" stopColor="#dfad16" offset="0" /><stop stopOpacity="1" stopColor="#dfad16" offset="0.99" /></linearGradient></defs></svg>
+                                    </button>
+                                </div>
+                                <ul className="mt-4" onClick={handleLinkClick}>
+                                    <li className="px-4 py-3">
+                                        <a href="/" className={`block text-[16px] ${location.pathname === '/' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li className="px-4 py-3">
+                                        <a href="/our-profile" className={`block text-[16px] ${location.pathname === '/our-profile' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                            Our Profile
+                                        </a>
+                                    </li>
+                                    <li className="px-4 py-3">
+                                        <a href="/our-services" className={`block text-[16px] ${location.pathname === '/our-services' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                            Our Service
+                                        </a>
+                                    </li>
+                                    <li className="px-4 py-3">
+                                        <a href="/career" className={`block text-[16px] ${location.pathname === '/career' ? 'text-white bg-[#1E1E1EF2] px-3 py-2 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                            Career
+                                        </a>
+                                    </li>
+                                    <li className="px-4 py-3">
+                                        <a href="/contact-us" className={`block text-[16px] ${location.pathname === '/contact-us' ? 'text-white bg-[#1E1E1EF2] px-3 py-2 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
