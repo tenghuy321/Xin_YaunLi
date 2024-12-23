@@ -20,6 +20,28 @@ const OurService = () => {
         offset: 10,
         });
     })
+    const scrollToCenter = (target, event) => {
+        // Prevent the default action of the link
+        event.preventDefault();
+    
+        // Get the target element
+        const element = document.querySelector(target);
+    
+        // If the element exists, calculate the position to center it in the viewport
+        if (element) {
+          const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+          const elementHeight = element.offsetHeight;
+          const viewportHeight = window.innerHeight;
+    
+          // Calculate the scroll position to center the element
+          const scrollPosition = elementTop - (viewportHeight / 2) + (elementHeight / 2);
+    
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth',
+          });
+        }
+      };
 
     return (
         <>
@@ -47,26 +69,26 @@ const OurService = () => {
                     {/* labtop */}
                     <div className='hidden md:block overflow-hidden'>
                         <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#29292980] rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
-                            <a href='#pro_services' className="flex justify-center w-[120px]">
+                            <a href='#pro_services' onClick={(event) => scrollToCenter('#pro_services', event)} className="flex justify-center w-[120px]">
                                 <img src={icon12} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </a>
-                            <a href='#financial' className="flex justify-center w-[120px]">
+                            <a href='#financial' onClick={(event) => scrollToCenter('#financial', event)} className="flex justify-center w-[120px]">
                                 <img src={icon13} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </a>
-                            <a href='#experiences' className="flex justify-center w-[120px]">
+                            <a href='#experiences' onClick={(event) => scrollToCenter('#experiences', event)} className="flex justify-center w-[120px]">
                                 <img src={icon14} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </a>
                         </div>
 
                         <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
                             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-                                <a href='#pro_services'>Pro Services</a>
+                                <a href='#pro_services' onClick={(event) => scrollToCenter('#pro_services', event)}>Pro Services</a>
                             </div>
                             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-                                <a href='#financial'>Financial</a>
+                                <a href='#financial' onClick={(event) => scrollToCenter('#financial', event)}>Financial</a>
                             </div>
                             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-                                <a href='#experiences'>Experiences</a>
+                                <a href='#experiences' onClick={(event) => scrollToCenter('#experiences', event)}>Experiences</a>
                             </div>
                         </div>
                     </div>

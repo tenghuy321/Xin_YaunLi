@@ -19,57 +19,79 @@ const Home = () => {
       offset: 10,
     });
   });
+  const scrollToCenter = (target, event) => {
+    // Prevent the default action of the link
+    event.preventDefault();
+
+    // Get the target element
+    const element = document.querySelector(target);
+
+    // If the element exists, calculate the position to center it in the viewport
+    if (element) {
+      const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+      const elementHeight = element.offsetHeight;
+      const viewportHeight = window.innerHeight;
+
+      // Calculate the scroll position to center the element
+      const scrollPosition = elementTop - (viewportHeight / 2) + (elementHeight / 2);
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth', 
+      });
+    }
+  };
   return (
     <>
       <div>
         <ButtonScroll />
       </div>
       <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-          <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5 xl:px-8">
-            <div className="flex flex-col items-center text-center justify-center text-[#ffffff] ">
-              <Reveal>
-                <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>              
-              </Reveal>
-              <Reveal>
-                <p className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[100px] leading-none font-[800]">XIN YUAN LI</p>
-              </Reveal>
-              <Reveal>
-                <p className="text-[16px] lg:text-[27px] tracking-[4px] md:tracking-[0.32rem]">BUSINESS SERVICE</p>
-              </Reveal>
-            </div>
+        <div className="w-full max-w-7xl flex justify-center md:justify-end md:px-5 xl:px-8">
+          <div className="flex flex-col items-center text-center justify-center text-[#ffffff] ">
+            <Reveal>
+              <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>
+            </Reveal>
+            <Reveal>
+              <p className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[100px] leading-none font-[800]">XIN YUAN LI</p>
+            </Reveal>
+            <Reveal>
+              <p className="text-[16px] lg:text-[27px] tracking-[4px] md:tracking-[0.32rem]">BUSINESS SERVICE</p>
+            </Reveal>
           </div>
+        </div>
       </section>
 
       <section className="max-w-7xl mx-auto items-center relative top-0 md:top-[-150px] z-10 overflow-hidden px-0 sm:px-4 2xl:px-0">
         {/* labtop */}
         <div className='hidden md:block overflow-hidden'>
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#29292980] rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
-            <a href='#who' className="flex justify-center w-[120px]">
+            <a href='#who' onClick={(event) => scrollToCenter('#who', event)} className="flex justify-center w-[120px]">
               <img src={icon1} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
-            <a href='#vision' className="flex justify-center w-[120px]">
+            <a href='#vision' onClick={(event) => scrollToCenter('#vision', event)} className="flex justify-center w-[120px]">
               <img src={icon2} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
-            <a href='#mission' className="flex justify-center w-[120px]">
+            <a href='#mission' onClick={(event) => scrollToCenter('#mission', event)} className="flex justify-center w-[120px]">
               <img src={icon3} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
-            <a href='#core_values' className="flex justify-center w-[120px]">
+            <a href='#core_values' onClick={(event) => scrollToCenter('#core_values', event)} className="flex justify-center w-[120px]">
               <img src={icon4} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
           </div>
 
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#who' >Who are we?</a>
+              <a href='#who' onClick={(event) => scrollToCenter('#who', event)}>Who are we?</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#vision'>Vision</a>
+              <a href='#vision' onClick={(event) => scrollToCenter('#vision', event)}>Vision</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#mission'>Mission</a>
+              <a href='#mission' onClick={(event) => scrollToCenter('#mission', event)}>Mission</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#core_values'>Core Values</a>
+              <a href='#core_values' onClick={(event) => scrollToCenter('#core_values', event)}>Core Values</a>
             </div>
           </div>
         </div>

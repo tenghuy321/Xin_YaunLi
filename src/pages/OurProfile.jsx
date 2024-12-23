@@ -30,10 +30,33 @@ const OurProfile = () => {
       offset: 10,
     });
   });
+
+  const scrollToCenter = (target, event) => {
+    // Prevent the default action of the link
+    event.preventDefault();
+
+    // Get the target element
+    const element = document.querySelector(target);
+
+    // If the element exists, calculate the position to center it in the viewport
+    if (element) {
+      const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+      const elementHeight = element.offsetHeight;
+      const viewportHeight = window.innerHeight;
+
+      // Calculate the scroll position to center the element
+      const scrollPosition = elementTop - (viewportHeight / 2) + (elementHeight / 2);
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
   return (
     <>
       <div>
-        <ButtonScroll/>
+        <ButtonScroll />
       </div>
       <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home/banner_footer.png')]">
         <div className="w-full max-w-7xl mx-auto flex justify-center md:px-5">
@@ -56,39 +79,39 @@ const OurProfile = () => {
         {/* labtop */}
         <div className='hidden md:block overflow-hidden'>
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#29292980] rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
-            <a href='#message' className="flex justify-center w-[120px]">
+            <a href='#message' onClick={(event) => scrollToCenter('#message', event)} className="flex justify-center w-[120px]">
               <img src={icon8} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
-            <a href='#uniqueness' className="flex justify-center w-[120px]">
+            <a href='#uniqueness' onClick={(event) => scrollToCenter('#uniqueness', event)} className="flex justify-center w-[120px]">
               <img src={icon10} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
-            <a href='#license' className="flex justify-center w-[120px]">
+            <a href='#license' onClick={(event) => scrollToCenter('#license', event)} className="flex justify-center w-[120px]">
               <img src={icon9} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
-            <a href='#clients' className="flex justify-center w-[120px]">
+            <a href='#clients' onClick={(event) => scrollToCenter('#clients', event)} className="flex justify-center w-[120px]">
               <img src={icon11} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
           </div>
 
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>Message</p>
+              <a href='#message' onClick={(event) => scrollToCenter('#message', event)}>Message</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>Uniqueness</p>
+              <a href='#uniqueness' onClick={(event) => scrollToCenter('#message', event)}>Uniqueness</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>License</p>
+              <a href='#license' onClick={(event) => scrollToCenter('#message', event)}>License</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <p>Notable Clients</p>
+              <a href='#clients' onClick={(event) => scrollToCenter('#message', event)}>Notable Clients</a>
             </div>
           </div>
         </div>
 
         {/* mobile */}
         <div className='grid md:hidden grid-cols-2 items-center justify-center py-4 gap-y-4'>
-          <a href='message' className='flex flex-col items-center justify-center'>
+          <a href='#message' className='flex flex-col items-center justify-center'>
             <img src={icon8} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
               <p>Message</p>
@@ -190,7 +213,7 @@ const OurProfile = () => {
         </div>
 
         {/* registered */}
-        <div className='bg-[#F1EBDB] py-10' id='license'>  
+        <div className='bg-[#F1EBDB] py-10' id='license'>
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center px-10' data-aos='fade-up' data-aos-duration='1000'>Our entity is officially registered under</h1>
           {/* laptop */}
           <div className='hidden lg:grid grid-cols-4 w-full px-4 max-w-7xl items-center mx-auto py-10 overflow-hidden'>
@@ -271,7 +294,7 @@ const OurProfile = () => {
           <div className="absolute inset-0 bg-blend-multiply bg-[#A59465CC]"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white px-4" data-aos="fade-up" data-aos-duration="1500">
             <Reveal>
-            <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
+              <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
             </Reveal>
           </div>
         </div>
