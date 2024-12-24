@@ -10,6 +10,12 @@ import clients1 from '../assets/images/profile/clients-1.png';
 import clients2 from '../assets/images/profile/clients-2.jpg';
 import clients3 from '../assets/images/profile/clients-3.png';
 import clients4 from '../assets/images/profile/clients-4.png';
+import clients5 from '../assets/images/profile/clients-5.png';
+import clients6 from '../assets/images/profile/clients-6.png';
+import clients7 from '../assets/images/profile/clients-7.png';
+import clients8 from '../assets/images/profile/clients-8.png';
+import clients9 from '../assets/images/profile/clients-9.png';
+import clients10 from '../assets/images/profile/clients-10.jpg';
 import banner from '../assets/images/profile/banner_footer.jpg';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -273,7 +279,7 @@ const OurProfile = () => {
         {/* Notable Clients */}
         <div className='w-full py-10' id='clients'>
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center' data-aos='fade-right' data-aos-duration='1000'>Notable Clients</h1>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto items-center justify-center py-6 px-4">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto items-center justify-center py-6 px-4">
             <div className='flex items-center justify-center' data-aos='fade-up' data-aos-duration='1200'>
               <img src={clients1} alt="" className="w-20 md:w-40 object-cover object-center" />
             </div>
@@ -285,6 +291,31 @@ const OurProfile = () => {
             </div>
             <div className='flex items-center justify-center' data-aos='fade-up' data-aos-duration='2000'>
               <img src={clients4} alt="" className="w-20 md:w-40 object-cover object-center" />
+            </div>
+          </div> */}
+          <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
+            <div className="flex slider-track mt-10">
+              <img src={clients1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              
+              <img src={clients1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={clients10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-4" />
             </div>
           </div>
         </div>
