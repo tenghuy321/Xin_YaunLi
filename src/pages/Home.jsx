@@ -11,7 +11,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Reveal from '../components/Reveal';
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import ButtonScroll from '../components/ButtonScroll';
 const Home = () => {
   useEffect(() => {
@@ -223,7 +223,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
 
     </>
   )

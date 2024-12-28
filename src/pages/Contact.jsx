@@ -1,27 +1,27 @@
 import Aos from "aos"
-import { useState,useEffect } from "react"
+import { useEffect } from "react";
 import Reveal from "../components/Reveal";
-import loadingImg from '../assets/images/loadingImg.png'
-import { Link } from "react-router-dom";
+// import loadingImg from '../assets/images/loadingImg.png'
+// import { Link } from "react-router-dom";
 
 const Contact = () => {
     useEffect(() => {
         Aos.init();
     })
-    const [isLoading, setIsLoading] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
 
-    const ScrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+    // const ScrollToTop = () => {
+    //     window.scrollTo({ top: 0, behavior: 'smooth' });
+    // };
     
-    const handleLinkClick = () => {
-        setIsLoading(true);  
-        ScrollToTop();  
+    // const handleLinkClick = () => {
+    //     setIsLoading(true);  
+    //     ScrollToTop();  
     
-        setTimeout(() => {
-        setIsLoading(false);
-        }, 1000);
-    };
+    //     setTimeout(() => {
+    //     setIsLoading(false);
+    //     }, 1000);
+    // };
     return (
         <>
             <section className="pt-[4rem] md:pt-[10rem] lg:pt-[14rem] h-full md:min-h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
 
 
-                <div className="pt-20 md:pt-32">
+                {/* <div className="pt-20 md:pt-32">
                     <div className="bg-[#29292980] w-full">
                         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 py-14 px-4">
                             <div className="flex flex-col space-y-3 text-[#ffffff] text-[13px] md:text-[15px]">
@@ -87,10 +87,10 @@ const Contact = () => {
                             <p>All right reserved 2024</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
 
-            {isLoading && (
+            {/* {isLoading && (
                 <div className="fixed inset-0 flex items-center justify-center bg-white z-[60]">
                     <img
                         src={loadingImg}
@@ -98,7 +98,7 @@ const Contact = () => {
                         className="w-14 h-14 animate-rotate"
                     />
                 </div>
-            )}
+            )} */}
         </>
     )
 }

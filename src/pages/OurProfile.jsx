@@ -28,7 +28,7 @@ import Aos from 'aos';
 import { useEffect } from 'react';
 import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 
 const OurProfile = () => {
@@ -332,7 +332,6 @@ const OurProfile = () => {
         </div>
       </section>
 
-      <Footer/>
     </>
   )
 }

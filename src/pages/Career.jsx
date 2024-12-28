@@ -4,7 +4,7 @@ import banner from '../assets/images/service/service_footer.jpg';
 import Aos from 'aos';
 import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 const Career = () => {
     useEffect(() => {
         Aos.init();
@@ -51,7 +51,7 @@ const Career = () => {
                 </div>
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
