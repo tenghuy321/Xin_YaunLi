@@ -1,21 +1,15 @@
 import icon8 from '../assets/images/icons/icon-8.png';
 import icon9 from '../assets/images/icons/icon-9.png';
-import icon10 from '../assets/images/icons/icon-10.png';
-import icon11 from '../assets/images/icons/icon-11.png';
+import icon2 from '../assets/images/icons/icon-2.png';
+import icon3 from '../assets/images/icons/icon-3.png';
+import icon4 from '../assets/images/icons/icon-4.png';
+import icon5 from '../assets/images/icons/icon-5.png';
+import icon6 from '../assets/images/icons/icon-6.png';
+import icon7 from '../assets/images/icons/icon-7.png';
 import profile from '../assets/images/profile/profile-bg.png';
 import image1 from '../assets/images/profile/image-1.png';
 import image2 from '../assets/images/profile/image-2.png';
 import image3 from '../assets/images/profile/image-3.png';
-import clients1 from '../assets/images/profile/clients-1.png';
-import clients2 from '../assets/images/profile/clients-2.jpg';
-import clients3 from '../assets/images/profile/clients-3.png';
-import clients4 from '../assets/images/profile/clients-4.png';
-import clients5 from '../assets/images/profile/clients-5.png';
-import clients6 from '../assets/images/profile/clients-6.png';
-import clients7 from '../assets/images/profile/clients-7.png';
-import clients8 from '../assets/images/profile/clients-8.png';
-import clients9 from '../assets/images/profile/clients-9.png';
-import clients10 from '../assets/images/profile/clients-10.jpg';
 import banner from '../assets/images/profile/banner_footer.jpg';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,10 +22,12 @@ import Aos from 'aos';
 import { useEffect } from 'react';
 import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
-// import Footer from "../components/Footer";
+// import { useTranslation } from 'react-i18next';
 
 
 const OurProfile = () => {
+
+  // const {t} = useTranslation();
   useEffect(() => {
     Aos.init({
       offset: 10,
@@ -85,18 +81,21 @@ const OurProfile = () => {
       <section className="relative top-0 md:top-[-150px] z-10 max-w-7xl mx-auto items-center px-0 sm:px-4 2xl:px-0">
         {/* labtop */}
         <div className='hidden md:block overflow-hidden'>
-          <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#29292980] rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
+          <div className='flex items-center justify-center space-x-14 py-4 md:py-2 bg-[#292929]/20 rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
             <a href='#message' onClick={(event) => scrollToCenter('#message', event)} className="flex justify-center w-[120px]">
               <img src={icon8} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
-            <a href='#uniqueness' onClick={(event) => scrollToCenter('#uniqueness', event)} className="flex justify-center w-[120px]">
-              <img src={icon10} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+            <a href='#vision' onClick={(event) => scrollToCenter('#vision', event)} className="flex justify-center w-[120px]">
+              <img src={icon2} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+            </a>
+            <a href='#mission' onClick={(event) => scrollToCenter('#mission', event)} className="flex justify-center w-[120px]">
+              <img src={icon3} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+            </a>
+            <a href='#core_values' onClick={(event) => scrollToCenter('#core_values', event)} className="flex justify-center w-[120px]">
+              <img src={icon4} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
             <a href='#license' onClick={(event) => scrollToCenter('#license', event)} className="flex justify-center w-[120px]">
               <img src={icon9} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            </a>
-            <a href='#clients' onClick={(event) => scrollToCenter('#clients', event)} className="flex justify-center w-[120px]">
-              <img src={icon11} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             </a>
           </div>
 
@@ -105,13 +104,16 @@ const OurProfile = () => {
               <a href='#message' onClick={(event) => scrollToCenter('#message', event)}>Message</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#uniqueness' onClick={(event) => scrollToCenter('#message', event)}>Uniqueness</a>
+              <a href='#vision' onClick={(event) => scrollToCenter('#vision', event)}>Vision</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#license' onClick={(event) => scrollToCenter('#message', event)}>License</a>
+              <a href='#mission' onClick={(event) => scrollToCenter('#mission', event)}>Mission</a>
             </div>
             <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#clients' onClick={(event) => scrollToCenter('#message', event)}>Notable Clients</a>
+              <a href='#core_values' onClick={(event) => scrollToCenter('#core_values', event)}>Core Values</a>
+            </div>
+            <div className="flex justify-center w-[120px] font-[500] text-gradient">
+              <a href='#license' onClick={(event) => scrollToCenter('#license', event)}>License</a>
             </div>
           </div>
         </div>
@@ -124,22 +126,28 @@ const OurProfile = () => {
               <p>Message</p>
             </div>
           </a>
-          <a href='#uniqueness' className='flex flex-col items-center justify-center'>
-            <img src={icon10} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+          <a href='#vision' className='flex flex-col items-center justify-center'>
+            <img src={icon2} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
-              <p>Uniqueness</p>
+              <p>Vision</p>
+            </div>
+          </a>
+          <a href='#mission' className='flex flex-col items-center justify-center'>
+            <img src={icon3} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+            <div className="p-2 font-[500] text-gradient">
+              <p>Mission</p>
+            </div>
+          </a>
+          <a href='#core_values' className='flex flex-col items-center justify-center'>
+            <img src={icon4} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+            <div className="p-2 font-[500] text-gradient">
+              <p>Core Values</p>
             </div>
           </a>
           <a href='#license' className='flex flex-col items-center justify-center'>
             <img src={icon9} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
             <div className="p-2 font-[500] text-gradient">
               <p>License</p>
-            </div>
-          </a>
-          <a href='#clients' className='flex flex-col items-center justify-center'>
-            <img src={icon11} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            <div className="p-2 font-[500] text-gradient">
-              <p>Notable Clients</p>
             </div>
           </a>
         </div>
@@ -177,50 +185,67 @@ const OurProfile = () => {
         <div data-aos='fade-up' data-aos-duration='1000'>
           <img src={profile} alt="" className='w-full h-auto object-cover object-center' />
         </div>
-        {/* Uniqueness */}
-        <div className='w-full py-10' id='uniqueness'>
-          <h1 className='text-[20px] md:text-[30px] text-gradient font-[700] text-center'>Uniqueness</h1>
-          <div className='grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-5 mt-4 px-4 overflow-hidden'>
-            <div className='flex flex-col md:flex-row md:space-x-4 items-center border border-[#A59465] p-4' data-aos='fade-right' data-aos-duration='1200'>
-              <h1 className='text-[50px] md:text-[100px] font-[700] text-gradient'>01</h1>
-              <div className='text-[13px] md:text-[15px]'>
-                <h1 className='text-[#A59465] font-[700]'>Consultant First</h1>
-                <p>We thoroughly examine the different types of businesses, offer a detailed marketing analysis of the business industry, and advocate for tax exemptions in certain sectors.</p>
-              </div>
+
+        {/* vision */}
+        <div id='vision' className='bg-[#F1EBDB] w-full mt-5'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto items-center py-14 md:py-16 px-4 md:px-20' data-aos='fade-right' data-aos-duration='1000'>
+            <div className='flex justify-center'>
+              <img src={icon5} alt="" className='w-32 md:w-40' />
             </div>
-            <div className='flex flex-col md:flex-row md:space-x-4 items-center border border-[#A59465] p-4' data-aos='fade-left' data-aos-duration='1200'>
-              <h1 className='text-[50px] md:text-[100px] font-[700] text-gradient'>02</h1>
-              <div className='text-[13px] md:text-[15px]'>
-                <h1 className='text-[#A59465] font-[700]'>Quick Service and Response</h1>
-                <p>We promptly respond to clients to ensure swift completion of tasks. Additionally, we offer quick business registration services, completing the process within 2 to 5 working days</p>
-              </div>
+            <div className='text-[12px] md:text-[14px] col-span-2'>
+              <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700]'>Vision</h1>
+              <p>To be a trusted tax agent and business advisor.</p>
             </div>
-            <div className='flex flex-col md:flex-row md:space-x-4 items-center border border-[#A59465] p-4' data-aos='fade-right' data-aos-duration='1500'>
-              <h1 className='text-[50px] md:text-[100px] font-[700] text-gradient'>03</h1>
-              <div className='text-[13px] md:text-[15px]'>
-                <h1 className='text-[#A59465] font-[700]'>Transparency and Reliability</h1>
-                <p>We maintain open and honest communication with our clients by taking responsibility for our clients’ needs to assure high-quality of work as well as back the clients during tax audit process.</p>
-              </div>
+          </div>
+        </div>
+        {/* mission */}
+        <div id='mission' className='bg-[#ffffff] w-full overflow-hidden'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto items-center py-10 md:py-20 px-4 md:px-20' data-aos='fade-left' data-aos-duration='1000'>
+            <div className='flex justify-center'>
+              <img src={icon6} alt="" className='w-32 md:w-40' />
             </div>
-            <div className='flex flex-col md:flex-row md:space-x-4 items-center border border-[#A59465] p-4' data-aos='fade-left' data-aos-duration='1500'>
-              <h1 className='text-[50px] md:text-[100px] font-[700] text-gradient'>04</h1>
-              <div className='text-[13px] md:text-[15px]'>
-                <h1 className='text-[#A59465] font-[700]'>Convenience</h1>
-                <p>We support our clients comprehensively by offering one-stop solution services. In addition to business registration, we assist with tax, accounting, auditing, and legal compliance consulting for businesses in Cambodia.</p>
-              </div>
+            <div className='text-[12px] md:text-[14px] col-span-2'>
+              <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700]'>Mission</h1>
+              <p>Our mission is to empower businesses by providing comprehensive services in business registration, tax and accounting services and strategic advisory. We simplify the complexities of business compliance, ensuring financial accuracy, and offer expert guidance to drive growth and innovation. Through our expertise, we strive for to be the trusted partner for businesses at every stage of their journey. </p>
             </div>
-            <div className='flex flex-col md:flex-row md:space-x-4 items-center border border-[#A59465] p-4 col-span-1 md:col-span-2' data-aos='fade-right' data-aos-duration='1700'>
-              <h1 className='text-[50px] md:text-[100px] font-[700] text-gradient'>05</h1>
-              <div className='text-[13px] md:text-[15px]'>
-                <h1 className='text-[#A59465] font-[700]'>Strong Local Network</h1>
-                <p>Our firm has strong local connections and direct links to the relevant ministries, allowing us to streamline processes, negotiate better solutions, and ensure efficient outcomes.  </p>
+          </div>
+        </div>
+        {/* Core Values */}
+        <div id='core_values' className='bg-[#F1EBDB] w-full'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto items-center py-10 px-4 md:px-20'>
+            <div className='flex justify-center' data-aos='fade-right' data-aos-duration='1000'>
+              <img src={icon7} alt="" className='w-32 md:w-40' />
+            </div>
+            <div className='text-[12px] md:text-[14px] col-span-2'>
+              <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700]' data-aos='fade-up' data-aos-duration='1000'>Core Values</h1>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-4'>
+                <div className='border border-[#A59465] flex flex-col p-4' data-aos='fade-up' data-aos-duration='1200'>
+                  <h1 className='font-[700] text-[#A59465]'>Integrity</h1>
+                  <p>We uphold the highest ethical standards in all interactions, ensuring trust and fairness with clients and our business partners.</p>
+                </div>
+                <div className='border border-[#A59465] flex flex-col p-4' data-aos='fade-up' data-aos-duration='1400'>
+                  <h1 className='font-[700] text-[#A59465]'>Expertise</h1>
+                  <p>We deliver our services with a high level of professionalism and commitment to continuous development.</p>
+                </div>
+                <div className='border border-[#A59465] flex flex-col p-4' data-aos='fade-up' data-aos-duration='1200'>
+                  <h1 className='font-[700] text-[#A59465]'>Client-centered</h1>
+                  <p>We mainly focus on understanding and meeting our clients’ needs, providing effective solutions and exceptional customer service.</p>
+                </div>
+                <div className='border border-[#A59465] flex flex-col p-4' data-aos='fade-up' data-aos-duration='1400'>
+                  <h1 className='font-[700] text-[#A59465]'>Reliability</h1>
+                  <p>We build trust with our clients through consistent and dependable service to ensure result efficiency to our clients.</p>
+                </div>
+                <div className='border border-[#A59465] flex flex-col p-4 col-span-1 md:col-span-2' data-aos='fade-up' data-aos-duration='1200'>
+                  <h1 className='font-[700] text-[#A59465]'>Teamwork</h1>
+                  <p>We foster a collaborative and inclusive environment where we encourage diverse skills and perspectives to improve open communication, mutual support and collective problem-solving to achieve unique customer support.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* registered */}
-        <div className='bg-[#F1EBDB] py-10' id='license'>
+        <div className='py-10' id='license'>
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center px-10' data-aos='fade-up' data-aos-duration='1000'>Our entity is officially registered under</h1>
           {/* laptop */}
           <div className='hidden lg:grid grid-cols-4 w-full px-4 max-w-7xl items-center mx-auto py-10 overflow-hidden'>
@@ -273,50 +298,6 @@ const OurProfile = () => {
                 <IoIosArrowForward />
               </div>
             </Swiper>
-          </div>
-        </div>
-
-        {/* Notable Clients */}
-        <div className='w-full py-10' id='clients'>
-          <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center' data-aos='fade-right' data-aos-duration='1000'>Notable Clients</h1>
-          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto items-center justify-center py-6 px-4">
-            <div className='flex items-center justify-center' data-aos='fade-up' data-aos-duration='1200'>
-              <img src={clients1} alt="" className="w-20 md:w-40 object-cover object-center" />
-            </div>
-            <div className='flex items-center justify-center' data-aos='fade-up' data-aos-duration='1500'>
-              <img src={clients2} alt="" className="w-20 md:w-40 object-cover object-center" />
-            </div>
-            <div className='flex items-center justify-center' data-aos='fade-up' data-aos-duration='1700'>
-              <img src={clients3} alt="" className="w-20 md:w-40 object-cover object-center" />
-            </div>
-            <div className='flex items-center justify-center' data-aos='fade-up' data-aos-duration='2000'>
-              <img src={clients4} alt="" className="w-20 md:w-40 object-cover object-center" />
-            </div>
-          </div> */}
-          <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
-            <div className="flex slider-track mt-10">
-              <img src={clients1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              
-              <img src={clients1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-4" />
-            </div>
           </div>
         </div>
 

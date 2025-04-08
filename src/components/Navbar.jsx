@@ -1,21 +1,24 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import loadingImg from '../assets/images/loadingImg.png';
+// import loadingImg from '../assets/images/loadingImg.png';
 import '../style';
+import { useTranslation } from 'react-i18next';
+
 const Navbar = () => {
     const location = useLocation();
-    const [isLoading, setIsLoading] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
 
-    const handleLinkClick = () => {
-        setIsLoading(true);
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 200);
-    };
+    // const handleLinkClick = () => {
+    //     // setIsLoading(true);
+    //     setTimeout(() => {
+    //         setIsLoading(false);
+    //     }, 200);
+    // };
+    const { t } = useTranslation();
 
     return (
         <nav className="absolute top-20 left-0 w-full z-50 hidden lg:block">
-            <div className="flex justify-between items-center py-3 px-3 max-w-7xl mx-auto bg-[#1E1E1E] bg-blend-multiply">
+            <div className="flex justify-between items-center py-3 px-3 max-w-7xl mx-auto bg-black/80 bg-blend-multiply">
                 <div className="flex items-center">
                     <a href="/" className="text-xl font-bold text-gray-800">
                         <img src="../logo.png" alt="Logo" className="w-10" />
@@ -23,19 +26,21 @@ const Navbar = () => {
                 </div>
 
                 <div className="hidden lg:flex items-center justify-center flex-1">
-                    <ul className="flex items-center justify-center space-x-20 text-[20px] nav_link">
-                        {["Home", "Our Profile", "Our Services", "Career", "Contact Us"].map((link) => {
+                    <ul className="flex items-center justify-center space-x-20 text-[18px] xl:text-[20px] nav_link">
+                        {["Home", "Our Services", "Gallery", "Our Profile", "Career", "Contact Us"].map((link) => {
                             const linkPath = `/${link.toLowerCase().replace(/\s+/g, '-')}`;
-                            const isActive = location.pathname === linkPath || (link === "Home" && location.pathname === "/");
+                            const currentPath = location.pathname;
+                            const isHome = link === "Home" && currentPath === "/";
+                            const isOurServices = link === "Our Services" && currentPath.startsWith("/our-services");
+                            const isActive = isHome || isOurServices || currentPath === linkPath;
 
                             return (
                                 <li key={link} className="text-center">
                                     <Link
                                         to={linkPath}
                                         className={`block ${isActive ? "active" : ""}`}
-                                        onClick={handleLinkClick}
                                     >
-                                        {link}
+                                        {t(link)}
                                     </Link>
                                 </li>
                             );
@@ -43,16 +48,6 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-
-            {isLoading && (
-                <div className="fixed inset-0 flex flex-col items-center justify-center bg-white z-[60]">
-                    <img
-                        src={loadingImg}
-                        alt="Loading"
-                        className="w-14 h-14 animate-rotate"
-                    />
-                </div>
-            )}
         </nav>
     );
 };

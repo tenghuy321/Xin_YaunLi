@@ -1,13 +1,21 @@
 import { useState } from "react";
-import loadingImg from '../assets/images/loadingImg.png'
-import { useLocation } from "react-router-dom";
-// import { useTranslation } from 'react-i18next';
-
+import { Link, useLocation } from "react-router-dom";
+import "../i18n";
+import { useTranslation } from "react-i18next";
 const Header = () => {
 
-    const location = useLocation();
-    const [isLoading, setIsLoading] = useState(false);
+    const { i18n } = useTranslation();
+    const [open, setOpen] = useState(false);
+    const [language, setLanguage] = useState(i18n.language);
 
+    const toggleDropdown = () => setOpen(!open);
+    const selectLanguage = (lang) => {
+        setLanguage(lang);
+        i18n.changeLanguage(lang);
+        setOpen(false);
+    };
+
+    const location = useLocation();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     // Toggle the drawer visibility
@@ -20,25 +28,84 @@ const Header = () => {
         setIsDrawerOpen(false);
     };
 
-    const handleLinkClick = () => {
-        setIsLoading(true);
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 1000);
+    const flags = {
+        en: "/public/en_flag.png",
+        ch: "/public/ch_flag.png",
     };
+
+    const { t } = useTranslation();
+
+
     return (
         <div>
-            <div className="container mx-auto py-3 px-3 lg:px-10 relative">
+            <div className="w-full mx-auto py-3 px-3 xl:px-10 relative">
                 <div className="flex justify-between items-center">
+                    {/* <div className="relative">
+                        <button
+                            onClick={toggleDropdown}
+                            className="border border-gray-400 text-[#000000] text-[12px] rounded-sm focus:ring-[#EBB81B] focus:border-[#EBB81B] block w-full py-1 px-2"
+                        >
+                            {language === "en" ? "English" : "Chinese"}
+                        </button>
+                        {open && (
+                            <div className="absolute mt-1 bg-white border border-gray-400 rounded-sm w-full">
+                                <button
+                                    onClick={() => selectLanguage("en")}
+                                    className="block w-full text-left py-1 px-2 text-[12px] text-[#000000] hover:bg-gray-100"
+                                >
+                                    English
+                                </button>
+                                <button
+                                    onClick={() => selectLanguage("ch")}
+                                    className="block w-full text-left py-1 px-2 text-[12px] text-[#000000] hover:bg-gray-100"
+                                >
+                                    Chinese
+                                </button>
+                            </div>
+                        )}
+                    </div> */}
+                    <div className="relative">
+                        <button
+                            onClick={toggleDropdown}
+                            className="border border-[#EBB81B] text-[#000000] text-[12px] rounded-sm focus:ring-[#EBB81B] focus:border-[#EBB81B] flex items-center gap-2 w-full py-1 px-4"
+                        >
+                            <img src={flags[language]} alt={language} className="w-7 h-5" />
+                            {language === "en" ? "English" : "Chinese"}
+                            <svg className={`w-3 h-3 transition-transform duration-300 ${open ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        {open && (
+                            <div
+                                className="absolute mt-[10px] w-full z-[999] transform transition-all duration-200 ease-out origin-top scale-95 opacity-0 animate-dropdown"
+                            >
+                                <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-[#EBB81B] transform rotate-45 shadow-sm"></div>
+                                <div className="bg-white border border-[#EBB81B] rounded-sm w-full shadow-md opacity-100 scale-100">
+                                    <button
+                                        onClick={() => selectLanguage("en")}
+                                        className="flex items-center gap-2 w-full text-left py-2 px-2 text-[12px] text-[#000000] hover:bg-[#EBB81B] hover:text-[#fff]"
+                                    >
+                                        <img src={flags["en"]} alt="English" className="w-7 h-5" />
+                                        English
+                                    </button>
+                                    <button
+                                        onClick={() => selectLanguage("ch")}
+                                        className="flex items-center gap-2 w-full text-left py-2 px-2 text-[12px] text-[#000000] hover:bg-[#EBB81B] hover:text-[#fff]"
+                                    >
+                                        <img src={flags["ch"]} alt="Chinese" className="w-7 h-5" />
+                                        Chinese
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
                     <div>
                         <button className="md:hidden text-white"
                             onClick={toggleDrawer}
                         >
                             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><g fill="rgb(0,0,0)"><path d="m5 2c-1.65685 0-3 1.34315-3 3v3c0 1.65685 1.34315 3 3 3h3c1.65685 0 3-1.34315 3-3v-3c0-1.65685-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m5 13c-1.65685 0-3 1.3431-3 3v3c0 1.6569 1.34315 3 3 3h3c1.65685 0 3-1.3431 3-3v-3c0-1.6569-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path clipRule="evenodd" d="m16 2c-1.6569 0-3 1.34315-3 3v3c0 1.65685 1.3431 3 3 3h3c1.6569 0 3-1.34315 3-3v-3c0-1.65685-1.3431-3-3-3zm-1 3c0-.55228.4477-1 1-1h3c.5523 0 1 .44772 1 1v3c0 .55228-.4477 1-1 1h-3c-.5523 0-1-.44772-1-1z" fillRule="evenodd" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m16 13c-1.6569 0-3 1.3431-3 3v3c0 1.6569 1.3431 3 3 3h3c1.6569 0 3-1.3431 3-3v-3c0-1.6569-1.3431-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /></g></g><defs><linearGradient id="SvgjsLinearGradient1015"><stop stopOpacity="1" stopColor="#ebb81b" offset="0" /><stop stopOpacity="1" stopColor="#dfad16" offset="1" /></linearGradient></defs></svg>
                         </button>
-                    </div>
-                    <div className="flex md:hidden">
-                        <img src="../logo.png" alt="" className="w-10" />
                     </div>
 
                     {/* md show */}
@@ -67,7 +134,7 @@ const Header = () => {
                                     </linearGradient>
                                 </defs>
                             </svg>
-                            <p> xinyaunli@gmail.com</p>
+                            <a href="mailto:xinyaunli@gmail.com">xinyaunli@gmail.com</a>
                         </div>
                         <div className="flex items-center space-x-2 text-[12px]">
                             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +148,7 @@ const Header = () => {
                                 </defs>
                             </svg>
 
-                            <p> 010 88 2019 / 077 88 2019</p>
+                            <p> <span><a href="tel:010 88 2019">010 88 2019</a></span> / <span><a href="tel:077 88 2019">077 88 2019</a></span></p>
                         </div>
                     </div>
 
@@ -98,7 +165,7 @@ const Header = () => {
                                         <svg className="w-5 h-5" id="Glyph" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" version="1.1"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><path d="m22.9541 16.00049s7.59664-7.59713 7.60254-7.60302c1.97479-1.97492 1.87283-5.29082-.20507-7.14893-1.94238-1.7373-4.96875-1.5874-6.89063.33643l-7.46094 7.46142-7.46094-7.46143c-1.92381-1.92381-4.94916-2.07373-6.89057-.33648-2.07575 1.85746-2.17371 5.18094-.20513 7.14849l7.60254 7.60254s-7.59125 7.59173-7.60253 7.60301c-1.92525 1.92538-1.84193 5.2761.15819 7.10646 1.91113 1.75 5.04199 1.60156 6.97656-.33301l7.42188-7.42187s7.42188 7.42188 7.42189 7.42189c1.90722 1.90902 5.14842 2.12061 7.12391.19242 1.92453-1.87845 1.89914-5.07757.01084-6.96587z" fill="url(#SvgjsLinearGradient1012)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /></g><defs><linearGradient id="SvgjsLinearGradient1012"><stop stopOpacity="1" stopColor="#dfad16" offset="0" /><stop stopOpacity="1" stopColor="#dfad16" offset="0.99" /></linearGradient></defs></svg>
                                     </button>
                                 </div>
-                                <ul className="mt-4" onClick={handleLinkClick}>
+                                {/* <ul className="mt-4">
                                     <li className="px-4 py-3">
                                         <a href="/" className={`block text-[16px] ${location.pathname === '/' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
                                             Home
@@ -124,6 +191,26 @@ const Header = () => {
                                             Contact Us
                                         </a>
                                     </li>
+                                </ul> */}
+                                <ul className="flex flex-col">
+                                    {["Home", "Our Services", "Gallery", "Our Profile", "Career", "Contact Us"].map((link) => {
+                                        const linkPath = `/${link.toLowerCase().replace(/\s+/g, '-')}`;
+                                        const currentPath = location.pathname;
+                                        const isHome = link === "Home" && currentPath === "/";
+                                        const isOurServices = link === "Our Services" && currentPath.startsWith("/our-services");
+                                        const isActive = isHome || isOurServices || currentPath === linkPath;
+
+                                        return (
+                                            <li key={link} className="px-4 py-3">
+                                                <Link
+                                                    to={linkPath}
+                                                    className={`block text-[16px] ${isActive ? "active text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider" : "text-gray-700"}`}
+                                                >
+                                                    {t(link)}
+                                                </Link>
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </div>
                         </div>
@@ -131,17 +218,6 @@ const Header = () => {
                 </div>
             </div>
             <hr style={{ height: '5px', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
-
-
-            {isLoading && (
-                <div className="fixed inset-0 flex items-center justify-center bg-white z-[60]">
-                    <img
-                        src={loadingImg}
-                        alt="Loading"
-                        className="w-14 h-14 animate-rotate"
-                    />
-                </div>
-            )}
         </div>
     )
 }

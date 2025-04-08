@@ -7,14 +7,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.active {
+.nav_link .active {
   position: relative;
   font-weight: bold;
   width: 100%;
   height: 100%;
 }
 
-.active::after {
+.nav_link .active::after {
   content: "";
   position: absolute;
   width: 160%;
@@ -81,6 +81,16 @@ ul .footer_link{
   display: inline-block;
   width: auto;
   height: 100%;
+}
+ul .active::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(to right, #BA7F14, #FFD700);
+  transition: width 0.5s ease;
 }
 
 ul .footer_link::after{

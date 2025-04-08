@@ -89,16 +89,6 @@ const Contact = () => {
                     </div>
                 </div> */}
             </section>
-
-            {/* {isLoading && (
-                <div className="fixed inset-0 flex items-center justify-center bg-white z-[60]">
-                    <img
-                        src={loadingImg}
-                        alt="Loading"
-                        className="w-14 h-14 animate-rotate"
-                    />
-                </div>
-            )} */}
         </>
     )
 }
