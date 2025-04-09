@@ -12,7 +12,7 @@ const Entity = () => {
             <div>
                 <ButtonScroll />
             </div>
-            <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-10' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
+            <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-10 overflow-hidden' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
                 <div className='px-2 md:pr-0 md:pl-12 xl:pl-20 py-14 lg:pb-0 lg:pt-20 xl:pt-40'>
                     <div className='flex items-end leading-none pl-4 md:pl-8'>
                         <h1 className='text-[20px] xl:text-[30px] text-gradient font-[700] w-full lg:w-2/3 2xl:w-1/2' data-aos='fade-right' data-aos-duration='1500'>Entities  Setup</h1>
@@ -167,7 +167,7 @@ const Entity = () => {
                 </div>
 
 
-                <div className='w-full h-full col-span-1 max-w-[95%] xl:max-w-full mx-auto overflow-x-auto scrollBar px-0 xl:px-6 mt-10'>
+                <div className='w-full h-full col-span-1 max-w-[98%] md:max-w-[95%] xl:max-w-full mx-auto overflow-x-auto scrollBar px-0 xl:px-6 mt-10'>
                     <div className=''>
                         <table className='min-w-full text-xs md:text-sm text-white'>
                             <thead className="text-xs text-left capitalize bg-gradient-to-r from-[#BA7F14] to-[#FFD700]">
@@ -175,7 +175,7 @@ const Entity = () => {
                                     <th className="py-5 px-3 min-w-[150px] text-black text-center text-[12px] md:text-[13px] font-bold">Category</th>
                                     <th className="py-5 px-3 min-w-[150px] text-black text-center text-[12px] md:text-[13px] font-bold">Small Entity</th>
                                     <th className="py-5 px-3 min-w-[150px] text-black text-center text-[12px] md:text-[13px] font-bold">Medium Entity</th>
-                                    <th className="py-5 px-3 min-w-[150px] text-black text-center text-[12px] md:text-[13px] font-bold">Large Entity</th>
+                                    <th className="py-5 px-3 min-w-[150px] text-black text-center text-[12px] md:text-[13px] font-bold border border-t-0 border-b-0 border-l-0 border-r-[#FFD700]">Large Entity</th>
                                 </tr>
                             </thead>
                             <tbody className="bg-[#1E1E1E] text-gray-200">

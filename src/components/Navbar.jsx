@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 // import loadingImg from '../assets/images/loadingImg.png';
 import '../style';
 import { useTranslation } from 'react-i18next';
+import logo from '../assets/images/logo.png'; 
 
 const Navbar = () => {
     const location = useLocation();
@@ -21,7 +22,7 @@ const Navbar = () => {
             <div className="flex justify-between items-center py-3 px-3 max-w-7xl mx-auto bg-black/80 bg-blend-multiply">
                 <div className="flex items-center">
                     <a href="/" className="text-xl font-bold text-gray-800">
-                        <img src="../logo.png" alt="Logo" className="w-10" />
+                        <img src={logo} alt="Logo" className="w-10" />
                     </a>
                 </div>
 

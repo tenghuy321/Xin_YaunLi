@@ -31,9 +31,6 @@ const Gallery = () => {
                 <img src={gallery4} alt="" className='w-full h-[250px] object-cover object-center' />
                 <img src={gallery5} alt="" className='w-full h-[250px] object-cover object-center' />
                 <img src={gallery6} alt="" className='w-full h-[250px] object-cover object-center' />
-                <img src={gallery4} alt="" className='w-full h-[250px] object-cover object-center' />
-                <img src={gallery5} alt="" className='w-full h-[250px] object-cover object-center' />
-                <img src={gallery6} alt="" className='w-full h-[250px] object-cover object-center' />
               </div>
             </div>
           </div>

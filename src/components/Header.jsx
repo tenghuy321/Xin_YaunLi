@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../i18n";
 import { useTranslation } from "react-i18next";
+import enFlag from '../assets/images/en_flag.png';
+import chFlag from '../assets/images/ch_flag.png';
 const Header = () => {
 
     const { i18n } = useTranslation();
@@ -29,8 +31,8 @@ const Header = () => {
     };
 
     const flags = {
-        en: "/public/en_flag.png",
-        ch: "/public/ch_flag.png",
+        en: enFlag,
+        ch: chFlag,
     };
 
     const { t } = useTranslation();
