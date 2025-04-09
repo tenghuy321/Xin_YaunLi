@@ -1,21 +1,19 @@
 .scrollBar {
-  /* Firefox */
-  scrollbar-width: thin;
-  scrollbar-color: #FFD700 #BA7F14;
+  overflow-x: scroll; /* or auto if you only want it to show when needed */
 }
 
 /* Chrome, Safari, Edge */
-.scrollBar::-webkit-scrollbar {
+body .scrollBar::-webkit-scrollbar {
   width: 4px;
   height: 4px;
 }
 
-.scrollBar::-webkit-scrollbar-track {
+body .scrollBar::-webkit-scrollbar-track {
   background-color: #BA7F14;
   border-radius: 10px;
 }
 
-.scrollBar::-webkit-scrollbar-thumb {
+body .scrollBar::-webkit-scrollbar-thumb {
   background-color: #FFD700;
   border-radius: 10px;
 }
