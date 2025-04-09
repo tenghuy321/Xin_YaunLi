@@ -1,0 +1,44 @@
+@keyframes scrollleft {
+  to {
+    left: -160px;
+  }
+}
+
+.client_item {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  left: max(calc(160px * 10), 100%);
+  animation: scrollleft 30s linear infinite;
+}
+
+.client_item.item1 {
+  animation-delay: calc(30s / 10 * (10 - 1) * -1);
+}
+.client_item.item2 {
+  animation-delay: calc(30s / 10 * (10 - 2) * -1);
+}
+.client_item.item3 {
+  animation-delay: calc(30s / 10 * (10 - 3) * -1);
+}
+.client_item.item4 {
+  animation-delay: calc(30s / 10 * (10 - 4) * -1);
+}
+.client_item.item5 {
+  animation-delay: calc(30s / 10 * (10 - 5) * -1);
+}
+.client_item.item6 {
+  animation-delay: calc(30s / 10 * (10 - 6) * -1);
+}
+.client_item.item7 {
+  animation-delay: calc(30s / 10 * (10 - 7) * -1);
+}
+.client_item.item8 {
+  animation-delay: calc(30s / 10 * (10 - 8) * -1);
+}
+.client_item.item9 {
+  animation-delay: calc(30s / 10 * (10 - 9) * -1);
+}
+.client_item.item10 {
+  animation-delay: calc(30s / 10 * (10 - 10) * -1);
+}

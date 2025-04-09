@@ -172,10 +172,10 @@ const Entity = () => {
                         <table className='min-w-full text-xs md:text-sm text-white'>
                             <thead className="text-xs text-left capitalize bg-gradient-to-r from-[#BA7F14] to-[#FFD700]">
                                 <tr>
-                                    <th className="py-5 px-3 min-w-[150px] text-black text-center text-[12px] md:text-[13px] font-bold">Category</th>
-                                    <th className="py-5 px-3 min-w-[150px] text-black text-center text-[12px] md:text-[13px] font-bold">Small Entity</th>
-                                    <th className="py-5 px-3 min-w-[150px] text-black text-center text-[12px] md:text-[13px] font-bold">Medium Entity</th>
-                                    <th className="py-5 px-3 min-w-[150px] text-black text-center text-[12px] md:text-[13px] font-bold border border-t-0 border-b-0 border-l-0 border-r-[#FFD700]">Large Entity</th>
+                                    <th className="py-5 px-3 min-w-[150px] md:w-full text-black text-center text-[12px] md:text-[13px] font-bold">Category</th>
+                                    <th className="py-5 px-3 min-w-[150px] md:w-full text-black text-center text-[12px] md:text-[13px] font-bold">Small Entity</th>
+                                    <th className="py-5 px-3 min-w-[150px] md:w-full text-black text-center text-[12px] md:text-[13px] font-bold">Medium Entity</th>
+                                    <th className="py-5 px-3 min-w-[150px] md:w-full text-black text-center text-[12px] md:text-[13px] font-bold border border-t-0 border-b-0 border-l-0 border-r-[#FFD700]">Large Entity</th>
                                 </tr>
                             </thead>
                             <tbody className="bg-[#1E1E1E] text-gray-200">

@@ -14,6 +14,7 @@ import client7 from '../assets/images/profile/client-7.png';
 import client8 from '../assets/images/profile/client-8.png';
 import client9 from '../assets/images/profile/client-9.png';
 import client10 from '../assets/images/profile/client-10.png';
+import clients10 from '../assets/images/profile/clients-10.png';
 
 import banner from '../assets/images/home/banner_footer.png';
 import Aos from 'aos';
@@ -22,6 +23,7 @@ import { useEffect } from 'react';
 import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
 import { useTranslation } from 'react-i18next';
+import './home.css';
 
 const Home = () => {
 
@@ -302,29 +304,39 @@ const Home = () => {
                 <img src={client10} alt="Image 10" className="w-40 h-40 object-cover" />
             </div>
           </div>
+          
           <div className="relative w-full max-w-7xl mx-auto px-4 overflow-hidden lg:hidden">
-            <div className="flex slider-track mt-10">
-              <img src={client1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-10" />
-
-              <img src={client1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-10" />
-              <img src={client10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-10" />
+            <div className="flex w-full h-[160px] slider-track mt-10">
+              <div className='client_item item1'>
+                <img src={client1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
+              <div className='client_item item2'>
+                <img src={client2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
+              <div className='client_item item3'>
+                <img src={client3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
+              <div className='client_item item4'>
+                <img src={client4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
+              <div className='client_item item5'>
+                <img src={client5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
+              <div className='client_item item6'>
+                <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
+              <div className='client_item item7'>
+                <img src={client7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
+              <div className='client_item item8'>
+                <img src={client8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
+              <div className='client_item item9'>
+                <img src={client9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
+              <div className='client_item item10'>
+                <img src={clients10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg" />
+              </div>
             </div>
           </div>
         </div>
