@@ -7,7 +7,7 @@ import gallery6 from '../assets/images/gallery/gallery-6.png';
 import banner from '../assets/images/home/banner_footer.png';
 import ButtonScroll from '../components/ButtonScroll';
 
-
+import video from '../assets/video/videos.mp4';
 import './gallery.css';
 const Gallery = () => {
   return (
@@ -23,21 +23,21 @@ const Gallery = () => {
           </div>
 
           <div className='py-10 md:py-20'>
-            <div className="overflow-y-auto custom-scrollbar" style={{ maxHeight: '530px', paddingRight: '10px' }}>
+            <div className="overflow-y-auto custom-scrollbar max-h-[530px] lg:max-h-[580px]" style={{ paddingRight: '10px' }}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <img src={gallery1} alt="" className='w-full h-[250px] object-cover object-center' />
-                <img src={gallery2} alt="" className='w-full h-[250px] object-cover object-center' />
-                <img src={gallery3} alt="" className='w-full h-[250px] object-cover object-center' />
-                <img src={gallery4} alt="" className='w-full h-[250px] object-cover object-center' />
-                <img src={gallery5} alt="" className='w-full h-[250px] object-cover object-center' />
-                <img src={gallery6} alt="" className='w-full h-[250px] object-cover object-center' />
+                <img src={gallery1} alt="" className='w-full h-[250px] lg:h-[280px] object-cover object-center' />
+                <img src={gallery2} alt="" className='w-full h-[250px] lg:h-[280px] object-cover object-center' />
+                <img src={gallery3} alt="" className='w-full h-[250px] lg:h-[280px] object-cover object-center' />
+                <img src={gallery4} alt="" className='w-full h-[250px] lg:h-[280px] object-cover object-center' />
+                <img src={gallery5} alt="" className='w-full h-[250px] lg:h-[280px] object-cover object-center' />
+                <img src={gallery6} alt="" className='w-full h-[250px] lg:h-[280px] object-cover object-center' />
               </div>
             </div>
           </div>
 
           <div className="max-w-7xl mx-auto pb-20">
             <video className="w-full h-auto rounded-lg shadow-lg" controls>
-              <source src="your-video.mp4" type="video/mp4" />
+              <source src={video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

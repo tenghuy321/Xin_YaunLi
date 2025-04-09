@@ -1,6 +1,4 @@
-.scrollBar {
-  overflow-x: scroll; /* or auto if you only want it to show when needed */
-}
+
 
 /* Chrome, Safari, Edge */
 body .scrollBar::-webkit-scrollbar {

@@ -3,16 +3,17 @@ import icon9 from '../assets/images/icons/icon-9.png';
 import icon10 from '../assets/images/icons/icon-10.png';
 import icon11 from '../assets/images/icons/icon-11.png';
 
-import clients1 from '../assets/images/profile/clients-1.png';
-import clients2 from '../assets/images/profile/clients-2.jpg';
-import clients3 from '../assets/images/profile/clients-3.png';
-import clients4 from '../assets/images/profile/clients-4.png';
-import clients5 from '../assets/images/profile/clients-5.png';
+import client1 from '../assets/images/profile/client-1.png';
+import client2 from '../assets/images/profile/client-2.png';
+import client3 from '../assets/images/profile/client-3.png';
+import client4 from '../assets/images/profile/client-4.png';
+import client5 from '../assets/images/profile/client-5.png';
+import client6 from '../assets/images/profile/client-6.png';
 import clients6 from '../assets/images/profile/clients-6.png';
-import clients7 from '../assets/images/profile/clients-7.png';
-import clients8 from '../assets/images/profile/clients-8.png';
-import clients9 from '../assets/images/profile/clients-9.png';
-import clients10 from '../assets/images/profile/clients-10.jpg';
+import client7 from '../assets/images/profile/client-7.png';
+import client8 from '../assets/images/profile/client-8.png';
+import client9 from '../assets/images/profile/client-9.png';
+import client10 from '../assets/images/profile/client-10.png';
 
 import banner from '../assets/images/home/banner_footer.png';
 import Aos from 'aos';
@@ -285,31 +286,45 @@ const Home = () => {
         </div>
 
         {/* Notable Clients */}
-        <div className='w-full py-10 px-4' id='clients'>
-          <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] max-w-7xl mx-auto px-4' data-aos='fade-right' data-aos-duration='1000'>Notable Clients</h1>
-          <div className="relative w-full max-w-7xl mx-auto px-4 overflow-hidden">
+        <div className='w-full py-10' id='clients'>
+          <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] max-w-7xl mx-auto px-4 py-4' data-aos='fade-right' data-aos-duration='1000'>Notable Clients</h1>
+          <div className='relative w-full bg-[#F2EBD9] hidden lg:block'>
+            <div className='max-w-7xl mx-auto grid grid-cols-5 gap-6 px-4 py-20 overflow-hidden'>
+                <img src={client1} alt="Image 1" className="w-40 h-40 object-cover" />
+                <img src={client2} alt="Image 2" className="w-40 h-40 object-cover" />
+                <img src={client3} alt="Image 3" className="w-40 h-40 object-cover" />
+                <img src={client4} alt="Image 4" className="w-40 h-40 object-cover" />
+                <img src={client5} alt="Image 5" className="w-40 h-40 object-cover" />
+                <img src={client6} alt="Image 6" className="w-40 h-40 object-cover" />
+                <img src={client7} alt="Image 7" className="w-40 h-40 object-cover" />
+                <img src={client8} alt="Image 8" className="w-40 h-40 object-cover" />
+                <img src={client9} alt="Image 9" className="w-40 h-40 object-cover" />
+                <img src={client10} alt="Image 10" className="w-40 h-40 object-cover" />
+            </div>
+          </div>
+          <div className="relative w-full max-w-7xl mx-auto px-4 overflow-hidden lg:hidden">
             <div className="flex slider-track mt-10">
-              <img src={clients1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={client1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-10" />
 
-              <img src={clients1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-4" />
-              <img src={clients10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-4" />
+              <img src={client1} alt="Image 1" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client2} alt="Image 2" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client3} alt="Image 3" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client4} alt="Image 4" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client5} alt="Image 5" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={clients6} alt="Image 6" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client7} alt="Image 7" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client8} alt="Image 8" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client9} alt="Image 9" className="w-40 h-40 object-cover rounded-lg mr-10" />
+              <img src={client10} alt="Image 10" className="w-40 h-40 object-cover rounded-lg mr-10" />
             </div>
           </div>
         </div>

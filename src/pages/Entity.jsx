@@ -60,7 +60,7 @@ const Entity = () => {
                     <img src={service1} alt="" className='w-full h-full' />
                 </div>
 
-                <div className="w-full h-full max-w-[98%] xl:max-w-full mx-auto col-span-1 md:col-span-2 overflow-x-auto scrollBar px-0 xl:px-6 pb-10">
+                <div className="w-full h-full max-w-[98%] xl:max-w-full mx-auto col-span-1 md:col-span-2 overflow-x-scroll xl:overflow-x-auto scrollBar px-0 xl:px-6 pb-10">
                     <div className=''>
                         <table className="min-w-full text-xs md:text-sm text-white">
                             <thead className="text-xs text-left capitalize bg-gradient-to-r from-[#BA7F14] to-[#FFD700]">
@@ -167,7 +167,7 @@ const Entity = () => {
                 </div>
 
 
-                <div className='w-full h-full col-span-1 max-w-[98%] md:max-w-[95%] xl:max-w-full mx-auto overflow-x-auto scrollBar px-0 xl:px-6 mt-10'>
+                <div className='w-full h-full col-span-1 max-w-[98%] md:max-w-[95%] xl:max-w-full mx-auto overflow-x-scroll xl:overflow-x-auto scrollBar px-0 xl:px-6 mt-10'>
                     <div className=''>
                         <table className='min-w-full text-xs md:text-sm text-white'>
                             <thead className="text-xs text-left capitalize bg-gradient-to-r from-[#BA7F14] to-[#FFD700]">
