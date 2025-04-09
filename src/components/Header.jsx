@@ -4,6 +4,8 @@ import "../i18n";
 import { useTranslation } from "react-i18next";
 import enFlag from '../assets/images/en_flag.png';
 import chFlag from '../assets/images/ch_flag.png';
+import logo from '../assets/images/logo.png'; 
+
 const Header = () => {
 
     const { i18n } = useTranslation();
@@ -161,7 +163,7 @@ const Header = () => {
                             <div className="">
                                 <div className="flex justify-between items-center border-gradient px-4 py-3">
                                     <span>
-                                        <img src="../logo.png" alt="" className="w-10" />
+                                        <img src={logo} alt="" className="w-10" />
                                     </span>
                                     <button onClick={closeDrawer} className="text-gray-500">
                                         <svg className="w-5 h-5" id="Glyph" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" version="1.1"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><path d="m22.9541 16.00049s7.59664-7.59713 7.60254-7.60302c1.97479-1.97492 1.87283-5.29082-.20507-7.14893-1.94238-1.7373-4.96875-1.5874-6.89063.33643l-7.46094 7.46142-7.46094-7.46143c-1.92381-1.92381-4.94916-2.07373-6.89057-.33648-2.07575 1.85746-2.17371 5.18094-.20513 7.14849l7.60254 7.60254s-7.59125 7.59173-7.60253 7.60301c-1.92525 1.92538-1.84193 5.2761.15819 7.10646 1.91113 1.75 5.04199 1.60156 6.97656-.33301l7.42188-7.42187s7.42188 7.42188 7.42189 7.42189c1.90722 1.90902 5.14842 2.12061 7.12391.19242 1.92453-1.87845 1.89914-5.07757.01084-6.96587z" fill="url(#SvgjsLinearGradient1012)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /></g><defs><linearGradient id="SvgjsLinearGradient1012"><stop stopOpacity="1" stopColor="#dfad16" offset="0" /><stop stopOpacity="1" stopColor="#dfad16" offset="0.99" /></linearGradient></defs></svg>
