@@ -224,7 +224,7 @@ const Home = () => {
                 </li>
               </ul>
 
-              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white'>Read Mode</NavLink>
+              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>Read Mode</NavLink>
             </div>
             <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1200'>
               <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Compliance Duties</p>
@@ -237,7 +237,7 @@ const Home = () => {
                 </li>
               </ul>
 
-              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white'>Read Mode</NavLink>
+              <NavLink to='our-services/compliance-duties' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>Read Mode</NavLink>
             </div>
             <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1400'>
               <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Business Advisory</p>
@@ -246,18 +246,14 @@ const Home = () => {
                   Business Advisory in Cambodia
                 </li>
               </ul>
-              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white'>Read Mode</NavLink>
+              <NavLink to='our-services/business-advisory' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>Read Mode</NavLink>
 
             </div>
             <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1400'>
               <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Qualified Investment Project</p>
-              {/* <ul className="max-w-md space-y-1 text-[#000000] list-disc list-inside dark:text-gray-400 px-5 pt-4">
-                <li>
-                  Business Advisory in Cambodia
-                </li>
-              </ul> */}
+              <p className='px-5 pt-4'>A status granted by the Council for the Development of Cambodia (CDC) to investment projects that meet certain criteria under the Law on Investment. When a project is registered as a QIP, it can receive a range of investment incentives.</p>
 
-              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white'>Read Mode</NavLink>
+              <NavLink to='/our-services/qualified-investment' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>Read Mode</NavLink>
             </div>
             
           </div>

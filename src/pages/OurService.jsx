@@ -54,26 +54,32 @@ const OurService = () => {
                     {/* labtop */}
                     <div className='hidden md:block overflow-hidden'>
                         <div className='flex items-center justify-center space-x-20 py-4 md:py-2 bg-[#29292980] rounded-t-md' data-aos='fade-up' data-aos-duration='1000'>
-                            <NavLink to='/our-services/entity-setup' className='flex justify-center w-[120px]'>
+                            <NavLink to='/our-services/entity-setup' className='flex justify-center w-[110px] lg:w-[155px]'>
                                 <img src={icon15} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </NavLink>
-                            <NavLink to='/our-services/compliance-duties' className='flex justify-center w-[120px]'>
+                            <NavLink to='/our-services/compliance-duties' className='flex justify-center w-[110px] lg:w-[155px]'>
                                 <img src={icon16} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </NavLink>
-                            <NavLink to='/our-services/business-advisory' className='flex justify-center w-[120px]'>
+                            <NavLink to='/our-services/business-advisory' className='flex justify-center w-[110px] lg:w-[155px]'>
+                                <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+                            </NavLink>
+                            <NavLink to='/our-services/qualified-investment' className='flex justify-center w-[110px] lg:w-[155px]'>
                                 <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </NavLink>
                         </div>
 
                         <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
                             <div className=''>
-                                <NavLink to='/our-services/entity-setup' className={({ isActive }) => `flex justify-center w-[150px] ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Entity Setup</NavLink>
+                                <NavLink to='/our-services/entity-setup' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Entity Setup</NavLink>
                             </div>
                             <div>
-                                <NavLink to='/our-services/compliance-duties' className={({ isActive }) => `flex justify-center w-[150px] ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Compliance Duties</NavLink>
+                                <NavLink to='/our-services/compliance-duties' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Compliance Duties</NavLink>
                             </div>
                             <div>
-                                <NavLink to='/our-services/business-advisory' className={({ isActive }) => `flex justify-center w-[150px] ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Business Advisory</NavLink>
+                                <NavLink to='/our-services/business-advisory' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Business Advisory</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/our-services/qualified-investment' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Qualified Investment Project</NavLink>
                             </div>
                         </div>
                     </div>
@@ -82,20 +88,26 @@ const OurService = () => {
                     <div className='grid md:hidden grid-cols-2 items-center justify-center py-4 gap-y-4'>
                         <NavLink to='/our-services/entity-setup' className={({isActive}) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
                             <img src={icon15} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-                            <div className="p-2 font-[500]">
+                            <div className="text-[12px] sm:text-[13px] p-2 font-[500]">
                                 <p>Entity Setup</p>
                             </div>
                         </NavLink>
                         <NavLink to='/our-services/compliance-duties' className={({isActive}) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
                             <img src={icon16} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-                            <div className="p-2 font-[500]">
+                            <div className="text-[12px] sm:text-[13px] p-2 font-[500]">
                                 <p>Compliance Duties</p>
                             </div>
                         </NavLink>
                         <NavLink to='/our-services/business-advisory' className={({isActive}) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
                             <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-                            <div className="p-2 font-[500]">
+                            <div className="text-[12px] sm:text-[13px] p-2 font-[500]">
                                 <p>Business Advisory</p>
+                            </div>
+                        </NavLink>
+                        <NavLink to='/our-services/qualified-investment' className={({isActive}) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
+                            <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+                            <div className="text-[12px] sm:text-[13px] p-2 font-[500]">
+                                <p>Qualified Investment Project</p>
                             </div>
                         </NavLink>
                     </div>

@@ -3,10 +3,20 @@ import { Link, useLocation } from "react-router-dom";
 // import loadingImg from '../assets/images/loadingImg.png';
 import '../style';
 import { useTranslation } from 'react-i18next';
-import logo from '../assets/images/logo.png'; 
+import logo from '../assets/images/logo.png';
+
+const navLinks = [
+    { label: "Home", path: "/" },
+    { label: "Our Services", path: "/our-services" },
+    { label: "Gallery", path: "/gallery" },
+    { label: "Our Profile", path: "/our-profile" },
+    { label: "Career", path: "/career" },
+    { label: "Contact Us", path: "/contact-us" },
+];
+
 
 const Navbar = () => {
-    const location = useLocation();
+    // const location = useLocation();
     // const [isLoading, setIsLoading] = useState(false);
 
     // const handleLinkClick = () => {
@@ -17,6 +27,8 @@ const Navbar = () => {
     // };
     const { t } = useTranslation();
 
+    const location = useLocation();
+    const currentPath = location.pathname;
     return (
         <nav className="absolute top-20 left-0 w-full z-50 hidden lg:block">
             <div className="flex justify-between items-center py-3 px-3 max-w-7xl mx-auto bg-black/80 bg-blend-multiply">
@@ -28,20 +40,21 @@ const Navbar = () => {
 
                 <div className="hidden lg:flex items-center justify-center flex-1">
                     <ul className="flex items-center justify-center space-x-20 text-[18px] xl:text-[20px] nav_link">
-                        {["Home", "Our Services", "Gallery", "Our Profile", "Career", "Contact Us"].map((link) => {
-                            const linkPath = `/${link.toLowerCase().replace(/\s+/g, '-')}`;
-                            const currentPath = location.pathname;
-                            const isHome = link === "Home" && currentPath === "/";
-                            const isOurServices = link === "Our Services" && currentPath.startsWith("/our-services");
-                            const isActive = isHome || isOurServices || currentPath === linkPath;
+                        {navLinks.map(({ label, path }) => {
+                            const isHome = path === "/" && currentPath === "/";
+                            const isOurServices =
+                                path === "/our-services" && currentPath.startsWith("/our-services");
+                            const isExactMatch = path !== "/" && path === currentPath;
+                            const isActive = isHome || isOurServices || isExactMatch;
 
                             return (
-                                <li key={link} className="text-center">
+                                <li key={label} className="text-center">
                                     <Link
-                                        to={linkPath}
-                                        className={`block ${isActive ? "active" : ""}`}
+                                        to={path}
+                                        className={`block transition duration-200 hover:text-blue-500 ${isActive ? "active text-blue-600 font-semibold" : ""
+                                            }`}
                                     >
-                                        {t(link)}
+                                        {t(label)}
                                     </Link>
                                 </li>
                             );
