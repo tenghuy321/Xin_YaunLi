@@ -24,6 +24,7 @@ import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
 import { useTranslation } from 'react-i18next';
 import './home.css';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
 
@@ -211,9 +212,9 @@ const Home = () => {
           <p className='text-[20px] md:text-[30px] font-[900] text-[#000000] py-4' data-aos='fade-left' data-aos-duration='1200'>Corporate services for every part of your journey.</p>
           <p data-aos='fade-right' data-aos-duration='1400'>Find intelligent answers to the most complex administrative issues you’ll come up against as your business expands into Cambodia and beyond. From establishing an investment vehicle through providing support for cross-border transactions to setting up a fully operational local or regional presence, we will help you make the most out of every incentive and benefit this unique region has to offer. Ask us for solutions, not just advice.</p>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-4 pt-10'>
-            <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1000'>
-              <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Entity Setup</p>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-10'>
+            <div className='relative rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1000'>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Entity Setup</p>
               <ul className="max-w-md space-y-1 text-[#000000] list-disc list-inside dark:text-gray-400 px-5 pt-4">
                 <li>
                   Company Registration
@@ -222,9 +223,11 @@ const Home = () => {
                   Corporate Secretarial Services
                 </li>
               </ul>
+
+              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white'>Read Mode</NavLink>
             </div>
             <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1200'>
-              <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Compliance Duties</p>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Compliance Duties</p>
               <ul className="max-w-md space-y-1 text-[#000000] list-disc list-inside dark:text-gray-400 px-5 pt-4">
                 <li>
                   Accounting Compliance Service
@@ -233,15 +236,30 @@ const Home = () => {
                   Tax Compliance 
                 </li>
               </ul>
+
+              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white'>Read Mode</NavLink>
             </div>
             <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1400'>
-              <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Business Advisory</p>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Business Advisory</p>
               <ul className="max-w-md space-y-1 text-[#000000] list-disc list-inside dark:text-gray-400 px-5 pt-4">
                 <li>
                   Business Advisory in Cambodia
                 </li>
               </ul>
+              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white'>Read Mode</NavLink>
+
             </div>
+            <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1400'>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>Qualified Investment Project</p>
+              {/* <ul className="max-w-md space-y-1 text-[#000000] list-disc list-inside dark:text-gray-400 px-5 pt-4">
+                <li>
+                  Business Advisory in Cambodia
+                </li>
+              </ul> */}
+
+              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white'>Read Mode</NavLink>
+            </div>
+            
           </div>
         </div>
 

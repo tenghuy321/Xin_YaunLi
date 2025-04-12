@@ -25,7 +25,8 @@ const Footer = () => {
             <hr style={{ height: '8px',border: 'none', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
             <div className="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 py-10 md:py-20 px-4">
                 <div>
-                    <iframe className="w-full h-[200px] rounded-sm" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19141.675652159014!2d104.88462033374552!3d11.517026725477594!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109507ab4fc2aa5%3A0xd7ca934e0389b6ad!2sPiphup%20Thmey%20Chamkar%20Doung%201%20Market!5e0!3m2!1sen!2skh!4v1739786827173!5m2!1sen!2skh" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    {/* <iframe className="w-full h-[200px] rounded-sm" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19141.675652159014!2d104.88462033374552!3d11.517026725477594!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109507ab4fc2aa5%3A0xd7ca934e0389b6ad!2sPiphup%20Thmey%20Chamkar%20Doung%201%20Market!5e0!3m2!1sen!2skh!4v1739786827173!5m2!1sen!2skh" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
+                    <iframe className="w-full h-[200px] rounded-sm" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488.5486805597143!2d104.92852913239892!3d11.595559311325339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109530050e4f245%3A0x4cc10f90b6bedd9d!2sXin%20Yuan%20Li%20Business%20Services!5e0!3m2!1sen!2skh!4v1744436135395!5m2!1sen!2skh" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div className="flex flex-col space-y-3 text-[#ffffff] text-[11px] md:text-[12px]">
                     <h1 className="text-[14px] md:text-[18px] text-[#EBB81B] font-[700]">Keep In Touch</h1>
