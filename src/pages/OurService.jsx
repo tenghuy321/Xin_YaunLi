@@ -14,6 +14,7 @@ import ButtonScroll from '../components/ButtonScroll';
 
 import './ourservice.css';
 import { NavLink, Outlet } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 // import Entity from './Entity';
 // import Compliance from './Compliance';
 // import Business from './Business';
@@ -26,7 +27,7 @@ const OurService = () => {
         });
     })
 
-    // const location = useLocation();
+    const { t } = useTranslation();
 
     return (
         <>
@@ -34,16 +35,19 @@ const OurService = () => {
                 <ButtonScroll />
             </div>
             <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-                <div className="w-full max-w-7xl mx-auto flex justify-center md:justify-end md:px-5 xl:px-8">
-                    <div className="flex flex-col items-center text-center text-[#ffffff]">
+                <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:px-5 xl:px-8">
+                    <div>
+
+                    </div>
+                    <div className="flex flex-col items-center text-center justify-center text-[#ffffff] ">
                         <Reveal>
-                            <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>
+                            <p className="text-[20px] lg:text-[30px] uppercase">{t("welcome")}</p>
                         </Reveal>
                         <Reveal>
-                            <h1 className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[100px] leading-none font-[800]">XIN YUAN LI</h1>
+                            <p className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[80px] xl:text-[100px] leading-none font-[800]">{t("xin_yuan_li")}</p>
                         </Reveal>
                         <Reveal>
-                            <p className="text-[16px] lg:text-[27px] tracking-[5px] md:tracking-[8px]">Business  Service</p>
+                            <p className="text-[16px] lg:text-[27px] tracking-[4px] md:tracking-[0.32rem] uppercase">{t("business_service")}</p>
                         </Reveal>
                     </div>
                 </div>
@@ -70,44 +74,44 @@ const OurService = () => {
 
                         <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
                             <div className=''>
-                                <NavLink to='/our-services/entity-setup' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Entity Setup</NavLink>
+                                <NavLink to='/our-services/entity-setup' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center font-[500] ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>{t("entity_setup")}</NavLink>
                             </div>
                             <div>
-                                <NavLink to='/our-services/compliance-duties' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Compliance Duties</NavLink>
+                                <NavLink to='/our-services/compliance-duties' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center font-[500] ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>{t("compliance_duties")}</NavLink>
                             </div>
                             <div>
-                                <NavLink to='/our-services/business-advisory' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Business Advisory</NavLink>
+                                <NavLink to='/our-services/business-advisory' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center font-[500] ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>{t("business_advisory")}</NavLink>
                             </div>
                             <div>
-                                <NavLink to='/our-services/qualified-investment' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>Qualified Investment Project</NavLink>
+                                <NavLink to='/our-services/qualified-investment' className={({ isActive }) => `flex justify-center w-[135px] text-[14px] lg:text-[16px] lg:w-[180px] text-center font-[500] ${isActive ? 'text-gradient' : 'text-[#fff]'}`}>{t("qualified_investment_project")}</NavLink>
                             </div>
                         </div>
                     </div>
 
                     {/* mobile */}
                     <div className='grid md:hidden grid-cols-2 items-center justify-center py-4 gap-y-4'>
-                        <NavLink to='/our-services/entity-setup' className={({isActive}) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
+                        <NavLink to='/our-services/entity-setup' className={({ isActive }) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
                             <img src={icon15} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="text-[12px] sm:text-[13px] p-2 font-[500]">
-                                <p>Entity Setup</p>
+                                <p>{t("entity_setup")}</p>
                             </div>
                         </NavLink>
-                        <NavLink to='/our-services/compliance-duties' className={({isActive}) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
+                        <NavLink to='/our-services/compliance-duties' className={({ isActive }) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
                             <img src={icon16} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="text-[12px] sm:text-[13px] p-2 font-[500]">
-                                <p>Compliance Duties</p>
+                                <p>{t("compliance_duties")}</p>
                             </div>
                         </NavLink>
-                        <NavLink to='/our-services/business-advisory' className={({isActive}) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
+                        <NavLink to='/our-services/business-advisory' className={({ isActive }) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
                             <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="text-[12px] sm:text-[13px] p-2 font-[500]">
-                                <p>Business Advisory</p>
+                                <p>{t("business_advisory")}</p>
                             </div>
                         </NavLink>
-                        <NavLink to='/our-services/qualified-investment' className={({isActive}) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
+                        <NavLink to='/our-services/qualified-investment' className={({ isActive }) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
                             <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="text-[12px] sm:text-[13px] p-2 font-[500]">
-                                <p>Qualified Investment Project</p>
+                                <p>{t("qualified_investment_project")}</p>
                             </div>
                         </NavLink>
                     </div>
@@ -127,7 +131,7 @@ const OurService = () => {
                     <img src={banner} alt="Image description" className="w-full h-[250px] sm:h-[400px] lg:h-[600px] object-cover object-center" />
                     <div className="absolute inset-0 bg-blend-multiply bg-[#A59465CC]"></div>
                     <div className="absolute inset-0 flex justify-center items-center text-white px-4" data-aos="fade-up" data-aos-duration="1500">
-                        <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
+                        <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[60rem] leading-none mx-auto text-center font-[800] text-gradient">{t("banner_title")}</p>
                     </div>
                 </div>
             </section>

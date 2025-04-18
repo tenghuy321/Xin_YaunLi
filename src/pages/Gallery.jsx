@@ -9,7 +9,11 @@ import ButtonScroll from '../components/ButtonScroll';
 
 import video from '../assets/video/videos.mp4';
 import './gallery.css';
+import { useTranslation } from 'react-i18next';
 const Gallery = () => {
+
+  const {t} = useTranslation();
+
   return (
     <>
       <div>
@@ -18,7 +22,7 @@ const Gallery = () => {
       <section className="bg-[#1E1E1E]">
         <div className="pt-[5rem] md:pt-[7rem] lg:pt-[12rem] min-h-screen max-w-7xl mx-auto px-4">
           <div className="flex items-end leading-none">
-            <h1 className="text-[20px] md:text-[30px] text-gradient font-[700] w-full md:w-[25%] lg:w-[20%]">Our Gallery</h1>
+            <h1 className="text-[20px] md:text-[30px] text-gradient font-[700] w-full md:w-[25%] lg:w-[20%]">{t("Our Gallery")}</h1>
             <hr className='w-full md:w-[75%] lg:w-[80%] ml-2' style={{ height: '4px', border: 'none', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
           </div>
 
@@ -51,7 +55,7 @@ const Gallery = () => {
           <img src={banner} alt="Image description" className="w-full h-[250px] sm:h-[400px] lg:h-[600px] object-cover object-center" />
           <div className="absolute inset-0 bg-blend-multiply bg-[#A59465]/80"></div>
           <div className="absolute inset-0 flex justify-center items-center px-4" data-aos="fade-up" data-aos-duration="1500">
-            <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
+            <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[60rem] leading-none mx-auto text-center font-[800] text-gradient">{t("banner_title")}</p>
           </div>
         </div>
       </section>

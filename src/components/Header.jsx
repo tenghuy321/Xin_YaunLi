@@ -75,8 +75,8 @@ const Header = () => {
                         >
                             <img src={flags[language]} alt={language} className="w-7 h-5" />
                             {language === "en" ? "English" : "Chinese"}
-                            <svg className={`w-3 h-3 transition-transform duration-300 ${open ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                            <svg className={`w-4 h-4 transition-transform duration-300 ${open ? 'rotate-180' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 9c.852 0 1.297 .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 -.01l.06 -.01l.057 -.004l12.059 -.002z"></path>
                             </svg>
                         </button>
                         {open && (
@@ -169,33 +169,6 @@ const Header = () => {
                                         <svg className="w-5 h-5" id="Glyph" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" version="1.1"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><path d="m22.9541 16.00049s7.59664-7.59713 7.60254-7.60302c1.97479-1.97492 1.87283-5.29082-.20507-7.14893-1.94238-1.7373-4.96875-1.5874-6.89063.33643l-7.46094 7.46142-7.46094-7.46143c-1.92381-1.92381-4.94916-2.07373-6.89057-.33648-2.07575 1.85746-2.17371 5.18094-.20513 7.14849l7.60254 7.60254s-7.59125 7.59173-7.60253 7.60301c-1.92525 1.92538-1.84193 5.2761.15819 7.10646 1.91113 1.75 5.04199 1.60156 6.97656-.33301l7.42188-7.42187s7.42188 7.42188 7.42189 7.42189c1.90722 1.90902 5.14842 2.12061 7.12391.19242 1.92453-1.87845 1.89914-5.07757.01084-6.96587z" fill="url(#SvgjsLinearGradient1012)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /></g><defs><linearGradient id="SvgjsLinearGradient1012"><stop stopOpacity="1" stopColor="#dfad16" offset="0" /><stop stopOpacity="1" stopColor="#dfad16" offset="0.99" /></linearGradient></defs></svg>
                                     </button>
                                 </div>
-                                {/* <ul className="mt-4">
-                                    <li className="px-4 py-3">
-                                        <a href="/" className={`block text-[16px] ${location.pathname === '/' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li className="px-4 py-3">
-                                        <a href="/our-profile" className={`block text-[16px] ${location.pathname === '/our-profile' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
-                                            Our Profile
-                                        </a>
-                                    </li>
-                                    <li className="px-4 py-3">
-                                        <a href="/our-services" className={`block text-[16px] ${location.pathname === '/our-services' ? 'text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
-                                            Our Service
-                                        </a>
-                                    </li>
-                                    <li className="px-4 py-3">
-                                        <a href="/career" className={`block text-[16px] ${location.pathname === '/career' ? 'text-white bg-[#1E1E1EF2] px-3 py-2 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
-                                            Career
-                                        </a>
-                                    </li>
-                                    <li className="px-4 py-3">
-                                        <a href="/contact-us" className={`block text-[16px] ${location.pathname === '/contact-us' ? 'text-white bg-[#1E1E1EF2] px-3 py-2 rounded-md font-[700] tracking-wider' : 'text-gray-700'}`}>
-                                            Contact Us
-                                        </a>
-                                    </li>
-                                </ul> */}
                                 <ul className="flex flex-col">
                                     {["Home", "Our Services", "Gallery", "Our Profile", "Career", "Contact Us"].map((link) => {
                                         const linkPath = `/${link.toLowerCase().replace(/\s+/g, '-')}`;

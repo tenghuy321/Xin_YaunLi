@@ -22,6 +22,7 @@ import Aos from 'aos';
 import { useEffect } from 'react';
 import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
+import { useTranslation } from 'react-i18next';
 // import { useTranslation } from 'react-i18next';
 
 
@@ -56,22 +57,27 @@ const OurProfile = () => {
       });
     }
   };
+
+  const {t} = useTranslation();
   return (
     <>
       <div>
         <ButtonScroll />
       </div>
       <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home/banner_footer.png')]">
-        <div className="w-full max-w-7xl mx-auto flex justify-center md:px-5 xl:px-8">
-          <div className="flex flex-col items-center text-center text-[#000000]">
+        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:px-5 xl:px-8">
+          <div>
+            
+          </div>
+          <div className="flex flex-col items-center text-center justify-center text-[#000000] font-[500]">
             <Reveal>
-              <p className="text-[20px] lg:text-[30px]">WELCOME TO</p>
+              <p className="text-[20px] lg:text-[30px] uppercase">{t("welcome")}</p>
             </Reveal>
             <Reveal>
-              <h1 className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[100px] leading-none font-[800]">XIN YUAN LI</h1>
+              <p className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[80px] xl:text-[100px] leading-none font-[800]">{t("xin_yuan_li")}</p>
             </Reveal>
             <Reveal>
-              <p className="text-[16px]  lg:text-[27px] tracking-[5px] md:tracking-[8px]">Business  Service</p>
+              <p className="text-[16px] lg:text-[27px] tracking-[4px] md:tracking-[0.32rem] uppercase">{t("business_service")}</p>
             </Reveal>
           </div>
         </div>
@@ -100,20 +106,20 @@ const OurProfile = () => {
           </div>
 
           <div className='flex items-center justify-center space-x-14 py-4 md:py-2 rounded-t-md' data-aos='fade-up' data-aos-duration='1200'>
-            <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#message' onClick={(event) => scrollToCenter('#message', event)}>Message</a>
+            <div className="flex justify-center w-[120px] font-[600] text-gradient">
+              <a href='#message' onClick={(event) => scrollToCenter('#message', event)}>{t("message")}</a>
             </div>
-            <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#vision' onClick={(event) => scrollToCenter('#vision', event)}>Vision</a>
+            <div className="flex justify-center w-[120px] font-[600] text-gradient">
+              <a href='#vision' onClick={(event) => scrollToCenter('#vision', event)}>{t("vision")}</a>
             </div>
-            <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#mission' onClick={(event) => scrollToCenter('#mission', event)}>Mission</a>
+            <div className="flex justify-center w-[120px] font-[600] text-gradient">
+              <a href='#mission' onClick={(event) => scrollToCenter('#mission', event)}>{t("mission")}</a>
             </div>
-            <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#core_values' onClick={(event) => scrollToCenter('#core_values', event)}>Core Values</a>
+            <div className="flex justify-center w-[120px] font-[600] text-gradient">
+              <a href='#core_values' onClick={(event) => scrollToCenter('#core_values', event)}>{t("core_values")}</a>
             </div>
-            <div className="flex justify-center w-[120px] font-[500] text-gradient">
-              <a href='#license' onClick={(event) => scrollToCenter('#license', event)}>License</a>
+            <div className="flex justify-center w-[120px] font-[600] text-gradient">
+              <a href='#license' onClick={(event) => scrollToCenter('#license', event)}>{t("license")}</a>
             </div>
           </div>
         </div>
@@ -122,32 +128,32 @@ const OurProfile = () => {
         <div className='grid md:hidden grid-cols-2 items-center justify-center py-4 gap-y-4'>
           <a href='#message' className='flex flex-col items-center justify-center'>
             <img src={icon8} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            <div className="p-2 font-[500] text-gradient">
-              <p>Message</p>
+            <div className="p-2 font-[600] text-gradient">
+              <p>{t("message")}</p>
             </div>
           </a>
           <a href='#vision' className='flex flex-col items-center justify-center'>
             <img src={icon2} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            <div className="p-2 font-[500] text-gradient">
-              <p>Vision</p>
+            <div className="p-2 font-[600] text-gradient">
+              <p>{t("vision")}</p>
             </div>
           </a>
           <a href='#mission' className='flex flex-col items-center justify-center'>
             <img src={icon3} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            <div className="p-2 font-[500] text-gradient">
-              <p>Mission</p>
+            <div className="p-2 font-[600] text-gradient">
+              <p>{t("mission")}</p>
             </div>
           </a>
           <a href='#core_values' className='flex flex-col items-center justify-center'>
             <img src={icon4} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            <div className="p-2 font-[500] text-gradient">
-              <p>Core Values</p>
+            <div className="p-2 font-[600] text-gradient">
+              <p>{t("core_values")}</p>
             </div>
           </a>
           <a href='#license' className='flex flex-col items-center justify-center'>
             <img src={icon9} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
-            <div className="p-2 font-[500] text-gradient">
-              <p>License</p>
+            <div className="p-2 font-[600] text-gradient">
+              <p>{t("license")}</p>
             </div>
           </a>
         </div>
@@ -161,19 +167,19 @@ const OurProfile = () => {
             </div>
             <div className='col-span-2 whitespace-pre-line space-y-2 text-[#ffffff] text-[12px] lg:text-[15px]'>
               <Reveal>
-                <h1 className='text-[20px] md:text-[30px] text-gradient font-[700]'>MESSAGE FROM CEO</h1>
+                <h1 className='text-[20px] md:text-[30px] text-gradient font-[700]'>{t("message_from_ceo")}</h1>
               </Reveal>
               <Reveal>
-                <p>First and foremost, I would like to extend my heartfelt gratitude to all our stakeholders for your unwavering support.</p>
+                <p>{t("message_from_ceo_des1")}</p>
               </Reveal>
               <Reveal>
-                <p>At Xin Yuan Li, we are dedicated to contributing to the growth of the business community by providing comprehensive services in business registration, tax, accounting, and advisory to our clients and business professionals.</p>
+                <p>{t("message_from_ceo_des2")}</p>
               </Reveal>
               <Reveal>
-                <p>Leveraging our extensive experience and strong connections with local authorities, we are confident in our ability to deliver high-quality work and ensure full compliance with legal frameworks for doing business in Cambodia, thereby avoiding potential issues and unnecessary penalties.</p>
+                <p>{t("message_from_ceo_des3")}</p>
               </Reveal>
               <Reveal>
-                <p>Looking ahead, we are committed to achieving our vision and creating a lasting impact. We aim to continue striving for excellence and embracing the opportunities that lie ahead.</p>
+                <p>{t("message_from_ceo_des4")}</p>
               </Reveal>
             </div>
           </div>
@@ -193,8 +199,8 @@ const OurProfile = () => {
               <img src={icon5} alt="" className='w-32 md:w-40' />
             </div>
             <div className='text-[12px] md:text-[14px] col-span-2'>
-              <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700]'>Vision</h1>
-              <p>To be a trusted tax agent and business advisor.</p>
+              <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700]'>{t("vision")}</h1>
+              <p>{t("vision_des")}</p>
             </div>
           </div>
         </div>
@@ -205,8 +211,8 @@ const OurProfile = () => {
               <img src={icon6} alt="" className='w-32 md:w-40' />
             </div>
             <div className='text-[12px] md:text-[14px] col-span-2'>
-              <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700]'>Mission</h1>
-              <p>Our mission is to empower businesses by providing comprehensive services in business registration, tax and accounting services and strategic advisory. We simplify the complexities of business compliance, ensuring financial accuracy, and offer expert guidance to drive growth and innovation. Through our expertise, we strive for to be the trusted partner for businesses at every stage of their journey. </p>
+              <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700]'>{t("mission")}</h1>
+              <p>{t("mission_des")}</p>
             </div>
           </div>
         </div>
@@ -217,27 +223,27 @@ const OurProfile = () => {
               <img src={icon7} alt="" className='w-32 md:w-40' />
             </div>
             <div className='text-[12px] md:text-[14px] col-span-2'>
-              <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700]' data-aos='fade-up' data-aos-duration='1000'>Core Values</h1>
+              <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700]' data-aos='fade-up' data-aos-duration='1000'>{t("core_values")}</h1>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-4'>
                 <div className='border border-[#A59465] flex flex-col p-4' data-aos='fade-up' data-aos-duration='1200'>
-                  <h1 className='font-[700] text-[#A59465]'>Integrity</h1>
-                  <p>We uphold the highest ethical standards in all interactions, ensuring trust and fairness with clients and our business partners.</p>
+                  <h1 className='font-[700] text-[#A59465]'>{t("core_values_title1")}</h1>
+                  <p>{t("core_values_des1")}</p>
                 </div>
                 <div className='border border-[#A59465] flex flex-col p-4' data-aos='fade-up' data-aos-duration='1400'>
-                  <h1 className='font-[700] text-[#A59465]'>Expertise</h1>
-                  <p>We deliver our services with a high level of professionalism and commitment to continuous development.</p>
+                  <h1 className='font-[700] text-[#A59465]'>{t("core_values_title2")}</h1>
+                  <p>{t("core_values_des2")}</p>
                 </div>
                 <div className='border border-[#A59465] flex flex-col p-4' data-aos='fade-up' data-aos-duration='1200'>
-                  <h1 className='font-[700] text-[#A59465]'>Client-centered</h1>
-                  <p>We mainly focus on understanding and meeting our clients’ needs, providing effective solutions and exceptional customer service.</p>
+                  <h1 className='font-[700] text-[#A59465]'>{t("core_values_title3")}</h1>
+                  <p>{t("core_values_des3")}</p>
                 </div>
                 <div className='border border-[#A59465] flex flex-col p-4' data-aos='fade-up' data-aos-duration='1400'>
-                  <h1 className='font-[700] text-[#A59465]'>Reliability</h1>
-                  <p>We build trust with our clients through consistent and dependable service to ensure result efficiency to our clients.</p>
+                  <h1 className='font-[700] text-[#A59465]'>{t("core_values_title4")}</h1>
+                  <p>{t("core_values_des4")}</p>
                 </div>
                 <div className='border border-[#A59465] flex flex-col p-4 col-span-1 md:col-span-2' data-aos='fade-up' data-aos-duration='1200'>
-                  <h1 className='font-[700] text-[#A59465]'>Teamwork</h1>
-                  <p>We foster a collaborative and inclusive environment where we encourage diverse skills and perspectives to improve open communication, mutual support and collective problem-solving to achieve unique customer support.</p>
+                  <h1 className='font-[700] text-[#A59465]'>{t("core_values_title5")}</h1>
+                  <p>{t("core_values_des5")}</p>
                 </div>
               </div>
             </div>
@@ -246,28 +252,28 @@ const OurProfile = () => {
 
         {/* registered */}
         <div className='py-10' id='license'>
-          <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center px-10' data-aos='fade-up' data-aos-duration='1000'>Our entity is officially registered under</h1>
+          <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center px-10' data-aos='fade-up' data-aos-duration='1000'>{t("registered")}</h1>
           {/* laptop */}
           <div className='hidden lg:grid grid-cols-4 w-full px-4 max-w-7xl items-center mx-auto py-10 overflow-hidden'>
             <div className='col-span-2 text-center' data-aos='fade-right' data-aos-duration='1000'>
               <img src={image1} alt="" className='w-full h-auto object-cover object-center' />
               <div className='pt-1 text-[10px] lg:text-[12px] xl:text-[16px]'>
-                <p>Ministry of Commerce with registration</p>
-                <p>number 00044850</p>
+                <p>{t("registered1")}</p>
+                <p>{t("registered_num1")}</p>
               </div>
             </div>
             <div className='text-center' data-aos='fade-left' data-aos-duration='1000'>
               <img src={image2} alt="" className='w-full h-auto object-cover object-center' />
               <div className='pt-1 text-[10px] lg:text-[12px] xl:text-[16px]'>
-                <p>Department of taxation with registration</p>
-                <p>number K004-901906337</p>
+                <p>{t("registered2")}</p>
+                <p>{t("registered_num2")}</p>
               </div>
             </div>
             <div className='text-center' data-aos='fade-left' data-aos-duration='1500'>
               <img src={image3} alt="" className='w-full h-auto object-cover object-center' />
               <div className='pt-1 text-[10px] lg:text-[12px] xl:text-[16px]'>
-                <p>Tax Agent License  with registration</p>
-                <p>number TA202001003</p>
+                <p>{t("registered3")}</p>
+                <p>{t("registered_num3")}</p>
               </div>
             </div>
           </div>
@@ -277,18 +283,18 @@ const OurProfile = () => {
             <Swiper modules={[Navigation]} loop={true} navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', }} slidesPerView={1} className="ProfileSwiper ProfileSlide h-[300px] sm:h-[400px] md:h-[500px]">
               <SwiperSlide className='w-full h-full text-center text-[10px]'>
                 <img src={image1} alt="" className='w-full h-full object-contain' />
-                <p className='pt-1'>Ministry of Commerce with registration</p>
-                <p>number 00044850</p>
+                <p className='pt-1'>{t("registered1")}</p>
+                <p>{t("registered_num1")}</p>
               </SwiperSlide>
               <SwiperSlide className='w-full h-full text-center text-[10px]'>
                 <img src={image2} alt="" className='w-full h-full object-contain' />
-                <p className='pt-1'>Department of taxation with registration</p>
-                <p>number K004-901906337</p>
+                <p className='pt-1'>{t("registered2")}</p>
+                <p>{t("registered_num2")}</p>
               </SwiperSlide>
               <SwiperSlide className='w-full h-full text-center text-[10px]'>
                 <img src={image3} alt="" className='w-full h-full object-contain' />
-                <p className='pt-1'>Tax Agent License  with registration</p>
-                <p>number TA202001003</p>
+                <p className='pt-1'>{t("registered3")}</p>
+                <p>{t("registered_num3")}</p>
               </SwiperSlide>
 
               <div className="swiper-button-prev">
@@ -307,7 +313,7 @@ const OurProfile = () => {
           <div className="absolute inset-0 bg-blend-multiply bg-[#A59465CC]"></div>
           <div className="absolute inset-0 flex justify-center items-center text-white px-4" data-aos="fade-up" data-aos-duration="1500">
             <Reveal>
-              <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[68rem] leading-none mx-auto text-center font-[800] text-gradient">Your Most Trusted Tax Agent & Business Advisor</p>
+              <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[70px] max-w-[60rem] leading-none mx-auto text-center font-[800] text-gradient">{t("banner_title")}</p>
             </Reveal>
           </div>
         </div>
