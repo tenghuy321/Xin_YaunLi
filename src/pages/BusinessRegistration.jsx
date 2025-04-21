@@ -4,11 +4,11 @@ import service1 from '../assets/images/service/service-1.png';
 import { List } from "flowbite-react";
 import ButtonScroll from '../components/ButtonScroll';
 
-import './entity.css';
+import './businessRegistration.css';
 import { useTranslation } from 'react-i18next';
 
 
-const Entity = () => {
+const BusinessRegistration = () => {
     const { t } = useTranslation();
     return (
         <>
@@ -18,7 +18,7 @@ const Entity = () => {
             <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-10 overflow-hidden' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
                 <div className='px-2 md:pr-0 md:pl-12 xl:pl-20 py-14 lg:pb-0 lg:pt-20 xl:pt-40'>
                     <div className='flex items-end leading-none pl-4 md:pl-8'>
-                        <h1 className='text-[20px] xl:text-[30px] text-gradient font-[700] w-full lg:w-2/3 2xl:w-1/2' data-aos='fade-right' data-aos-duration='1500'>{t("entities_setup")}</h1>
+                        <h1 className='text-[20px] xl:text-[30px] text-gradient font-[700] w-full lg:w-2/3 2xl:w-1/2 pb-1' data-aos='fade-right' data-aos-duration='1500'>{t("business_registrations")}</h1>
                         <hr className='w-full ml-3' style={{ height: '4px', border: 'none', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
                     </div>
                     <div className='pt-5 lg:pt-10 xl:pt-20 text-[12px] lg:text-[14px] pl-5 sm:pl-10 md:pl-0'>
@@ -27,33 +27,33 @@ const Entity = () => {
                                 <circle cx="7" cy="7" r="7" fill="#EBB81B" />
                             </svg>
 
-                            <p>{t("entities_setup_title")}</p>
+                            <p>{t("business_registration_title")}</p>
                         </h1>
 
                         <List className='pt-5 xl:pt-10 text-[#fff] space-y-4 pl-5 sm:pl-10'>
                             <List.Item className='font-[700]' data-aos='fade-right' data-aos-duration='1200'>
-                                {t("entities_setup_title_one")}
+                                {t("business_registration_title_one")}
                                 <div className='flex flex-col font-[300] pl-5 space-y-1 pt-2'>
-                                    <p>{t("entities_setup_title_one1")}</p>
-                                    <p>{t("entities_setup_title_one2")}</p>
+                                    <p>{t("business_registration_title_one1")}</p>
+                                    <p>{t("business_registration_title_one2")}</p>
                                 </div>
                             </List.Item>
                             <List.Item className='font-[700]' data-aos='fade-right' data-aos-duration='1400'>
-                                {t("entities_setup_title_two")}
+                                {t("business_registration_title_two")}
                                 <div className='flex flex-col font-[300] pl-5 space-y-1 pt-2'>
-                                    <p>{t("entities_setup_title_two1")}</p>
-                                    <p>{t("entities_setup_title_two2")}</p>
-                                    <p>{t("entities_setup_title_two3")}</p>
+                                    <p>{t("business_registration_title_two1")}</p>
+                                    <p>{t("business_registration_title_two2")}</p>
+                                    <p>{t("business_registration_title_two3")}</p>
                                 </div>
                             </List.Item>
                             <List.Item className='font-[700]' data-aos='fade-right' data-aos-duration='1600'>
-                                {t("entities_setup_title_three")}
+                                {t("business_registration_title_three")}
                             </List.Item>
                             <List.Item className='font-[700]' data-aos='fade-right' data-aos-duration='1800'>
-                                {t("entities_setup_title_four")}
+                                {t("business_registration_title_four")}
                                 <div className='flex flex-col font-[300] pl-5 space-y-1 pt-2'>
-                                    <p>{t("entities_setup_title_four1")}</p>
-                                    <p>{t("entities_setup_title_four2")}</p>
+                                    <p>{t("business_registration_title_four1")}</p>
+                                    <p>{t("business_registration_title_four2")}</p>
                                 </div>
                             </List.Item>
                         </List>
@@ -207,7 +207,7 @@ const Entity = () => {
 
                 <div className='max-w-7xl mx-auto px-2 col-span-1 md:col-span-2 w-full pb-20 pt-20 md:pt-10'>
                     <div className='flex items-end leading-none'>
-                        <h1 className='text-[20px] md:text-[30px] text-gradient font-[700] w-full md:w-2/3 2xl:w-[20%]' data-aos='fade-right' data-aos-duration='1500'>{t("entities_setup")}</h1>
+                        <h1 className='text-[20px] md:text-[30px] text-gradient font-[700] w-full md:w-2/3 2xl:w-[20%] mb-1' data-aos='fade-right' data-aos-duration='1500'>{t("business_registrations")}</h1>
                         <hr className='w-full ml-3' style={{ height: '4px', border: 'none', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
                     </div>
 
@@ -252,4 +252,4 @@ const Entity = () => {
     )
 }
 
-export default Entity
+export default BusinessRegistration

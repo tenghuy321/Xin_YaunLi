@@ -152,97 +152,17 @@ const Home = () => {
               {t("who")}
             </div>
             <div className='whitespace-pre-line space-y-4 text-[#ffffff] text-[12px] lg:text-[14px]'>
-              {/* <Reveal>
-                <p>{t("who_one")}</p>
-              </Reveal>
-              <Reveal>
-                <p>{t("who_two")}</p>
-              </Reveal>
-              <Reveal>
-                <p>{t("who_three")}</p>
-              </Reveal>
-              <Reveal>
-                <p>{t("who_four")}</p>
-              </Reveal> */}
-
               <h1 data-aos='fade-right' data-aos-duration='1000' className='text-[20px] md:text-[25px] font-[700] text-gradient'>{t("company_introduction")}</h1>
 
               <p data-aos='fade-left' data-aos-duration='1000'>{t("company_introduction_des1")}</p>
 
               <p data-aos='fade-right' data-aos-duration='1000'>{t("company_introduction_des2")}</p>
 
-              <h1 data-aos='fade-left' data-aos-duration='1000' className='text-[20px] md:text-[25px] font-[700] text-gradient'>{t("our_core_value")}</h1>
-
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 md:mt-10 overflow-hidden'>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[50px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("business_registration")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("business_registration_des")}</p>
-                </div>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[50px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("tax_declaration")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("tax_declaration_des")}</p>
-                </div>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[50px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("accounting")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("accounting_des")}</p>
-                </div>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[50px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("audit_preparation")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("audit_preparation_des")}</p>
-                </div>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[50px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("business_licensing")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("business_licensing_des")}</p>
-                </div>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[50px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("regulatory_advisory")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("regulatory_advisory_des")}</p>
-                </div>
-              </div>
 
               <p data-aos='fade-right' data-aos-duration='1000' className='mt-5 md:mt-10'>{t('company_introduction_des3')}</p>
               <p data-aos='fade-left' data-aos-duration='1000' className='mt-2'>{t('company_introduction_des4')}</p>
 
-              <h1 data-aos='fade-left' data-aos-duration='1000' className='text-[20px] md:text-[25px] font-[700] text-gradient'>{t("our_vision")}</h1>
-              <p data-aos='fade-right' data-aos-duration='1000' className='mt-5 md:mt-10'>{t('our_vision_des1')}</p>
-              <p data-aos='fade-left' data-aos-duration='1000' className='mt-2'>{t('our_vision_des2')}</p>
-              <p data-aos='fade-right' data-aos-duration='1000' className='mt-5 md:mt-10'>{t('our_vision_des3')}</p>
 
-
-              {/* <p data-aos='fade-right' data-aos-duration='1000' className='text-[20px] md:text-[25px] text-gradient font-[700] leading-none mt-5 md:mt-10'>
-                {t('who_title')}
-              </p>
-
-              <p data-aos='fade-left'>{t('who_des')}</p>
-
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 md:mt-10 overflow-hidden'>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[100px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("in_depth")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("in_depth_des")}</p>
-                </div>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[100px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("personalized_attention")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("personalized_attention_des")}</p>
-                </div>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[100px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("agility_efficiency")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("agility_efficiency_des")}</p>
-                </div>
-                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
-                  <h1 className='h-[100px]'></h1>
-                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("long_term")}</p>
-                  <p className='px-4 pt-5 pb-10'>{t("long_term_des")}</p>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
@@ -257,48 +177,60 @@ const Home = () => {
           <p className='text-[20px] md:text-[30px] font-[900] text-[#000000] py-4' data-aos='fade-left' data-aos-duration='1200'>{t("our_services_title")}</p>
           <p data-aos='fade-right' data-aos-duration='1400'>{t("our_services_des")}</p>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-10'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-10'>
             <div className='relative rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1000'>
-              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("entity_setup")}</p>
-              <ul className="max-w-md space-y-1 text-[#000000] list-disc list-inside dark:text-gray-400 px-5 pt-4">
-                <li>
-                  {t("entity_setup_des_one")}
-                </li>
-                <li>
-                  {t("entity_setup_des_two")}
-                </li>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("business_registration")}</p>
+              <ul className="max-w-md space-y-1 text-[#000000]  px-5 pt-4">
+                <p>{t("business_registration_des")}</p>
               </ul>
 
-              <NavLink to='our-services/entity-setup' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t("read_more")}</NavLink>
+              <NavLink to='our-services/business-registration' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t("read_more")}</NavLink>
             </div>
             <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1200'>
-              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("compliance_duties")}</p>
-              <ul className="max-w-md space-y-1 text-[#000000] list-disc list-inside dark:text-gray-400 px-5 pt-4">
-                <li>
-                  {t("compliance_duties_des_one")}
-                </li>
-                <li>
-                  {t("compliance_duties_des_two")}
-                </li>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("tax_declaration")}</p>
+              <ul className="max-w-md space-y-1 text-[#000000]  px-5 pt-4">
+                <p>{t("tax_declaration_des")}</p>
               </ul>
 
-              <NavLink to='our-services/compliance-duties' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t("read_more")}</NavLink>
+              <NavLink to='our-services/tax-declaration-compliance' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t("read_more")}</NavLink>
             </div>
             <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1400'>
-              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("business_advisory")}</p>
-              <ul className="max-w-md space-y-1 text-[#000000] list-disc list-inside dark:text-gray-400 px-5 pt-4">
-                <li>
-                  {t("business_advisory_des")}
-                </li>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("accounting")}</p>
+              <ul className="max-w-md space-y-1 text-[#000000] px-5 pt-4">
+                <p>{t("accounting_des")}</p>
               </ul>
-              <NavLink to='our-services/business-advisory' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t('read_more')}</NavLink>
+              <NavLink to='our-services/accounting-bookkeeping' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t('read_more')}</NavLink>
 
             </div>
             <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1400'>
-              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("qualified_investment_project")}</p>
-              <p className='px-5 pt-4'>{t("qualified_investment_project_des")}</p>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("audit_preparation_support")}</p>
+              <ul className="max-w-md space-y-1 text-[#000000] px-5 pt-4">
+                <li>
+                  {t("audit_preparation_des")}
+                </li>
+              </ul>
 
-              <NavLink to='/our-services/qualified-investment' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t('read_more')}</NavLink>
+              <NavLink to='/our-services/audit-preparation' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t('read_more')}</NavLink>
+            </div>
+            <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1400'>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("business_licensing_title")}</p>
+              <ul className="max-w-md space-y-1 text-[#000000] px-5 pt-4">
+                <li>
+                  {t("business_licensing_des")}
+                </li>
+              </ul>
+
+              <NavLink to='/our-services/business-licensing' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t('read_more')}</NavLink>
+            </div>
+            <div className='rounded-[10px] bg-[#EAE6DCCC] py-20' data-aos='fade-up' data-aos-duration='1400'>
+              <p className='py-1 px-4 text-[16px] md:text-[18px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("regulatory_advisory")}</p>
+              <ul className="max-w-md space-y-1 text-[#000000] px-5 pt-4">
+                <li>
+                  {t("regulatory_advisory_des")}
+                </li>
+              </ul>
+
+              <NavLink to='/our-services/regulatory-advisory' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t('read_more')}</NavLink>
             </div>
             
           </div>

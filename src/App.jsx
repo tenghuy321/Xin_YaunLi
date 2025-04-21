@@ -9,13 +9,15 @@ import Gallery from "./pages/Gallery";
 import Career from "./pages/Career";
 import Contact from "./pages/Contact";
 import './i18n';
-import Entity from "./pages/Entity";
+import BusinessRegistration from "./pages/BusinessRegistration";
 import Compliance from "./pages/Compliance";
-import Business from "./pages/Business";
 import { useEffect, useState } from 'react';
 // import Aos from 'aos';
 import Loading from "./components/Loading";
-import QualifiedInvestment from "./pages/QualifiedInvestment";
+import BusinessLicensing from "./pages/BusinessLicensing";
+import RegulatoryAdvisory from "./pages/RegulatoryAdvisory";
+import AuditPreparation from "./pages/AuditPreparation";
+import Accounting from "./pages/Accounting";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -42,11 +44,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-services/*" element={<OurService />}>
-          <Route index element={<Navigate to="entity-setup" replace />} />
-          <Route path="entity-setup" element={<Entity />} />
-          <Route path="compliance-duties" element={<Compliance />} />
-          <Route path="business-advisory" element={<Business />} />
-          <Route path="qualified-investment" element={<QualifiedInvestment />} />
+          <Route index element={<Navigate to="business-registration" replace />} />
+          <Route path="business-registration" element={<BusinessRegistration />} />
+          <Route path="tax-declaration-compliance" element={<Compliance />} />
+          <Route path="accounting-bookkeeping" element={<Accounting />} />
+          <Route path="audit-preparation" element={<AuditPreparation />} />
+          <Route path="business-licensing" element={<BusinessLicensing />} />
+          <Route path="regulatory-advisory" element={<RegulatoryAdvisory />} />
         </Route>
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/our-profile" element={<OurProfile />} />

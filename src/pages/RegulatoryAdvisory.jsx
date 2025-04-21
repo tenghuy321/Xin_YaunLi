@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import service4 from '../assets/images/service/service-4.png'
 import { useTranslation } from 'react-i18next';
-const Business = () => {
+
+const RegulatoryAdvisory = () => {
     const [showMore, setShowMore] = useState(false);
 
     const {t} = useTranslation();
@@ -11,14 +12,14 @@ const Business = () => {
             <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-10 pb-20' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
                 <div className='px-2 md:pr-0 md:pl-12 xl:pl-20 py-14 lg:pb-0 lg:pt-20 xl:pt-40 col-span-1 md:col-span-2 text-[#fff]'>
                     <div className='flex items-end leading-none pl-4 md:pl-8'>
-                        <h1 className='text-[20px] lg:text-[30px] text-gradient font-[700] text-start text-line w-[600px] lg:w-[500px]' data-aos='fade-right' data-aos-duration='1500'>{t("business_advisory1")}</h1>
+                        <h1 className='text-[20px] lg:text-[30px] text-gradient font-[700] text-start w-full lg:w-2/3 2xl:w-1/2 pb-1' data-aos='fade-right' data-aos-duration='1500'>{t("regulatory_advisory_title")}</h1>
                         <hr className='w-full ml-1' style={{ height: '4px', border: 'none', background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }} />
                     </div>
                     <div className='text-[20px] lg:text-[25px] font-[700] text-[#fff] pt-10 pl-4 md:pl-8' data-aos='fade-right' data-aos-duration='1400'>
-                        <h2>{t("business_advisory_title")}</h2>
-                        <p className='text-[10px] md:text-[12px] font-[500]'>{t("business_advisory_des1")}</p>
-                        <p className='text-[10px] md:text-[12px] font-[500]'>{t("business_advisory_des2")}</p>
-                        <p className='text-[10px] md:text-[12px] font-[500]'>{t("business_advisory_des3")}</p>
+                        <h2>{t("regulatory_advisory_desc")}</h2>
+                        <p className='text-[10px] md:text-[12px] font-[500]'>{t("regulatory_advisory_des1")}</p>
+                        <p className='text-[10px] md:text-[12px] font-[500]'>{t("regulatory_advisory_des2")}</p>
+                        <p className='text-[10px] md:text-[12px] font-[500]'>{t("regulatory_advisory_des3")}</p>
                     </div>
                     <div className='pl-4 md:pl-0 pt-4 text-[12px] lg:text-[14px]' data-aos='fade-right' data-aos-duration='1400'>
                         <h1 className="flex items-center space-x-2 md:space-x-4 text-[14px] md:text-[15px] text-[#EBB81B] font-bold">
@@ -120,4 +121,4 @@ const Business = () => {
     )
 }
 
-export default Business
+export default RegulatoryAdvisory

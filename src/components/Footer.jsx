@@ -42,7 +42,7 @@ const Footer = () => {
                 <div className="flex flex-col space-y-3 text-[#ffffff] text-[11px] md:text-[12px]">
                     <h1 className="text-[14px] md:text-[18px] text-[#EBB81B] font-[700]">{t("information")}</h1>
                     <ul className="flex flex-col space-y-3" onClick={handleLinkClick}>
-                        <li><Link className="footer_link" to="/home">{t("Home")}</Link></li>
+                        <li><Link className="footer_link" to="/">{t("Home")}</Link></li>
                         <li><Link className="footer_link" to="/our-services">{t("Our Services")}</Link></li>
                         <li><Link className="footer_link" to="/gallery">{t("Gallery")}</Link></li>
                         <li><Link className="footer_link" to="/our-profile">{t("Our Profile")}</Link></li>
