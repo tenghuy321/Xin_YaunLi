@@ -148,13 +148,11 @@ const Home = () => {
         <div id='who'>
           <hr style={{ height: '8px', border: 'none', background: 'linear-gradient(90deg, #BA7F14 0%, #FAF088 47.5%, #EBB81B 100%)' }} />
           <div className='flex flex-col space-y-10 gap-4 py-10 md:py-16 px-4 lg:px-32 2xl:px-40 overflow-hidden' style={{ background: 'rgba(30, 30, 30, 0.95)' }}>
-            <Reveal>
-              <div className='text-[30px] text-gradient font-[700]'>
-                {t("who")}
-              </div>
-            </Reveal>
+            <div data-aos='fade-right' data-aos-duration='1000' className='text-[30px] text-gradient font-[700]'>
+              {t("who")}
+            </div>
             <div className='whitespace-pre-line space-y-4 text-[#ffffff] text-[12px] lg:text-[14px]'>
-              <Reveal>
+              {/* <Reveal>
                 <p>{t("who_one")}</p>
               </Reveal>
               <Reveal>
@@ -165,17 +163,63 @@ const Home = () => {
               </Reveal>
               <Reveal>
                 <p>{t("who_four")}</p>
-              </Reveal>
+              </Reveal> */}
 
-              <Reveal>
-                <p className='text-[20px] md:text-[30px] text-gradient font-[700] leading-none mt-5 md:mt-10'>
-                  {t('who_title')}
-                </p>
-              </Reveal>
+              <h1 data-aos='fade-right' data-aos-duration='1000' className='text-[20px] md:text-[25px] font-[700] text-gradient'>{t("company_introduction")}</h1>
 
-              <Reveal>
-                <p>{t('who_des')}</p>
-              </Reveal>
+              <p data-aos='fade-left' data-aos-duration='1000'>{t("company_introduction_des1")}</p>
+
+              <p data-aos='fade-right' data-aos-duration='1000'>{t("company_introduction_des2")}</p>
+
+              <h1 data-aos='fade-left' data-aos-duration='1000' className='text-[20px] md:text-[25px] font-[700] text-gradient'>{t("our_core_value")}</h1>
+
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 md:mt-10 overflow-hidden'>
+                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
+                  <h1 className='h-[50px]'></h1>
+                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("business_registration")}</p>
+                  <p className='px-4 pt-5 pb-10'>{t("business_registration_des")}</p>
+                </div>
+                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
+                  <h1 className='h-[50px]'></h1>
+                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("tax_declaration")}</p>
+                  <p className='px-4 pt-5 pb-10'>{t("tax_declaration_des")}</p>
+                </div>
+                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
+                  <h1 className='h-[50px]'></h1>
+                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("accounting")}</p>
+                  <p className='px-4 pt-5 pb-10'>{t("accounting_des")}</p>
+                </div>
+                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
+                  <h1 className='h-[50px]'></h1>
+                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("audit_preparation")}</p>
+                  <p className='px-4 pt-5 pb-10'>{t("audit_preparation_des")}</p>
+                </div>
+                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
+                  <h1 className='h-[50px]'></h1>
+                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("business_licensing")}</p>
+                  <p className='px-4 pt-5 pb-10'>{t("business_licensing_des")}</p>
+                </div>
+                <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
+                  <h1 className='h-[50px]'></h1>
+                  <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("regulatory_advisory")}</p>
+                  <p className='px-4 pt-5 pb-10'>{t("regulatory_advisory_des")}</p>
+                </div>
+              </div>
+
+              <p data-aos='fade-right' data-aos-duration='1000' className='mt-5 md:mt-10'>{t('company_introduction_des3')}</p>
+              <p data-aos='fade-left' data-aos-duration='1000' className='mt-2'>{t('company_introduction_des4')}</p>
+
+              <h1 data-aos='fade-left' data-aos-duration='1000' className='text-[20px] md:text-[25px] font-[700] text-gradient'>{t("our_vision")}</h1>
+              <p data-aos='fade-right' data-aos-duration='1000' className='mt-5 md:mt-10'>{t('our_vision_des1')}</p>
+              <p data-aos='fade-left' data-aos-duration='1000' className='mt-2'>{t('our_vision_des2')}</p>
+              <p data-aos='fade-right' data-aos-duration='1000' className='mt-5 md:mt-10'>{t('our_vision_des3')}</p>
+
+
+              {/* <p data-aos='fade-right' data-aos-duration='1000' className='text-[20px] md:text-[25px] text-gradient font-[700] leading-none mt-5 md:mt-10'>
+                {t('who_title')}
+              </p>
+
+              <p data-aos='fade-left'>{t('who_des')}</p>
 
               <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 md:mt-10 overflow-hidden'>
                 <div className='bg-[#1E1E1E] rounded-[10px]' data-aos='fade-right' data-aos-duration='1000'>
@@ -198,7 +242,7 @@ const Home = () => {
                   <p className='py-1 px-4 text-[16px] md:text-[18px] lg:text-[20px] font-[700] text-[#1A1916]' style={{ background: 'linear-gradient(90deg, #EBB81B 0%, #DFAD16 45.5%, #FAF088 100%)' }}>{t("long_term")}</p>
                   <p className='px-4 pt-5 pb-10'>{t("long_term_des")}</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -307,16 +351,16 @@ const Home = () => {
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] max-w-7xl mx-auto px-4 py-4' data-aos='fade-right' data-aos-duration='1000'>{t("notable_clients")}</h1>
           <div className='relative w-full bg-[#F2EBD9] hidden lg:block'>
             <div className='max-w-7xl mx-auto grid grid-cols-5 gap-6 px-4 py-20 overflow-hidden'>
-                <img src={client1} alt="Image 1" className="w-40 h-40 object-cover" />
-                <img src={client2} alt="Image 2" className="w-40 h-40 object-cover" />
-                <img src={client3} alt="Image 3" className="w-40 h-40 object-cover" />
-                <img src={client4} alt="Image 4" className="w-40 h-40 object-cover" />
-                <img src={client5} alt="Image 5" className="w-40 h-40 object-cover" />
-                <img src={client6} alt="Image 6" className="w-40 h-40 object-cover" />
-                <img src={client7} alt="Image 7" className="w-40 h-40 object-cover" />
-                <img src={client8} alt="Image 8" className="w-40 h-40 object-cover" />
-                <img src={client9} alt="Image 9" className="w-40 h-40 object-cover" />
-                <img src={client10} alt="Image 10" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1000' src={client1} alt="Image 1" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1200' src={client2} alt="Image 2" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1400' src={client3} alt="Image 3" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1600' src={client4} alt="Image 4" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1800' src={client5} alt="Image 5" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1000' src={client6} alt="Image 6" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1200' src={client7} alt="Image 7" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1400' src={client8} alt="Image 8" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1600' src={client9} alt="Image 9" className="w-40 h-40 object-cover" />
+                <img data-aos='fade-up' data-aos-duration='1800' src={client10} alt="Image 10" className="w-40 h-40 object-cover" />
             </div>
           </div>
           
