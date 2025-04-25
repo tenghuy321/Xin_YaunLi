@@ -35,9 +35,9 @@ const Footer = () => {
                 <div className="flex flex-col space-y-3 text-[#ffffff] text-[11px] md:text-[12px]">
                     <h1 className="text-[14px] md:text-[18px] text-[#EBB81B] font-[700]">{t("keep_in_touch")}</h1>
                     <p>Boeung Torteung Thngai 2 Street OCIC, #BT2, 291, Chroy Changva District, Phnom Penh</p>
-                    <a href="#">WWW.XINYUANLI.COM</a>
+                    <a href="https://www.xinyuanli.biz" target="_blank" rel="noopener noreferrer">WWW.XINYUANLI.BIZ</a>
                     <a href="#">O10 882019</a>
-                    <a href="#">077 882029</a>
+                    {/* <a href="#">077 882029</a> */}
                 </div>
                 <div className="flex flex-col space-y-3 text-[#ffffff] text-[11px] md:text-[12px]">
                     <h1 className="text-[14px] md:text-[18px] text-[#EBB81B] font-[700]">{t("information")}</h1>

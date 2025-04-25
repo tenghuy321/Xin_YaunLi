@@ -9,7 +9,7 @@
     "Our Profile": "Our Profile",
     "Career": "Career",
     "Contact Us": "Contact Us",
-    "who" : "Who are We ?",
+    "who" : "Who are We",
     "who_one" : "Xin Yuan Li was started in 2018 and later officially registered in 2019 as medium tax enterprise. As of now, the company has increased the number of clients from 15 to 50 clients, while 80% are international clients and 20% are locals.",
     "who_two" : "The company provides support to business registration, tax and accounting services, advisory services.",
     "who_three" : "Founded by the managing director held degrees of Finance and English language proficiency. With a conviction in business service, the ideas of turning the problems from the founder have been implemented into opportunity, assisting in audit and finance.",
@@ -336,7 +336,7 @@
     "business_licensing_title3" : "Ministry of Labor and Vocational Training (MLVT)",
     "business_licensing_des3" : "Declaration of staff, internal regulations, work permits for local and foreign employees.",
     "business_licensing_title4" : "Ministry of Economy and Finance (MEF)",
-    "business_licensing_des4" : "Ministry of Economy and Finance (MEF)",
+    "business_licensing_des4" : "Licensing for financial service providers and relevant regulated sectors.",
     "business_licensing_title5" : "Ministry of Industry, Science, Technology & Innovation (MISTI)",
     "business_licensing_des5" : "Manufacturing, industrial operations, product certification.",
     "business_licensing_title6" : "Ministry of Health (MOH)",
@@ -365,5 +365,6 @@
     "information" : "Information",
     "follow_us" : "Follow Us",
     "read_less" : "Read Less",
-    "read_more" : "Read More"
+    "read_more" : "Read More",
+    "header" : "Monday - Friday 8am - 5pm"
 }

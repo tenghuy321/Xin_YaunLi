@@ -69,18 +69,18 @@ const BusinessRegistration = () => {
                             <thead className="text-xs text-left capitalize bg-gradient-to-r from-[#BA7F14] to-[#FFD700]">
                                 <tr>
                                     <th className="py-5 px-3 text-black"> </th>
-                                    <th className="py-5 px-3 text-black text-center text-[12px] md:text-[13px] font-bold" colSpan="2">{t("cooperate_entities")}</th>
-                                    <th className="py-5 px-3 text-black text-center text-[12px] md:text-[13px] font-bold" colSpan="3">{t("foreign_owned_entity")}</th>
+                                    {/* <th className="py-5 px-3 text-black text-center text-[12px] md:text-[13px] font-bold" colSpan="2">{t("cooperate_entities")}</th>
+                                    <th className="py-5 px-3 text-black text-center text-[12px] md:text-[13px] font-bold" colSpan="3">{t("foreign_owned_entity")}</th> */}
                                     <th className="py-5 px-3 text-black text-center text-[12px] md:text-[13px] font-bold">{t("sole_proprietorship")}</th>
                                     <th className="py-5 px-3 text-black text-center text-[12px] md:text-[13px] font-bold" colSpan="2">{t("partnership")}</th>
                                 </tr>
                                 <tr className="bg-[#000] text-white capitalize">
                                     <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-l-0 border-r-[#FAF088] font-bold text-gradient"></th>
-                                    <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("private_limited")}</th>
+                                    {/* <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("private_limited")}</th>
                                     <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("public_limited")}</th>
                                     <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("branch")}</th>
                                     <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("subsidiary")}</th>
-                                    <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("representative_office")}</th>
+                                    <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("representative_office")}</th> */}
                                     <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("sole_proprietorship_des")}</th>
                                     <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("general_partnership")}</th>
                                     <th className="py-5 px-3 min-w-[150px] border border-t-0 border-b-0 border-r-[#FAF088] font-[400] text-[10px] md:text-[11px] text-center">{t("limited_partnership")}</th>
@@ -89,80 +89,80 @@ const BusinessRegistration = () => {
                             <tbody className="bg-[#1E1E1E] text-gray-200">
                                 <tr>
                                     <td className="py-5 px-3 border border-l-0 border-t-0 border-r-[#FAF088] border-b-black font-bold text-gradient">{t("ownership")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#000]">{t("private_limited_1")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#000]">{t("public_limited_1")}</td>
+                                    {/* <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#000]">{t("private_limited_1")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#000]">{t("public_limited_1")}</td>
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-r-0 border-l-[#FAF088] text-[10px] text-center leading-[12px]">{t("branch_1")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#000]">{t("subsidiary_1")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#000]">{t("representative_office_1")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#000]">{t("subsidiary_1")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#000]">{t("representative_office_1")}</td> */}
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("sole_proprietorship_des_1")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#000]">{t("general_partnership_1")}</td>
-                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-0 border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_1")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#000]">{t("general_partnership_1")}</td>
+                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_1")}</td>
                                 </tr>
                                 <tr>
                                     <td className="py-5 px-3 border border-l-0 border-t-0 border-r-[#FAF088] border-b-black font-bold text-gradient">{t("liability")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-0 border-t-0 border-b-[#000]">{t("private_limited_2")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-0 border-t-0 border-b-[#000]">{t("private_limited_2")}</td>
+                                    {/* <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-[#FAF088] border-t-0 border-b-[#000]">{t("private_limited_2")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-[#FAF088] border-t-0 border-b-[#000]">{t("private_limited_2")}</td>
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-r-0 border-l-[#FAF088] text-[10px] text-center leading-[12px]">{t("branch_2")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#000]">{t("subsidiary_2")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-0 border-r-0 border-b-[#000]">{t("representative_office_2")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#000]">{t("subsidiary_2")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-[#FAF088] border-r-0 border-b-[#000]">{t("representative_office_2")}</td> */}
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("sole_proprietorship_des_2")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#000]">{t("general_partnership_2")}</td>
-                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-0 border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_2")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#000]">{t("general_partnership_2")}</td>
+                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_2")}</td>
                                 </tr>
                                 <tr>
                                     <td className="py-5 px-3 border border-l-0 border-t-0 border-r-[#FAF088] border-b-black font-bold text-gradient">{t("management")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-0 border-r-0 border-b-[#000]">{t("private_limited_3")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-0 border-r-0 border-b-[#000]">{t("private_limited_3")}</td>
+                                    {/* <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-[#FAF088] border-r-0 border-b-[#000]">{t("private_limited_3")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-[#FAF088] border-r-0 border-b-[#000]">{t("private_limited_3")}</td>
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-r-0 border-l-[#FAF088] text-[10px] text-center leading-[12px]">{t("branch_3")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-b-[#000]">{t("subsidiary_3")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#000]">{t("representative_office_3")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-b-[#000]">{t("subsidiary_3")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#000]">{t("representative_office_3")}</td> */}
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("sole_proprietorship_des_3")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-b-[#000]">{t("general_partnership_3")}</td>
-                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-0 border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_3")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-b-[#000]">{t("general_partnership_3")}</td>
+                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_3")}</td>
                                 </tr>
                                 <tr>
                                     <td className="py-5 px-3 border border-l-0 border-t-0 border-r-[#FAF088] border-b-black font-bold text-gradient">{t("taxation")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-0 border-r-0 border-b-[#000]">{t("private_limited_4")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-0 border-r-0 border-b-[#000]">{t("private_limited_4")}</td>
+                                    {/* <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-[#FAF088] border-r-0 border-b-[#000]">{t("private_limited_4")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-[#FAF088] border-r-0 border-b-[#000]">{t("private_limited_4")}</td>
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-r-0 border-l-[#FAF088] text-[10px] text-center leading-[12px]">{t("branch_4")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-0 border-b-[#000]">{t("subsidiary_4")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-b-[#000]">{t("representative_office_4")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-[#FAF088] border-b-[#000]">{t("subsidiary_4")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-b-[#000]">{t("representative_office_4")}</td> */}
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("sole_proprietorship_des_4")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-b-[#000] border-l-0 border-r-0 border-t-0">{t("general_partnership_4")}</td>
-                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-0 border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_4")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-b-[#000] border-l-[#FAF088] border-r-0 border-t-0">{t("general_partnership_4")}</td>
+                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_4")}</td>
                                 </tr>
                                 <tr>
                                     <td className="py-5 px-3 border border-l-0 border-t-0 border-r-[#FAF088] border-b-black font-bold text-gradient">{t("continuity")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-r-0 border-l-0 border-b-[#000]">{t("private_limited_5")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-r-0 border-l-0 border-b-[#000]">{t("private_limited_5")}</td>
+                                    {/* <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-r-0 border-l-[#FAF088] border-b-[#000]">{t("private_limited_5")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-r-0 border-l-[#FAF088] border-b-[#000]">{t("private_limited_5")}</td>
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-r-0 border-l-[#FAF088] text-[10px] text-center leading-[12px]">{t("branch_5")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-0 border-t-0 border-b-[#000]">{t("subsidiary_5")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-0 border-t-0 border-b-[#000]">{t("representative_office_5")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-[#FAF088] border-t-0 border-b-[#000]">{t("subsidiary_5")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-[#FAF088] border-t-0 border-b-[#000]">{t("representative_office_5")}</td> */}
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("sole_proprietorship_des_5")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#000]">{t("general_partnership_5")}</td>
-                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-0 border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_5")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#000]">{t("general_partnership_5")}</td>
+                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_5")}</td>
                                 </tr>
                                 <tr>
                                     <td className="py-5 px-3 border border-l-0 border-t-0 border-r-[#FAF088] border-b-black font-bold text-gradient">{t("legal_structure")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-0 border-t-0 border-b-[#000]">{t("private_limited_6")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-0 border-t-0 border-b-[#000]">{t("private_limited_6")}</td>
+                                    {/* <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-[#FAF088] border-t-0 border-b-[#000]">{t("private_limited_6")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-r-0 border-l-[#FAF088] border-t-0 border-b-[#000]">{t("private_limited_6")}</td>
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-r-0 border-l-[#FAF088] text-[10px] text-center leading-[12px]">{t("branch_6")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-0 border-r-0 border-b-[#000]">{t("subsidiary_6")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-0 border-r-0 border-b-[#000]">{t("representative_office_6")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-[#FAF088] border-r-0 border-b-[#000]">{t("subsidiary_6")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-[#FAF088] border-r-0 border-b-[#000]">{t("representative_office_6")}</td> */}
                                     <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("sole_proprietorship_des_6")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-0 border-r-0 border-b-[#000]">{t("general_partnership_6")}</td>
-                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-0 border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_6")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-[#FAF088] border-r-0 border-b-[#000]">{t("general_partnership_6")}</td>
+                                    <td className="py-5 px-3 border border-t-0 border-b-[#000] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_6")}</td>
                                 </tr>
                                 <tr>
                                     <td className="py-5 px-3 border border-l-0 border-t-0 border-r-[#FAF088] border-b-[#FAF088] font-bold text-gradient">{t("classification")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-r-0 border-b-[#FAF088]">{t("private_limited_7")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-0 border-r-0 border-b-[#FAF088]">{t("private_limited_7")}</td>
+                                    {/* <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-r-0 border-b-[#FAF088]">{t("private_limited_7")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-l-[#FAF088] border-r-0 border-b-[#FAF088]">{t("private_limited_7")}</td>
                                     <td className="py-5 px-3 border border-t-0 border-r-0 border-b-[#FAF088] border-l-[#FAF088] text-[10px] text-center leading-[12px]">{t("branch_7")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#FAF088]">{t("subsidiary_7")}</td>
-                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-0 border-r-0 border-t-0 border-b-[#FAF088]">{t("representative_office_7")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#FAF088]">{t("subsidiary_7")}</td>
+                                    <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-l-[#FAF088] border-r-0 border-t-0 border-b-[#FAF088]">{t("representative_office_7")}</td> */}
                                     <td className="py-5 px-3 border border-t-0 border-[#FAF088] text-[10px] text-center leading-[12px]">{t("sole_proprietorship_des_7")}</td>
                                     <td className="py-5 px-3 text-[10px] text-center leading-[12px] border border-t-0 border-r-0 border-[#FAF088]">{t("general_partnership_7")}</td>
-                                    <td className="py-5 px-3 border border-t-0 border-b-[#FAF088] border-l-0 border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_7")}</td>
+                                    <td className="py-5 px-3 border border-t-0 border-b-[#FAF088] border-l-[#FAF088] border-r-[#FAF088] text-[10px] text-center leading-[12px]">{t("limited_partnership_7")}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -170,7 +170,7 @@ const BusinessRegistration = () => {
                 </div>
 
 
-                <div className='w-full h-full col-span-1 max-w-[98%] md:max-w-[95%] xl:max-w-full mx-auto overflow-x-scroll xl:overflow-x-auto scrollBar px-0 xl:px-6 mt-10'>
+                {/* <div className='w-full md:w-[90%] lg:w-2/3 xl:w-full h-full col-span-1 md:col-span-2 xl:col-span-1 max-w-[98%] md:max-w-[95%] xl:max-w-full xl:mx-auto overflow-x-scroll xl:overflow-x-auto scrollBar px-0 md:px-4 xl:px-6 mt-10'>
                     <div className=''>
                         <table className='min-w-full text-xs md:text-sm text-white'>
                             <thead className="text-xs text-left capitalize bg-gradient-to-r from-[#BA7F14] to-[#FFD700]">
@@ -203,7 +203,7 @@ const BusinessRegistration = () => {
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </div> */}
 
                 <div className='max-w-7xl mx-auto px-2 col-span-1 md:col-span-2 w-full pb-20 pt-20 md:pt-10'>
                     <div className='flex items-end leading-none'>

@@ -4,7 +4,16 @@ import "../i18n";
 import { useTranslation } from "react-i18next";
 import enFlag from '../assets/images/en_flag.png';
 import chFlag from '../assets/images/ch_flag.png';
-import logo from '../assets/images/logo.png'; 
+import logo from '../assets/images/logo.png';
+
+const navLinks = [
+    { label: "Home", path: "/" },
+    { label: "Our Services", path: "/our-services" },
+    { label: "Gallery", path: "/gallery" },
+    { label: "Our Profile", path: "/our-profile" },
+    { label: "Career", path: "/career" },
+    { label: "Contact Us", path: "/contact-us" },
+];
 
 const Header = () => {
 
@@ -38,6 +47,7 @@ const Header = () => {
     };
 
     const { t } = useTranslation();
+    const currentPath = location.pathname;
 
 
     return (
@@ -105,7 +115,7 @@ const Header = () => {
                     </div>
 
                     <div>
-                        <button className="md:hidden text-white"
+                        <button className="lg:hidden text-white"
                             onClick={toggleDrawer}
                         >
                             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><g fill="rgb(0,0,0)"><path d="m5 2c-1.65685 0-3 1.34315-3 3v3c0 1.65685 1.34315 3 3 3h3c1.65685 0 3-1.34315 3-3v-3c0-1.65685-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m5 13c-1.65685 0-3 1.3431-3 3v3c0 1.6569 1.34315 3 3 3h3c1.65685 0 3-1.3431 3-3v-3c0-1.6569-1.34315-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path clipRule="evenodd" d="m16 2c-1.6569 0-3 1.34315-3 3v3c0 1.65685 1.3431 3 3 3h3c1.6569 0 3-1.34315 3-3v-3c0-1.65685-1.3431-3-3-3zm-1 3c0-.55228.4477-1 1-1h3c.5523 0 1 .44772 1 1v3c0 .55228-.4477 1-1 1h-3c-.5523 0-1-.44772-1-1z" fillRule="evenodd" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /><path d="m16 13c-1.6569 0-3 1.3431-3 3v3c0 1.6569 1.3431 3 3 3h3c1.6569 0 3-1.3431 3-3v-3c0-1.6569-1.3431-3-3-3z" fill="url(#SvgjsLinearGradient1015)" fillOpacity="1" data-original-color="#000000ff" stroke="none" strokeOpacity="1" /></g></g><defs><linearGradient id="SvgjsLinearGradient1015"><stop stopOpacity="1" stopColor="#ebb81b" offset="0" /><stop stopOpacity="1" stopColor="#dfad16" offset="1" /></linearGradient></defs></svg>
@@ -113,7 +123,7 @@ const Header = () => {
                     </div>
 
                     {/* md show */}
-                    <div className="hidden md:flex items-center space-x-4">
+                    <div className="hidden lg:flex items-center space-x-4">
                         <div className="flex items-center space-x-2 text-[12px]">
                             <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.46491 8.90287C5.51442 9.03688 5.49975 9.18888 5.42595 9.30839C5.3517 9.42839 5.2284 9.4999 5.09594 9.4999H4.11919H3.14197C3.00951 9.4999 2.88621 9.42789 2.81196 9.30839C2.73817 9.18888 2.7235 9.03688 2.773 8.90287C2.94122 8.44885 3.26481 8.01233 3.73509 7.60682L3.87259 7.48831C4.01743 7.36331 4.22323 7.36381 4.36761 7.48931L4.50237 7.60682C4.9731 8.01483 5.29716 8.45085 5.46491 8.90287ZM7.7246 10.0119C7.41246 9.77641 6.98436 9.86041 6.76801 10.2019C6.6493 10.3889 6.45496 10.4999 6.24778 10.4999H2.00205C1.81825 10.4999 1.64362 10.4119 1.52261 10.2594C1.45523 10.1734 1.34614 9.99092 1.38144 9.73541C1.5359 8.61336 2.18172 7.55482 3.30102 6.58827C3.46557 6.44577 3.56183 6.22926 3.56183 6.00025C3.56183 5.77124 3.46557 5.55423 3.30102 5.41223C2.18172 4.44569 1.53544 3.38664 1.38144 2.2646C1.34614 2.00908 1.45477 1.82708 1.52261 1.74107C1.64362 1.58807 1.81825 1.50056 2.00205 1.50056H6.24824C6.43158 1.50056 6.60622 1.58757 6.72676 1.74007C6.97427 2.05309 7.40788 2.08859 7.69618 1.81808C7.98403 1.54757 8.01566 1.07405 7.76769 0.760032C7.38588 0.277012 6.83173 6.7333e-07 6.24824 6.7333e-07H2.00205C1.41765 -0.000499348 0.863038 0.277512 0.48077 0.761532C0.104003 1.23905 -0.0637544 1.86808 0.0219579 2.4871C0.197049 3.75816 0.802993 4.93671 1.82604 5.99975C0.802993 7.06279 0.197049 8.24134 0.0219579 9.5124C-0.0637544 10.1314 0.104003 10.7604 0.48077 11.238C0.863038 11.7225 1.41765 12 2.00205 12H6.24824C6.9069 12 7.52384 11.647 7.89923 11.0555C8.11558 10.7149 8.0372 10.2474 7.7246 10.0119ZM11 5.99975C11 7.65682 9.76886 8.99988 8.24988 8.99988C6.73089 8.99988 5.49975 7.65682 5.49975 5.99975C5.49975 4.34268 6.73089 2.99963 8.24988 2.99963C9.76886 2.99963 11 4.34268 11 5.99975ZM9.39576 6.54277L8.70823 5.79274V4.49969C8.70823 4.22368 8.50289 3.99967 8.24988 3.99967C7.99686 3.99967 7.79152 4.22368 7.79152 4.49969V5.79274C7.79152 6.05775 7.88823 6.31226 8.06012 6.49977L8.74765 7.2498C8.92686 7.44481 9.217 7.44481 9.39576 7.2498C9.57498 7.05429 9.57498 6.73778 9.39576 6.54277Z" fill="url(#paint0_linear_3_168)" />
@@ -125,7 +135,7 @@ const Header = () => {
                                     </linearGradient>
                                 </defs>
                             </svg>
-                            <p> Monday - Friday 8am - 5pm</p>
+                            <p> {t("header")}</p>
                         </div>
                         <div className="flex items-center space-x-2 text-[12px]">
                             <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +148,7 @@ const Header = () => {
                                     </linearGradient>
                                 </defs>
                             </svg>
-                            <a href="mailto:xinyaunli@gmail.com">xinyaunli@gmail.com</a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@xinyuanli.biz">info@xinyuanli.biz</a>
                         </div>
                         <div className="flex items-center space-x-2 text-[12px]">
                             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +162,7 @@ const Header = () => {
                                 </defs>
                             </svg>
 
-                            <p> <span><a href="tel:010 88 2019">010 88 2019</a></span> / <span><a href="tel:077 88 2019">077 88 2019</a></span></p>
+                            <p> <span><a href="tel:010 88 2019">010 88 2019</a></span></p>
                         </div>
                     </div>
 
@@ -170,24 +180,26 @@ const Header = () => {
                                     </button>
                                 </div>
                                 <ul className="flex flex-col">
-                                    {["Home", "Our Services", "Gallery", "Our Profile", "Career", "Contact Us"].map((link) => {
-                                        const linkPath = `/${link.toLowerCase().replace(/\s+/g, '-')}`;
-                                        const currentPath = location.pathname;
-                                        const isHome = link === "Home" && currentPath === "/";
-                                        const isOurServices = link === "Our Services" && currentPath.startsWith("/our-services");
-                                        const isActive = isHome || isOurServices || currentPath === linkPath;
+                                    {navLinks.map(({ label, path }) => {
+                                        const isHome = path === "/" && currentPath === "/";
+                                        const isOurServices =
+                                            path === "/our-services" && currentPath.startsWith("/our-services");
+                                        const isExactMatch = path !== "/" && path === currentPath;
+                                        const isActive = isHome || isOurServices || isExactMatch;
 
                                         return (
-                                            <li key={link} className="px-4 py-3">
+                                            <li key={label} className="px-4 py-3">
                                                 <Link
-                                                    to={linkPath}
-                                                    className={`block text-[16px] ${isActive ? "active text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider" : "text-gray-700"}`}
+                                                    to={path}
+                                                    className={`block text-[16px] ${isActive ? "active text-white bg-[#1E1E1EF2] py-2 px-3 rounded-md font-[700] tracking-wider" : "text-gray-700"}
+                                                        }`}
                                                 >
-                                                    {t(link)}
+                                                    {t(label)}
                                                 </Link>
                                             </li>
                                         );
                                     })}
+
                                 </ul>
                             </div>
                         </div>

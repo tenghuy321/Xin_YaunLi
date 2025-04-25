@@ -3,28 +3,31 @@ import icon9 from '../assets/images/icons/icon-9.png';
 import icon10 from '../assets/images/icons/icon-10.png';
 import icon11 from '../assets/images/icons/icon-11.png';
 
-import client1 from '../assets/images/profile/client-1.png';
-import client2 from '../assets/images/profile/client-2.png';
-import client3 from '../assets/images/profile/client-3.png';
-import client4 from '../assets/images/profile/client-4.png';
-import client5 from '../assets/images/profile/client-5.png';
-import client6 from '../assets/images/profile/client-6.png';
-import clients6 from '../assets/images/profile/clients-6.png';
-import client7 from '../assets/images/profile/client-7.png';
-import client8 from '../assets/images/profile/client-8.png';
-import client9 from '../assets/images/profile/client-9.png';
-import client10 from '../assets/images/profile/client-10.png';
-import clients10 from '../assets/images/profile/clients-10.png';
+// import client1 from '../assets/images/profile/client-1.png';
+// import client2 from '../assets/images/profile/client-2.png';
+// import client3 from '../assets/images/profile/client-3.png';
+// import client4 from '../assets/images/profile/client-4.png';
+// import client5 from '../assets/images/profile/client-5.png';
+// import client6 from '../assets/images/profile/client-6.png';
+// import clients6 from '../assets/images/profile/clients-6.png';
+// import client7 from '../assets/images/profile/client-7.png';
+// import client8 from '../assets/images/profile/client-8.png';
+// import client9 from '../assets/images/profile/client-9.png';
+// import client10 from '../assets/images/profile/client-10.png';
+// import clients10 from '../assets/images/profile/clients-10.png';
 
 import banner from '../assets/images/home/banner_footer.png';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
 import { useTranslation } from 'react-i18next';
 import './home.css';
 import { NavLink } from 'react-router-dom';
+import img1 from '../assets/images/home-bg.png';
+import img2 from '../assets/images/home/banner_footer.png';
+const bgImages = [img1, img2];
 
 const Home = () => {
 
@@ -59,15 +62,41 @@ const Home = () => {
       });
     }
   };
+
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % bgImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <div>
         <ButtonScroll />
       </div>
-      <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:px-5 xl:px-8">
-          <div>
-            
+      <section className="relative h-[40vh] sm:h-[50vh] md:h-screen bg-cover bg-center overflow-hidden">
+        <div
+          className="flex transition-transform duration-1000 ease-in-out h-full md:h-screen"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {bgImages.map((img, index) => (
+            <div
+              key={index}
+              className="min-w-full h-full bg-cover bg-center"
+              style={{ backgroundImage: `url(${img})` }}
+            />
+          ))}
+        </div>
+
+
+        <div className="absolute inset-0 mt-0 md:-mt-10 w-full h-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:px-5 xl:px-8">
+          <div className='hidden lg:block'>
+
           </div>
           <div className="flex flex-col items-center text-center justify-center text-[#ffffff] ">
             <Reveal>
@@ -232,7 +261,7 @@ const Home = () => {
 
               <NavLink to='/our-services/regulatory-advisory' className='py-2 text-center rounded-md border border-[#EBB81B] w-[90%] absolute bottom-4 left-1/2 -translate-x-1/2 hover:bg-[#EBB81B] hover:text-white tracking-wider font-[600] hover:tracking-widest transition duration-200'>{t('read_more')}</NavLink>
             </div>
-            
+
           </div>
         </div>
 
@@ -279,7 +308,7 @@ const Home = () => {
         </div>
 
         {/* Notable Clients */}
-        <div className='w-full py-10' id='clients'>
+        {/* <div className='w-full py-10' id='clients'>
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] max-w-7xl mx-auto px-4 py-4' data-aos='fade-right' data-aos-duration='1000'>{t("notable_clients")}</h1>
           <div className='relative w-full bg-[#F2EBD9] hidden lg:block'>
             <div className='max-w-7xl mx-auto grid grid-cols-5 gap-6 px-4 py-20 overflow-hidden'>
@@ -330,7 +359,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* banner footer */}
         <div className="relative mt-10 md:mt-20">

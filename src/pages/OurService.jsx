@@ -5,9 +5,12 @@ import '../swiper.css';
 import icon15 from '../assets/images/icons/icon-15.png'
 import icon16 from '../assets/images/icons/icon-16.png'
 import icon17 from '../assets/images/icons/icon-17.png'
+import icon18 from '../assets/images/icons/icon-18.png'
+import icon19 from '../assets/images/icons/icon-19.png'
+import icon20 from '../assets/images/icons/icon-20.png'
 
 import banner from '../assets/images/home/banner_footer.png';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Aos from 'aos';
 import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
@@ -15,6 +18,9 @@ import ButtonScroll from '../components/ButtonScroll';
 import './ourservice.css';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import img1 from '../assets/images/home-bg.png';
+import img2 from '../assets/images/home/banner_footer.png';
+const bgImages = [img1, img2];
 
 const OurService = () => {
     useEffect(() => {
@@ -25,14 +31,38 @@ const OurService = () => {
 
     const { t } = useTranslation();
 
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex(prev => (prev + 1) % bgImages.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <>
             <div>
                 <ButtonScroll />
             </div>
-            <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home-bg.png')]">
-                <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:px-5 xl:px-8">
-                    <div>
+            <section className="relative h-[40vh] sm:h-[50vh] md:h-screen overflow-hidden">
+                <div
+                    className="flex transition-transform duration-1000 ease-in-out h-full md:h-screen"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                >
+                    {bgImages.map((img, index) => (
+                        <div
+                            key={index}
+                            className="min-w-full h-full bg-cover bg-center"
+                            style={{ backgroundImage: `url(${img})` }}
+                        />
+                    ))}
+                </div>
+
+                <div className="absolute inset-0 mt-0 md:-mt-10 w-full h-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:px-5 xl:px-8">
+                    <div className='hidden lg:block'>
 
                     </div>
                     <div className="flex flex-col items-center text-center justify-center text-[#ffffff] ">
@@ -61,16 +91,16 @@ const OurService = () => {
                                 <img src={icon16} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </NavLink>
                             <NavLink to='/our-services/accounting-bookkeeping' className='flex justify-center w-[115px] lg:w-[95px] xl:w-[115px]'>
-                                <img src={icon16} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+                                <img src={icon18} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </NavLink>
                             <NavLink to='/our-services/audit-preparation' className='flex justify-center w-[115px] lg:w-[95px] xl:w-[115px]'>
                                 <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </NavLink>
                             <NavLink to='/our-services/business-licensing' className='flex justify-center w-[115px] lg:w-[95px] xl:w-[115px]'>
-                                <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+                                <img src={icon19} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </NavLink>
                             <NavLink to='/our-services/regulatory-advisory' className='flex justify-center w-[115px] lg:w-[95px] xl:w-[115px]'>
-                                <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+                                <img src={icon20} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             </NavLink>
                         </div>
 
@@ -111,7 +141,7 @@ const OurService = () => {
                             </div>
                         </NavLink>
                         <NavLink to='/our-services/accounting-bookkeeping' className={({ isActive }) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
-                            <img src={icon16} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+                            <img src={icon18} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="text-[12px] sm:text-[13px] p-2 font-[500] text-center h-[50px]">
                                 <p>{t("accounting_bookkeeping")}</p>
                             </div>
@@ -123,13 +153,13 @@ const OurService = () => {
                             </div>
                         </NavLink>
                         <NavLink to='/our-services/business-licensing' className={({ isActive }) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
-                            <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+                            <img src={icon19} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="text-[12px] sm:text-[13px] p-2 font-[500] text-center h-[50px]">
                                 <p>{t("business_licensing_title")}</p>
                             </div>
                         </NavLink>
                         <NavLink to='/our-services/regulatory-advisory' className={({ isActive }) => `flex flex-col items-center justify-center ${isActive ? 'text-gradient' : 'text-black'}`}>
-                            <img src={icon17} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
+                            <img src={icon20} alt="" className='w-12 h-12 object-contain bg-[#131211] p-2 rounded-md' />
                             <div className="text-[12px] sm:text-[13px] p-2 font-[500] text-center h-[50px]">
                                 <p>{t("regulatory_advisory_title")}</p>
                             </div>

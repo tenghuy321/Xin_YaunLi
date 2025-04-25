@@ -42,3 +42,38 @@
 .client_item.item10 {
   animation-delay: calc(30s / 10 * (10 - 10) * -1);
 }
+
+/* .bg-slider{
+  overflow: hidden;
+  position: relative;
+  background-image: url("../assets/images/home-bg.png");
+  justify-content: center;
+  animation: change 10s infinite ease-in-out;
+}
+
+@keyframes change{
+  0%
+  {
+      background-image: url("../assets/images/home-bg.png");
+  }
+  20%
+  {
+      background-image: url("../assets/images/home/banner_footer.png");
+  }
+  40%
+  {
+      background-image: url("../assets/images/home-bg.png");
+  }
+  60%
+  {
+      background-image: url("../assets/images/home-bg.png");
+  }
+  80%
+  {
+      background-image: url("../assets/images/home-bg.png");
+  }
+  100%
+  {
+      background-image: url("../assets/images/home-bg.png");
+  }
+} */

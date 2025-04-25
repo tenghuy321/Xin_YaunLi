@@ -7,23 +7,25 @@ import icon5 from '../assets/images/icons/icon-5.png';
 import icon6 from '../assets/images/icons/icon-6.png';
 import icon7 from '../assets/images/icons/icon-7.png';
 import profile from '../assets/images/profile/profile-bg.png';
-import image1 from '../assets/images/profile/image-1.png';
-import image2 from '../assets/images/profile/image-2.png';
-import image3 from '../assets/images/profile/image-3.png';
+// import image1 from '../assets/images/profile/image-1.png';
+// import image2 from '../assets/images/profile/image-5.png';
+// import image3 from '../assets/images/profile/image-3.png';
 import banner from '../assets/images/profile/banner_footer.jpg';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../swiper.css';
-import { Navigation } from 'swiper/modules';
+// import { Navigation } from 'swiper/modules';
 import Aos from 'aos';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Reveal from '../components/Reveal';
 import ButtonScroll from '../components/ButtonScroll';
 import { useTranslation } from 'react-i18next';
-// import { useTranslation } from 'react-i18next';
+import img1 from '../assets/images/home-bg.png';
+import img2 from '../assets/images/home/banner_footer.png';
+const bgImages = [img1, img2];
 
 
 const OurProfile = () => {
@@ -58,18 +60,43 @@ const OurProfile = () => {
     }
   };
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % bgImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <>
       <div>
         <ButtonScroll />
       </div>
-      <section className="py-[4rem] md:pt-[14rem] h-full md:h-screen bg-cover bg-center bg-[url('assets/images/home/banner_footer.png')]">
-        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:px-5 xl:px-8">
+      <section className="relative h-[40vh] sm:h-[50vh] md:h-screen overflow-hidden">
+        <div
+          className="flex transition-transform duration-1000 ease-in-out h-full md:h-screen"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {bgImages.map((img, index) => (
+            <div
+              key={index}
+              className="min-w-full h-full bg-cover bg-center"
+              style={{ backgroundImage: `url(${img})` }}
+            />
+          ))}
+        </div>
+
+        <div className="absolute inset-0 mt-0 md:-mt-10 w-full h-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:px-5 xl:px-8">
           <div>
-            
+
           </div>
-          <div className="flex flex-col items-center text-center justify-center text-[#000000] font-[500]">
+          <div className="flex flex-col items-center text-center justify-center text-[#fff] font-[500]">
             <Reveal>
               <p className="text-[20px] lg:text-[30px] uppercase">{t("welcome")}</p>
             </Reveal>
@@ -251,9 +278,9 @@ const OurProfile = () => {
         </div>
 
         {/* registered */}
-        <div className='py-10' id='license'>
+        {/* <div className='py-10' id='license'>
           <h1 className='text-[#A59465] text-[20px] md:text-[30px] font-[700] text-center px-10' data-aos='fade-up' data-aos-duration='1000'>{t("registered")}</h1>
-          {/* laptop */}
+    
           <div className='hidden lg:grid grid-cols-4 w-full px-4 max-w-7xl items-center mx-auto py-10 overflow-hidden'>
             <div className='col-span-2 text-center' data-aos='fade-right' data-aos-duration='1000'>
               <img src={image1} alt="" className='w-full h-auto object-cover object-center' />
@@ -278,7 +305,7 @@ const OurProfile = () => {
             </div>
           </div>
 
-          {/* mobile */}
+
           <div className='lg:hidden pt-10 relative px-2'>
             <Swiper modules={[Navigation]} loop={true} navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', }} slidesPerView={1} className="ProfileSwiper ProfileSlide h-[300px] sm:h-[400px] md:h-[500px]">
               <SwiperSlide className='w-full h-full text-center text-[10px]'>
@@ -305,7 +332,7 @@ const OurProfile = () => {
               </div>
             </Swiper>
           </div>
-        </div>
+        </div> */}
 
         {/* banner footer */}
         <div className="relative mt-4">

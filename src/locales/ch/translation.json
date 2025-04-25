@@ -9,7 +9,7 @@
     "Our Profile": "概要",
     "Career": "职业公告",
     "Contact Us": "联系方法",
-    "who" : "概要",
+    "who" : "我们是谁",
     "who_one" : "鑫源里成立于2018年，并于2019年正式注册为中型税务企业。截至目前，该公司的客户数量已从15家增加到50家，其中80%是国际客户，20%是本地客户。",
     "who_two" : "公司提供工商登记支持、税务会计服务、咨询服务。",
     "who_three" : "由董事总经理创办，拥有金融学位和英语熟练程度。秉持商业服务的信念，将创始人的问题转化为机遇，协助审计和财务。",
@@ -27,7 +27,7 @@
     "long_term_des" : "我们是来旅行的。随着我们公司的投资，您的成功是我们共同的优先事项。",
 
     "our_services" : "服务",
-    "our_services_title" : "公司为您提供全程服务",
+    "our_services_title" : "公司为您提供全程服务。",
     "our_services_des" : "当您的业务扩展到柬埔寨及其他地区时，您将遇到最复杂的行政问题，找到明智的答案。从建立投资工具到为跨境交易提供支持，再到在当地或区域建立全面运营的业务，我们将帮助您充分利用这一独特地区所提供的每一项激励和利益。向我们寻求解决方案，而不仅仅是建议。",
     
     "entity_setup" : "实体的设置",
@@ -42,9 +42,9 @@
     "audit_preparation_support_des1" : "在正式审计通知发出之前，评估税务申报和财务记录，识别危险信号和潜在的审计风险。",
     "audit_preparation_support_title2" : "文件准备和对账",
     "audit_preparation_support_des2" : "协助编制和组织必要的文件，同时确保财务报表和税务申报的一致性。",
-    "audit_preparation_support_title3" : "审计策略和代理",
+    "audit_preparation_support_title3" : "审计策略与陈述",
     "audit_preparation_support_des3" : "制定应对审计问题的策略，如果获得授权，在审计过程中代表客户与税务机关进行讨论。",
-    "audit_preparation_support_title4" : "审计查询回复和沟通",
+    "audit_preparation_support_title4" : "审计查询回应与沟通",
     "audit_preparation_support_des4" : "对审核员提出的问题作出专业、合规的回答，并作为主要联络点，确保沟通顺畅、准确。",
     "audit_preparation_support_title5" : "审计后决议和咨询",
     "audit_preparation_support_des5" : "支持客户处理审计发现，必要时提出申诉，并就合规性改进提出建议，以防止未来的审计问题。",
@@ -307,7 +307,7 @@
     "registered_num3" : "号码 TA202001003",
     "message" : "寄语",
     "license" : "执照",
-    "footer_des" : "The business further commits to building strong networking with local authorities for business registration at MOC.",
+    "footer_des" : "该公司进一步致力于与地方政府建立强大的网络，以便在商务部进行商业登记。",
     "keep_in_touch" : "保持联系",
 
     "company_introduction" : "公司介绍",
@@ -352,20 +352,22 @@
     "business_licensing_title10" : "信息部（MOI）",
     "business_licensing_des10" : "媒体、出版物、广播和数字内容的许可。",
     "business_licensing_title11" : "邮电部（MPTC）",
-    "business_licensing_des11" : "——电信运营商、互联网服务提供商、科技平台的发牌。",
+    "business_licensing_des11" : "电信运营商、互联网服务提供商、科技平台的发牌。",
     "business_licensing_title12" : "柬埔寨发展委员会（CDC）",
     "business_licensing_des12" : "QIP（合格投资项目）注册和投资激励。",
     "business_licensing_title13" : "公共工程和交通部（MPWT）",
-    "business_licensing_des13" : "——物流运输企业及车辆相关业务许可。",
+    "business_licensing_des13" : "物流运输企业及车辆相关业务许可。",
     "business_licensing_title14" : "教育、青年和体育部（MoEYS）",
     "business_licensing_des14" : "学校、大学和培训中心的许可。",
     "business_licensing_title15" : "非银行金融服务管理局辖下的房地产业务及典当行规管",
-    "business_licensing_des15" : "——房地产、估价、当铺和非银行金融服务牌照。",
+    "business_licensing_des15" : "房地产、估价、典当行和非银行金融服务的许可证。",
 
     "work_with_us" : "和我们一起工作吧！",
     "banner_title" : "您最值得信赖的税务代理和商业顾问",
     "information" : "信息",
     "follow_us" : "跟着我们",
     "read_less" : "少读",
-    "read_more" : "阅读更多"
+    "read_more" : "阅读更多",
+    "header" : "Monday - Friday 8am - 5pm"
+
 }
