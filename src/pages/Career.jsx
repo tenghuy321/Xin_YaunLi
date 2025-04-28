@@ -52,7 +52,7 @@ const Career = () => {
                     </div>
                     <div className="flex flex-col items-center text-center justify-center text-[#ffffff] ">
                         <Reveal>
-                            <p className="text-[20px] lg:text-[30px] uppercase">{t("welcome")}</p>
+                            <p className="text-[20px] lg:text-[30px]">{t("welcome")}</p>
                         </Reveal>
                         <Reveal>
                             <p className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[80px] xl:text-[100px] leading-none font-[800]">{t("xin_yuan_li")}</p>

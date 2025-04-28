@@ -48,7 +48,7 @@ const Contact = () => {
                     </div>
                     <div className="flex flex-col items-center text-center justify-center text-[#ffffff] ">
                         <Reveal>
-                            <p className="text-[20px] lg:text-[30px] uppercase">{t("welcome")}</p>
+                            <p className="text-[20px] lg:text-[30px]">{t("welcome")}</p>
                         </Reveal>
                         <Reveal>
                             <p className="text-gradient text-[40px] sm:text-[50px] md:text-[70px] lg:text-[80px] xl:text-[100px] leading-none font-[800]">{t("xin_yuan_li")}</p>
@@ -71,7 +71,7 @@ const Contact = () => {
                                 <path d="M9.02 8.801l-.6 6a2 2 0 0 0 1.99 2.199h7.98a2 2 0 0 0 1.99 -1.801l.6 -6a2 2 0 0 0 -1.99 -2.199h-7.98a2 2 0 0 0 -1.99 1.801z"></path>
                                 <path d="M9.8 7.5l2.982 3.28a3 3 0 0 0 4.238 .202l3.28 -2.982"></path>
                             </svg>
-                            <span>Contact Us</span>
+                            <span>{t("Contact Us")}</span>
                         </a>
 
 
